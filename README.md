@@ -10,11 +10,13 @@ A lightweight multi-page affiliate guide site intended for `finds.billsworkshopc
 - Affiliate disclosure
 - Privacy policy
 
-## Before publishing affiliate links
+## Affiliate links
 
-Open `main.js` and set `SITE.amazonTag` to the Amazon Associates tracking ID approved for this site. The product buttons currently open relevant Amazon search results without an affiliate tag. Replace the search-based recommendations with specific products after reviewing them, if desired.
+`SITE.amazonTag` in `main.js` is set to `billsworkshop-20`, and `finds.billsworkshopcompany.com` is registered as an approved website in Amazon Associates. Product buttons open tagged Amazon search results and carry `rel="sponsored nofollow noopener"`.
 
-Add both the subdomain and the Pinterest account to the Amazon Associates approved websites/social profiles before promotion.
+Remaining optional improvement: replace the search-based recommendations with specific reviewed products.
+
+Add the Pinterest account to the Amazon Associates approved social profiles before promoting there.
 
 ## Run locally
 
@@ -29,9 +31,16 @@ npm run dev
 npm run build
 ```
 
-The production-ready static files will be in `dist/` and can be deployed on Netlify, Vercel, Cloudflare Pages or similar static hosting.
+The production-ready static files will be in `dist/`.
 
-## Connect the subdomain
+## Deployment
 
-After deploying, add the custom domain `finds.billsworkshopcompany.com` in the hosting provider and create the DNS record it supplies. Do not guess the record; use the exact target shown by the host.
-# bills-workshop-finds
+Hosted on Vercel as project `bills-workshop-finds` (team `billchristianwebs-projects`), live at https://finds.billsworkshopcompany.com.
+
+Pushing to `main` deploys to production automatically; pull requests get preview URLs. Preview and `*.vercel.app` URLs sit behind team SSO — the custom domain is public.
+
+`vercel.json` is the single source of truth for host config: clean (extensionless) URLs, four security headers, and a one-year immutable cache for Vite's content-hashed assets in `/assets/`. Build command and output directory come from Vercel's Vite framework preset.
+
+Because pages are served without the `.html` extension, internal links, canonical tags, and `public/sitemap.xml` must all use extensionless paths. The files in `dist/` keep their `.html` names — Vercel maps the clean path to them at request time.
+
+Design and implementation notes for the deployment live in `docs/superpowers/`.

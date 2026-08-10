@@ -1,0 +1,1 @@
+Shared header and footer markup is intentionally repeated in the static HTML pages so each page remains deployable on simple static hosting without server-side includes.

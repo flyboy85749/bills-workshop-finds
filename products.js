@@ -1,8 +1,10 @@
 import { SITE } from "./site.js";
 import { travelEssentials } from "./guides/travel-essentials.js";
+import { dogGifts } from "./guides/flight-attendant-dog-gifts.js";
 
 export const collections = {
-  "travel-essentials": travelEssentials
+  "travel-essentials": travelEssentials,
+  "flight-attendant-dog-gifts": dogGifts
 };
 
 function escapeHtml(value) {

@@ -7,10 +7,16 @@ const GUIDES = [
     file: "dist/flight-attendant-travel-essentials.html",
     cards: 15,
     anchors: [1, 3, 4, 6, 8, 11]
+  },
+  {
+    file: "dist/flight-attendant-dog-gifts.html",
+    cards: 15,
+    anchors: [1, 4, 7, 10, 13]
   }
 ];
 
 const failures = [];
+const signatures = new Map();
 let totalCards = 0;
 
 for (const guide of GUIDES) {
@@ -43,6 +49,20 @@ for (const guide of GUIDES) {
 
   if (/data-product-grid[^>]*>\s*<\/div>/.test(html)) {
     fail("the [data-product-grid] container shipped empty");
+  }
+
+  const queries = [...html.matchAll(/amazon\.com\/s\?k=([^&"]+)/g)].map(m => m[1]).sort().join("|");
+  signatures.set(guide.file, queries);
+}
+
+const seenSignature = new Map();
+for (const [file, signature] of signatures) {
+  if (!signature) continue;
+  const twin = seenSignature.get(signature);
+  if (twin) {
+    failures.push(`${file}: renders the same products as ${twin} — the collections are crossed`);
+  } else {
+    seenSignature.set(signature, file);
   }
 }
 

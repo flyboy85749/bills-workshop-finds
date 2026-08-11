@@ -48,6 +48,7 @@ export default defineConfig({
       input: {
         home: "index.html",
         guide: "flight-attendant-travel-essentials.html",
+        dogGifts: "flight-attendant-dog-gifts.html",
         about: "about.html",
         disclosure: "affiliate-disclosure.html",
         privacy: "privacy.html"

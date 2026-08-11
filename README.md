@@ -6,6 +6,7 @@ A lightweight multi-page affiliate guide site intended for `finds.billsworkshopc
 
 - Home and category hub
 - 15 Flight Attendant Travel Essentials guide
+- 15 Gifts for Flight Attendants Who Love Dogs guide
 - About
 - Affiliate disclosure
 - Privacy policy
@@ -44,3 +45,11 @@ Pushing to `main` deploys to production automatically; pull requests get preview
 Because pages are served without the `.html` extension, internal links, canonical tags, and `public/sitemap.xml` must all use extensionless paths. The files in `dist/` keep their `.html` names — Vercel maps the clean path to them at request time.
 
 Design and implementation notes for the deployment live in `docs/superpowers/`.
+
+## Adding a guide
+
+Guide content lives in `guides/<slug>.js` as an array of `{ category, name, query, reason, tip }`
+objects. Register the array in `collections` in `products.js`, mark the page's container with
+`data-product-grid="<slug>"`, add the page to `rollupOptions.input` in `vite.config.js`, and add
+an entry to `GUIDES` in `scripts/verify-build.mjs`. The build fails if a registered collection is
+never injected, so a half-wired guide cannot ship.

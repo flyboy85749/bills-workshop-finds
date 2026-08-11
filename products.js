@@ -25,7 +25,7 @@ export function amazonUrl(query) {
 
 export function renderProductGrid(key) {
   const items = collections[key];
-  if (!items) {
+  if (!Array.isArray(items) || items.length === 0) {
     throw new Error(
       `renderProductGrid: unknown collection "${key}". Registered keys: ${Object.keys(collections).join(", ")}.`
     );
@@ -38,5 +38,5 @@ export function renderProductGrid(key) {
       <p class="product-tip"><strong>What to look for:</strong> ${escapeHtml(item.tip)}</p>
       <a class="button button-primary" href="${escapeHtml(amazonUrl(item.query))}" target="_blank" rel="sponsored nofollow noopener" aria-label="See ${escapeHtml(item.name)} options on Amazon">See options on Amazon <span aria-hidden="true">↗</span></a>
     </article>
-  `).join("");
+  `.trim()).join("");
 }

@@ -349,6 +349,7 @@ p { margin-top: 0; }
   background: var(--sky);
 }
 .related-callout p { color: #365463; }
+.related-callout .button-row { display: flex; flex-wrap: wrap; gap: .8rem; }
 
 .prose { max-width: 780px; }
 .prose h2 { margin-top: 2.8rem; font-size: 2rem; }

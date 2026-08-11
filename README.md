@@ -13,7 +13,7 @@ A lightweight multi-page affiliate guide site intended for `finds.billsworkshopc
 
 ## Affiliate links
 
-`SITE.amazonTag` in `main.js` is set to `billsworkshop-20`, and `finds.billsworkshopcompany.com` is registered as an approved website in Amazon Associates. Product buttons open tagged Amazon search results and carry `rel="sponsored nofollow noopener"`.
+`SITE.amazonTag` in `site.js` is set to `billsworkshop-20`, and `finds.billsworkshopcompany.com` is registered as an approved website in Amazon Associates. Product buttons open tagged Amazon search results and carry `rel="sponsored nofollow noopener"`.
 
 Remaining optional improvement: replace the search-based recommendations with specific reviewed products.
 
@@ -53,3 +53,7 @@ objects. Register the array in `collections` in `products.js`, mark the page's c
 `data-product-grid="<slug>"`, add the page to `rollupOptions.input` in `vite.config.js`, and add
 an entry to `GUIDES` in `scripts/verify-build.mjs`. The build fails if a registered collection is
 never injected, so a half-wired guide cannot ship.
+
+A guide that builds and verifies is not yet reachable. Also link it in: add a card on the home
+page (featured guide or guide-card grid), add it to the footer links, add its extensionless path
+to `public/sitemap.xml`, and add a cross-link from the other guide's `related-callout`.

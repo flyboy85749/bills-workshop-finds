@@ -1,4 +1,5 @@
 import { readFileSync } from "node:fs";
+import { collections } from "../products.js";
 
 const AMAZON_TAG = "billsworkshop-20";
 
@@ -6,14 +7,23 @@ const GUIDES = [
   {
     file: "dist/flight-attendant-travel-essentials.html",
     cards: 15,
-    anchors: [1, 3, 4, 6, 8, 11]
+    anchors: [1, 3, 4, 6, 8, 11],
+    contains: "Compression packing cubes"
   },
   {
     file: "dist/flight-attendant-dog-gifts.html",
     cards: 15,
-    anchors: [1, 4, 7, 10, 13]
+    anchors: [1, 4, 7, 10, 13],
+    contains: "Treat-tossing pet camera"
   }
 ];
+
+if (GUIDES.length !== Object.keys(collections).length) {
+  console.error(
+    `verify-build FAILED:\n  - GUIDES has ${GUIDES.length} entries but collections has ${Object.keys(collections).length} — a guide is registered but not checked, or checked but not registered.`
+  );
+  process.exit(1);
+}
 
 const failures = [];
 const signatures = new Map();
@@ -45,6 +55,10 @@ for (const guide of GUIDES) {
     if (!html.includes(`id="item-${n}"`)) {
       fail(`jump nav targets #item-${n} but no element has that id`);
     }
+  }
+
+  if (guide.contains && !html.includes(guide.contains)) {
+    fail(`expected to find "${guide.contains}" but it is missing`);
   }
 
   if (/data-product-grid[^>]*>\s*<\/div>/.test(html)) {

@@ -1,9 +1,8 @@
 import { defineConfig } from "vite";
 import { collections, renderProductGrid } from "./products.js";
 
-// The lookarounds matter: a plain \b would still match "data-product-grid-BROKEN"
-// (a hyphen satisfies a word boundary), so a renamed or typo'd marker would slip
-// through the closeBundle guard below — the exact failure it exists to catch.
+// The leading lookbehind guards against a prefixed attribute such as
+// data-x-data-product-grid="k" being mistaken for the real marker.
 const GRID_PATTERN = /(<div[^>]*(?<![-\w])data-product-grid="([\w-]+)"[^>]*>)(\s*)(<\/div>)/g;
 
 function prerenderProducts() {
@@ -11,6 +10,9 @@ function prerenderProducts() {
 
   return {
     name: "prerender-products",
+    buildStart() {
+      injected.clear();
+    },
     transformIndexHtml: {
       order: "pre",
       handler(html) {

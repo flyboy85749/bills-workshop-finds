@@ -7,6 +7,7 @@ A lightweight multi-page affiliate guide site intended for `finds.billsworkshopc
 - Home and category hub
 - 15 Flight Attendant Travel Essentials guide
 - 15 Gifts for Flight Attendants Who Love Dogs guide
+- 15 Classroom Essentials Elementary Teachers Actually Use All Year guide
 - About
 - Affiliate disclosure
 - Privacy policy
@@ -56,4 +57,4 @@ never injected, so a half-wired guide cannot ship.
 
 A guide that builds and verifies is not yet reachable. Also link it in: add a card on the home
 page (featured guide or guide-card grid), add it to the footer links, add its extensionless path
-to `public/sitemap.xml`, and add a cross-link from the other guide's `related-callout`.
+to `public/sitemap.xml`, and add a cross-link from each existing guide's TOC aside.

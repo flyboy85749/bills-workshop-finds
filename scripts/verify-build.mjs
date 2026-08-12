@@ -15,6 +15,12 @@ const GUIDES = [
     cards: 15,
     anchors: [1, 4, 7, 10, 13],
     contains: "Treat-tossing pet camera"
+  },
+  {
+    file: "dist/elementary-classroom-essentials.html",
+    cards: 15,
+    anchors: [1, 4, 7, 10, 13],
+    contains: "Rolling 10-drawer cart"
   }
 ];
 

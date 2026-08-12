@@ -4,7 +4,7 @@ export const classroomEssentials = [
     name: "Rolling 10-drawer cart",
     query: "rolling cart 10 drawer organizer classroom",
     reason: "Ten labeled drawers hold a week of centers, small-group sets and copies, and the whole thing rolls to wherever the lesson is happening instead of anchoring the materials to one corner of the room.",
-    tip: "Check that the casters lock. An unlocked cart drifts across tile every time a child leans on it, and the locking versions cost a dollar or two more."
+    tip: "Check that the casters lock. An unlocked cart drifts across tile every time a child leans on it."
   },
   {
     category: "setup & storage",
@@ -32,7 +32,7 @@ export const classroomEssentials = [
     name: "Wireless doorbell chime",
     query: "wireless doorbell chime multiple tones portable",
     reason: "A chime gets thirty children's attention without the teacher raising their voice, and a single press cuts through room noise in a way a raised voice competes with.",
-    tip: "Pick a model with several selectable tones and a volume control. A single tone stops working within about a month, once the class has habituated to it."
+    tip: "Pick a model with several selectable tones and a volume control. A single tone tends to stop working once the class habituates to it, often within a month or two."
   },
   {
     category: "noise & transitions",
@@ -46,13 +46,13 @@ export const classroomEssentials = [
     name: "Thermal laminator and pouches",
     query: "thermal laminator machine classroom pouches",
     reason: "Anything a child handles daily — name plates, center cards, sorting pieces — lasts about a week unlaminated and the whole year laminated.",
-    tip: "Confirm the pouch thickness the machine supports before buying pouches in bulk. A 3 mil machine jams on 5 mil pouches, and that mismatch is the most common reason these get returned."
+    tip: "Confirm the pouch thickness the machine supports before buying pouches in bulk. A 3 mil machine jams on 5 mil pouches, and that mismatch is a common reason these end up returned."
   },
   {
     category: "display & feedback",
     name: "Reusable dry-erase pockets",
     query: "reusable dry erase pockets sleeves classroom",
-    reason: "One printed page in a sleeve replaces a class set of copies every time you reuse it, which makes this one of the few classroom purchases that pays for itself within a semester.",
+    reason: "One printed page in a sleeve replaces a class set of copies every time you reuse it, which makes this one of the few classroom purchases that can pay for itself within a semester.",
     tip: "Seal quality separates the good ones from the rest. Cheap sleeves ghost within a month and stop wiping clean, so check that the edges are sealed on all sides."
   },
   {
@@ -66,7 +66,7 @@ export const classroomEssentials = [
     category: "teacher survival",
     name: "Anti-fatigue standing mat",
     query: "anti fatigue standing mat classroom desk",
-    reason: "Elementary teaching is a standing job done on a concrete slab under thin tile, and the ache at the end of the day comes from the floor as much as from the hours.",
+    reason: "Elementary teaching is a standing job, and in most buildings it is done on a concrete slab under thin tile, so the ache at the end of the day comes from the floor as much as from the hours.",
     tip: "Look for beveled edges. A mat with a square lip in a classroom is a trip hazard, and in most rooms it is a child who will catch it."
   },
   {

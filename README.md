@@ -7,6 +7,7 @@ A lightweight multi-page affiliate guide site intended for `finds.billsworkshopc
 - Home and category hub
 - 15 Flight Attendant Travel Essentials guide
 - 15 Gifts for Flight Attendants Who Love Dogs guide
+- 15 Classroom Essentials Elementary Teachers Actually Use All Year guide
 - About
 - Affiliate disclosure
 - Privacy policy

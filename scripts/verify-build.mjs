@@ -27,6 +27,12 @@ const GUIDES = [
     cards: 15,
     anchors: [1, 4, 7, 10, 13],
     contains: "Snuffle mat"
+  },
+  {
+    file: "dist/student-pilot-gifts.html",
+    cards: 15,
+    anchors: [1, 4, 7, 10, 13],
+    contains: "Non-polarized aviation sunglasses"
   }
 ];
 

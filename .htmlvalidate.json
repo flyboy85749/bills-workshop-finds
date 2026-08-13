@@ -3,6 +3,7 @@
   "rules": {
     "doctype-style": "off",
     "void-style": "off",
-    "no-inline-style": "off"
+    "no-inline-style": "off",
+    "long-title": ["error", { "maxlength": 75 }]
   }
 }

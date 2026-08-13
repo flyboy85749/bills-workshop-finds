@@ -21,6 +21,12 @@ const GUIDES = [
     cards: 15,
     anchors: [1, 4, 7, 10, 13],
     contains: "Rolling 10-drawer cart"
+  },
+  {
+    file: "dist/dog-lover-gifts.html",
+    cards: 15,
+    anchors: [1, 4, 7, 10, 13],
+    contains: "Snuffle mat"
   }
 ];
 

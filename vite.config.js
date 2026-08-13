@@ -52,6 +52,7 @@ export default defineConfig({
         guide: "flight-attendant-travel-essentials.html",
         dogGifts: "flight-attendant-dog-gifts.html",
         classroom: "elementary-classroom-essentials.html",
+        dogLovers: "dog-lover-gifts.html",
         about: "about.html",
         disclosure: "affiliate-disclosure.html",
         privacy: "privacy.html"

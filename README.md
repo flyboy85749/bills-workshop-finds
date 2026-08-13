@@ -36,6 +36,16 @@ npm run build
 
 The production-ready static files will be in `dist/`.
 
+## Checks
+
+```bash
+npm run verify
+```
+
+Runs `html-validate` over every page, then checks the built guides in `dist/`. Keep each
+`<title>` on one line: the `long-title` rule counts the whitespace inside the element, so a
+title wrapped across lines fails the 75-character limit even when its text is well under.
+
 ## Deployment
 
 Hosted on Vercel as project `bills-workshop-finds` (team `billchristianwebs-projects`), live at https://finds.billsworkshopcompany.com.

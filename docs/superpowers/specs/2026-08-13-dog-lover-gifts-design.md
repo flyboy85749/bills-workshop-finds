@@ -18,7 +18,7 @@ establish itself and late enough that the work is not speculative.
 ## Goal
 
 Publish `/dog-lover-gifts` — a 15-item Amazon-first gift guide for people shopping for a dog
-owner — that opens the Seasonal Finds category without becoming a page that dies in January.
+owner — that deepens the Dog Lovers category with a gift-focused guide, without becoming a page that dies in January. Seasonal Finds remains unserved.
 
 ## Non-goals
 
@@ -32,8 +32,8 @@ pattern as the other three, so that stays one future decision applied to all gui
 
 Five content decisions were settled before design:
 
-1. **Seasonal**, not Everyday Workshop, a pilot guide, or a second teacher guide. It opens an
-   empty category, and a gift guide published in August has time to age into its own season.
+1. **Seasonal**, not Everyday Workshop, a pilot guide, or a second teacher guide. The seasonal
+   *timing* drove this decision—a gift guide published in August has time to age into its own season.
 2. **Dog lovers**, not teachers or flight crew. It carries the broadest search volume of the
    candidate personas and deepens a category the site already established, so the new page and
    the existing dog guide reinforce each other rather than starting a fourth audience cold.

@@ -39,6 +39,12 @@ const GUIDES = [
     cards: 15,
     anchors: [1, 4, 7, 10, 13],
     contains: "Flange plunger"
+  },
+  {
+    file: "dist/holiday-gifts.html",
+    cards: 15,
+    anchors: [1, 4, 7, 10, 13],
+    contains: "First-solo shirttail display frame"
   }
 ];
 

@@ -5,6 +5,7 @@ import { classroomEssentials } from "./guides/elementary-classroom-essentials.js
 import { dogLoverGifts } from "./guides/dog-lover-gifts.js";
 import { studentPilotGifts } from "./guides/student-pilot-gifts.js";
 import { firstApartmentTools } from "./guides/first-apartment-tools.js";
+import { holidayGifts } from "./guides/holiday-gifts.js";
 
 export const collections = {
   "travel-essentials": travelEssentials,
@@ -12,7 +13,8 @@ export const collections = {
   "elementary-classroom-essentials": classroomEssentials,
   "dog-lover-gifts": dogLoverGifts,
   "student-pilot-gifts": studentPilotGifts,
-  "first-apartment-tools": firstApartmentTools
+  "first-apartment-tools": firstApartmentTools,
+  "holiday-gifts": holidayGifts
 };
 
 function escapeHtml(value) {

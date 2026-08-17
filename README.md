@@ -11,6 +11,7 @@ A lightweight multi-page affiliate guide site intended for `finds.billsworkshopc
 - 15 Gifts for Dog Lovers That Aren't Junk guide
 - 15 Gifts for Student Pilots, Sorted by Where They Are in Training guide
 - 15 Tools for a First Apartment, Sorted by What Just Went Wrong guide
+- 15 Holiday Gifts, Grouped by Who You're Buying For guide
 - About
 - Affiliate disclosure
 - Privacy policy

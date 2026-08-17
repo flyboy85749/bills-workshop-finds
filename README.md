@@ -9,6 +9,7 @@ A lightweight multi-page affiliate guide site intended for `finds.billsworkshopc
 - 15 Gifts for Flight Attendants Who Love Dogs guide
 - 15 Classroom Essentials Elementary Teachers Actually Use All Year guide
 - 15 Gifts for Dog Lovers That Aren't Junk guide
+- 15 Gifts for Student Pilots, Sorted by Where They Are in Training guide
 - About
 - Affiliate disclosure
 - Privacy policy

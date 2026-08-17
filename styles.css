@@ -243,7 +243,7 @@ p { margin-top: 0; }
 .chip-row { display: flex; flex-wrap: wrap; gap: .5rem; margin: 1.2rem 0 1.8rem; }
 .chip { padding: .32rem .62rem; border-radius: 999px; color: var(--teal); background: var(--sky); font-weight: 800; font-size: .76rem; }
 
-.guide-card-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem; margin-top: 1.5rem; }
+.guide-card-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin-top: 1.5rem; }
 .guide-card {
   display: flex;
   flex-direction: column;
@@ -369,7 +369,7 @@ p { margin-top: 0; }
 @media (max-width: 860px) {
   .hero-grid, .featured-guide, .guide-layout, .newsletter { grid-template-columns: 1fr; }
   .travel-board { min-height: 430px; }
-  .category-grid, .values-grid { grid-template-columns: repeat(2, 1fr); }
+  .category-grid, .values-grid, .guide-card-grid { grid-template-columns: repeat(2, 1fr); }
   .toc { position: static; order: -1; }
   .footer-grid { grid-template-columns: 1fr 1fr; }
 }

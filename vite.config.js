@@ -55,6 +55,7 @@ export default defineConfig({
         dogLovers: "dog-lover-gifts.html",
         studentPilots: "student-pilot-gifts.html",
         firstApartment: "first-apartment-tools.html",
+        holiday: "holiday-gifts.html",
         about: "about.html",
         disclosure: "affiliate-disclosure.html",
         privacy: "privacy.html"

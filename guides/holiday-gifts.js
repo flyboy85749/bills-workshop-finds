@@ -5,7 +5,7 @@ export const holidayGifts = [
     query: "dog paw print ornament kit clay",
     reason:
       "The first Christmas with a dog, and every Christmas after it, gets one object that is unmistakably theirs. The print takes a minute to make and the ornament outlasts the dog by decades.",
-    tip: "Get the air-dry clay type rather than the bake-in-the-oven kind, because a print pressed into oven clay distorts as it cures. Take the print early in the day: the clay needs several undisturbed hours lying flat before it goes anywhere near a tree."
+    tip: "Most kits ship air-dry clay, which is easier to use and shrinks as it dries — press the print deeper than looks necessary and dry it flat, or a shallow print closes up. An oven-bake polymer kit holds finer detail and barely shrinks if they are willing to use the oven. Either way the print wants doing early in the day, well before it goes near a tree."
   },
   {
     category: "for the dog lover",
@@ -13,7 +13,7 @@ export const holidayGifts = [
     query: "dog treat advent calendar",
     reason:
       "Twenty-four days of a dog losing its mind at a cardboard door. It entertains the owner more than the dog, which is exactly what you want out of December.",
-    tip: "Most calendars are filled for medium dogs, and a treat sized for a labrador is a choking hazard for a chihuahua — if you do not know the dog, the small-breed version is the safe default. Order by late November: a calendar that arrives on the 6th has lost a quarter of its point."
+    tip: "Most calendars are filled for medium dogs, and a treat sized for a labrador is a choking hazard for a chihuahua — if you do not know the dog, the small-breed version is the safe default. Order by mid-November so it is in their hands before the 1st — a calendar that arrives on the 6th has lost a quarter of its point."
   },
   {
     category: "for the dog lover",
@@ -37,7 +37,7 @@ export const holidayGifts = [
     query: "engraved coordinates keychain",
     reason:
       "Crew measure their lives in three-letter codes. This puts the coordinates of the place they actually consider home on the thing that opens a hotel room door every night.",
-    tip: "Coordinates read better than the airport code on something this small — the code is the job, the coordinates are the place. Ask which base they mean before ordering, because the one on their roster is not always the one they would choose."
+    tip: "Coordinates read better than the airport code on something this small — the code is the job, the coordinates are the place. Ask which base they mean before ordering if you can — and if you cannot, their hometown reads better than a roster base anyway."
   },
   {
     category: "for the flight attendant",
@@ -61,7 +61,7 @@ export const holidayGifts = [
     query: "airport diagram etched whiskey glass",
     reason:
       "The runway layout of the field somebody learned to fly at, on a glass. Every pilot recognizes their own airport from the diagram alone, which is the whole trick.",
-    tip: "Use the field they trained at rather than a famous one — a JFK diagram is a poster, their own field is a memory. Check the airport is actually offered before ordering, because sellers stock the big fields and cut the small ones to order."
+    tip: "Use the field they trained at rather than a famous one — a JFK diagram is a poster, their own field is a memory. Check the airport is actually offered before ordering, because sellers stock the big fields and cut the small ones to order. If you do not know the field, the airport nearest where they live is the safe default — it is where they fly now."
   },
   {
     category: "for the student pilot",
@@ -77,7 +77,7 @@ export const holidayGifts = [
     query: "coffee mug warmer desk auto shut off",
     reason:
       "A teacher's coffee goes cold at 7:40am and gets microwaved four times before lunch. This is the small daily indignity that a twenty-dollar plate quietly ends.",
-    tip: "Get one with auto shut-off, because a classroom is a room people leave in a hurry. Make sure it heats by contact plate rather than induction: an induction warmer only works with its own mug, and the point is the mug they already love."
+    tip: "Get one with auto shut-off, because a classroom is a room people leave in a hurry. Make sure it heats by contact plate rather than induction: an induction warmer will not heat the plain ceramic mug they already own, and the point is the mug they already love."
   },
   {
     category: "for the teacher",
@@ -85,7 +85,7 @@ export const holidayGifts = [
     query: "felt tip pens fine point set",
     reason:
       "Teachers are startlingly specific about pens, and the ones they like get stolen by students, colleagues and their own children. A large set of good ones gets used up, which is the highest compliment a consumable can earn.",
-    tip: "Buy the big multi-colour set rather than a small premium one — grading, planning and display each want a different colour, and quantity is what makes it feel generous. Skip gel pens for grading: they smear under a hand and bleed through worksheet paper."
+    tip: "Buy the big multi-colour set rather than a small premium one — grading, planning and display each want a different colour, and quantity is what makes it feel generous. Skip gel pens for grading: they smear under a hand."
   },
   {
     category: "for the teacher",
@@ -101,7 +101,7 @@ export const holidayGifts = [
     query: "kitchen fire extinguisher ABC rated",
     reason:
       "The least romantic object on this list and the one most first apartments do not have. It costs about what a scented candle costs and does rather more.",
-    tip: "It needs an ABC rating, which covers the grease, wood and electrical fires a kitchen produces — water on a grease fire spreads it. Mount it near the kitchen exit rather than under the sink, so you reach it standing between the fire and the door instead of past it."
+    tip: "It needs an ABC rating, which covers the wood, paper and electrical fires a home produces. It is not the answer to a pan of burning oil — that is a lid and the burner off, and a Class K unit if they fry often. Mount it near the kitchen exit rather than under the sink, so you reach it standing between the fire and the door instead of past it."
   },
   {
     category: "for the first place",
@@ -117,6 +117,6 @@ export const holidayGifts = [
     query: "smart plug set 2.4GHz",
     reason:
       "Tree lights on a schedule, a lamp that comes on before you walk into a dark apartment, and certainty about whether something is off. Two of those are seasonal and the third matters all year.",
-    tip: "Setup pairs over 2.4GHz Wi-Fi, which is where these trip people up on a modern dual-band router — it is a five-minute settings change rather than a fault, and it is the single most common reason one of these ends up back in its box in January. Never put a space heater on one: the plug is rated well below what a heater pulls."
+    tip: "Setup pairs over 2.4GHz Wi-Fi, which is where these trip people up on a modern dual-band router — it is a five-minute settings change rather than a fault, and it is the single most common reason one of these ends up back in its box in January. Never put a space heater on one. Even a plug rated 15A sits above the 80% continuous-load limit under a 1500W heater, the housing heats up over hours, and every manufacturer prohibits it."
   }
 ];

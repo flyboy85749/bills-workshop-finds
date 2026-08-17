@@ -51,8 +51,9 @@ swap is recorded here but NOT implemented — it is a separate one-line change.
    "Featured slot" below. This supersedes the dog-lover spec's planned October swap to the
    dog-lover guide, on the grounds that a page written for the season and routing into all five
    audiences is the better Q4 feature than a general gift guide.
-6. **Routing lives in the body copy, not the TOC.** Each trio's intro sentence links inline to its
-   deep guide. The TOC keeps the same two-cross-links-plus-All-guides cap as every other guide.
+6. **Routing lives in the body copy, not the TOC.** One shared guide-intro paragraph carries five
+   inline links, one per trio, into its deep guide. The TOC keeps the same two-cross-links-plus-All-guides
+   cap as every other guide.
 
 ## Separation from the existing guides
 
@@ -88,8 +89,9 @@ The `tip` fields that carry information the buyer cannot be expected to have:
   cut off and displayed after their first solo flight. Given to someone who has soloed it is the
   best thing on this list; given to someone who has not, it is a countdown clock they did not ask
   for. Ask, or give it after the fact.
-- **The advent calendar and the stocking have a hard date.** Both are useless if they arrive on the
-  20th, and personalized work runs on its own lead time. Order by late November.
+- **The advent calendar and the stocking have a hard date, but not the same one.** The calendar is
+  useless if it is not in hand by December 1, so order by mid-November. The stocking is needed by
+  the 24th, but personalization runs on its own lead time, so order by late November.
 - **The fire extinguisher needs an ABC rating and the right mounting spot** — near the kitchen exit,
   not under the sink, because the point is reaching it while standing between the fire and the door.
 - **Hand cream is not a generic gift for a teacher.** Whiteboard markers and constant hand

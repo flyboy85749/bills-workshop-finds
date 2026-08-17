@@ -44,7 +44,14 @@ const GUIDES = [
     file: "dist/holiday-gifts.html",
     cards: 15,
     anchors: [1, 4, 7, 10, 13],
-    contains: "First-solo shirttail display frame"
+    contains: "First-solo shirttail display frame",
+    links: [
+      "/dog-lover-gifts",
+      "/flight-attendant-travel-essentials",
+      "/student-pilot-gifts",
+      "/elementary-classroom-essentials",
+      "/first-apartment-tools"
+    ]
   }
 ];
 
@@ -89,6 +96,12 @@ for (const guide of GUIDES) {
 
   if (guide.contains && !html.includes(guide.contains)) {
     fail(`expected to find "${guide.contains}" but it is missing`);
+  }
+
+  for (const href of guide.links ?? []) {
+    if (!html.includes(`href="${href}"`)) {
+      fail(`expected an inline link to ${href} but it is missing`);
+    }
   }
 
   if (/data-product-grid[^>]*>\s*<\/div>/.test(html)) {

@@ -5,7 +5,7 @@ export const firstApartmentTools = [
     query: "ratcheting screwdriver bit set",
     reason:
       "Flat-pack furniture arrives with a stamped steel key and a hundred screws. A ratcheting driver turns an evening of wrist pain into twenty minutes, and it stays the most-used tool in the place long after the boxes are gone.",
-    tip: "Do not reach for a drill on flat-pack. A powered driver strips particleboard cam screws and chews out the threads before you feel it happen, where the ratchet gives you the feel to stop at snug. Get a set carrying both Phillips and hex bits, because most furniture uses both."
+    tip: "Do not reach for a drill on flat-pack. A powered driver strips particleboard cam screws and chews out the threads before you feel it happen, where the ratchet gives you the feel to stop at snug. Get a set carrying Pozidriv, Phillips and hex bits — most flat-pack furniture uses Pozidriv, not Phillips, and a Phillips bit cams out in a Pozidriv head."
   },
   {
     category: "flat-pack day",
@@ -20,7 +20,7 @@ export const firstApartmentTools = [
     name: "Folding hex-key set",
     query: "folding hex key set metric SAE",
     reason:
-      "The L-shaped key in the box is soft steel that rounds off the first time a bolt is genuinely tight. A folding set gives you leverage and does not vanish into the carpet halfway through.",
+      "The L-shaped key in the box is soft steel that rounds off the first time a bolt is genuinely tight, and a hex bit in a driver has no leverage on a bolt that tight either. A folding set gives you leverage and does not vanish into the carpet halfway through.",
     tip: "Buy metric and SAE together. Flat-pack furniture is metric, but anything bought secondhand in the US may not be, and finding that out mid-assembly is the version of this problem you cannot solve at 9pm."
   },
   {
@@ -37,7 +37,7 @@ export const firstApartmentTools = [
     query: "stud finder wall scanner AC detection",
     reason:
       "Anything heavy hangs from a stud or from a properly rated anchor, and studs are not where you guess they are. Ten seconds with this decides whether a TV mount is safe or a story.",
-    tip: "Get one with AC wiring detection — drilling into a live cable is the failure mode that actually matters, and the feature costs a few dollars. Calibrate it on a blank stretch of wall every time you use it; skipping that step is why cheap ones get blamed for being wrong."
+    tip: "Get one with AC wiring detection — drilling into a live cable is the failure mode that actually matters, and the feature costs a few dollars. It is a warning, not a guarantee: it will not see cable in conduit or a circuit that happens to be off. Calibrate it on a blank stretch of wall every time you use it; skipping that step is why cheap ones get blamed for being wrong."
   },
   {
     category: "hanging things",
@@ -61,7 +61,7 @@ export const firstApartmentTools = [
     query: "drain snake hair clog remover tool",
     reason:
       "A slow bathroom drain is hair caught in the trap, not a blockage deep in the building's pipes, and a barbed plastic strip pulls the whole thing out in one pass.",
-    tip: "Try this before any chemical drain cleaner. Caustic cleaner sits in the trap, degrades older pipes and seals, and converts a two-dollar job into a plumber's invoice — which in a rental becomes an argument about who pays for it."
+    tip: "Try this before any chemical drain cleaner. Caustic cleaner sits in the trap, degrades older pipes and seals, and converts a two-dollar job into a plumber's invoice — which in a rental becomes an argument about who pays for it. Never plunge or snake a drain you have already poured cleaner into — that is a caustic splash-back hazard."
   },
   {
     category: "water where it shouldn't be",
@@ -84,8 +84,8 @@ export const firstApartmentTools = [
     name: "Non-contact voltage tester",
     query: "non-contact voltage tester pen",
     reason:
-      "Before touching a switch, an outlet or a light fixture, this tells you whether the circuit is genuinely dead. Breaker panels are mislabeled constantly, and older buildings are worse.",
-    tip: "This is the twenty-dollar item most likely to be dismissed as optional and the one most likely to keep you out of an emergency room. Test it against a known live outlet before every use, so you find out the tester has died before you trust it on something else."
+      "Before touching a switch, an outlet or a light fixture, this tells you whether the circuit is still live. Breaker panels are mislabeled constantly, and older buildings are worse.",
+    tip: "This is the twenty-dollar item most likely to be dismissed as optional and the one most likely to keep you out of an emergency room. Test it against a known live outlet before every use, so you find out the tester has died before you trust it on something else. A silent pen means probably dead, not proven dead — it can miss voltage inside conduit or armored cable — so kill the breaker first and use the tester only to confirm you killed the right one."
   },
   {
     category: "power problems",
@@ -93,7 +93,7 @@ export const firstApartmentTools = [
     query: "12 gauge extension cord 25 ft",
     reason:
       "One good cord replaces the three thin ones that otherwise get daisy-chained across a room, which is the arrangement that starts fires.",
-    tip: "Gauge numbers run backwards: 12 AWG is thicker than 16 AWG. A 16-gauge cord is fine under a lamp and genuinely dangerous under a space heater or a window air conditioner. Buy 12-gauge once and stop thinking about it, and never plug one extension cord into another."
+    tip: "Gauge numbers run backwards: 12 AWG is thicker than 16 AWG. A 16-gauge cord is fine under a lamp, a fan or a power tool. Buy 12-gauge once for those loads and stop thinking about it, and never plug one extension cord into another. A space heater or a window air conditioner is the one load no extension cord is right for, at any gauge — it goes straight into a wall outlet."
   },
   {
     category: "what lives in the bag",

@@ -13,7 +13,7 @@ export const holidayGifts = [
     query: "dog treat advent calendar",
     reason:
       "Twenty-four days of a dog losing its mind at a cardboard door. It entertains the owner more than the dog, which is exactly what you want out of December.",
-    tip: "Check the treat size against the dog before buying. Most calendars are filled for medium dogs, and a treat sized for a labrador is a choking hazard for a chihuahua. Order by late November — a calendar that arrives on the 6th has lost a quarter of its point."
+    tip: "Most calendars are filled for medium dogs, and a treat sized for a labrador is a choking hazard for a chihuahua — if you do not know the dog, the small-breed version is the safe default. Order by late November: a calendar that arrives on the 6th has lost a quarter of its point."
   },
   {
     category: "for the dog lover",
@@ -117,6 +117,6 @@ export const holidayGifts = [
     query: "smart plug set 2.4GHz",
     reason:
       "Tree lights on a schedule, a lamp that comes on before you walk into a dark apartment, and certainty about whether something is off. Two of those are seasonal and the third matters all year.",
-    tip: "Check they run on 2.4GHz Wi-Fi and that the recipient's router still broadcasts it, because most smart plugs will not join a 5GHz network and that is the single most common reason one ends up back in its box in January. Never put a space heater on one — the plug is rated well below what a heater pulls."
+    tip: "Setup pairs over 2.4GHz Wi-Fi, which is where these trip people up on a modern dual-band router — it is a five-minute settings change rather than a fault, and it is the single most common reason one of these ends up back in its box in January. Never put a space heater on one: the plug is rated well below what a heater pulls."
   }
 ];

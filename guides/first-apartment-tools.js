@@ -93,7 +93,7 @@ export const firstApartmentTools = [
     query: "12 gauge extension cord 25 ft",
     reason:
       "One good cord replaces the three thin ones that otherwise get daisy-chained across a room, which is the arrangement that starts fires.",
-    tip: "Gauge numbers run backwards: 12 AWG is thicker than 16 AWG. A 16-gauge cord is fine under a lamp, a fan or a power tool. Buy 12-gauge once for those loads and stop thinking about it, and never plug one extension cord into another. A space heater or a window air conditioner is the one load no extension cord is right for, at any gauge — it goes straight into a wall outlet."
+    tip: "Gauge numbers run backwards: 12 AWG is thicker than 16 AWG. A 16-gauge cord is fine under a lamp or a fan and undersized for a power tool pulling 12 amps or more. Buy 12-gauge once, cover both, and never plug one extension cord into another. A space heater or a window air conditioner is the one load no extension cord is right for, at any gauge — it goes straight into a wall outlet."
   },
   {
     category: "what lives in the bag",

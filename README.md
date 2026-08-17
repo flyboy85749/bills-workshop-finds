@@ -10,6 +10,7 @@ A lightweight multi-page affiliate guide site intended for `finds.billsworkshopc
 - 15 Classroom Essentials Elementary Teachers Actually Use All Year guide
 - 15 Gifts for Dog Lovers That Aren't Junk guide
 - 15 Gifts for Student Pilots, Sorted by Where They Are in Training guide
+- 15 Tools for a First Apartment, Sorted by What Just Went Wrong guide
 - About
 - Affiliate disclosure
 - Privacy policy

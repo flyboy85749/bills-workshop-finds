@@ -4,13 +4,15 @@ import { dogGifts } from "./guides/flight-attendant-dog-gifts.js";
 import { classroomEssentials } from "./guides/elementary-classroom-essentials.js";
 import { dogLoverGifts } from "./guides/dog-lover-gifts.js";
 import { studentPilotGifts } from "./guides/student-pilot-gifts.js";
+import { firstApartmentTools } from "./guides/first-apartment-tools.js";
 
 export const collections = {
   "travel-essentials": travelEssentials,
   "flight-attendant-dog-gifts": dogGifts,
   "elementary-classroom-essentials": classroomEssentials,
   "dog-lover-gifts": dogLoverGifts,
-  "student-pilot-gifts": studentPilotGifts
+  "student-pilot-gifts": studentPilotGifts,
+  "first-apartment-tools": firstApartmentTools
 };
 
 function escapeHtml(value) {

@@ -33,6 +33,12 @@ const GUIDES = [
     cards: 15,
     anchors: [1, 4, 7, 10, 13],
     contains: "Non-polarized aviation sunglasses"
+  },
+  {
+    file: "dist/first-apartment-tools.html",
+    cards: 15,
+    anchors: [1, 4, 7, 10, 13],
+    contains: "Flange plunger"
   }
 ];
 

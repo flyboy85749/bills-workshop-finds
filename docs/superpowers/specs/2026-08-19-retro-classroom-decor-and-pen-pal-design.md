@@ -63,14 +63,16 @@ the stationery audience (see "Home page" below). The partial extraction contempl
 
 6. **The hero button keeps its target and gets a corrected label.** It continues to point at
    `/elementary-classroom-essentials`, but the label moves from "Read the newest guide" to
-   "Back-to-school favorite". The old label was already wrong — that guide stopped being the
-   newest two guides ago — so this fixes a stale claim rather than redirecting traffic.
+   "See the 15 classroom essentials". The old label was already wrong — that guide stopped being
+   the newest two guides ago — so this fixes a stale claim rather than redirecting traffic.
 
-   The word "favorite" is not backed by measurement, and that is recorded here rather than
-   implied. Vercel Web Analytics is not enabled on the project (`get_web_analytics` returns
-   `404 Web Analytics not found`), so no traffic data was available. The claim rests on the
-   classroom guide having held the featured slot since launch, not on data. Enabling Web
-   Analytics is the obvious follow-up and is out of scope here.
+   The label went through one revision. It was first changed to "Back-to-school favorite", which
+   fixed the stale claim but introduced two new problems: it asserted a popularity ranking with no
+   data behind it (Vercel Web Analytics is not enabled on the project — `get_web_analytics`
+   returns `404 Web Analytics not found`), and it carried no verb, so the link no longer said what
+   it did when read out of context in a screen-reader link list. The final wording is verb-led,
+   describes its destination, and claims nothing that cannot be checked. Enabling Web Analytics
+   remains the obvious follow-up and is out of scope here.
 
 7. **No "Writing & Stationery" category card.** `.category-grid` is `repeat(3, 1fr)`
    (`styles.css:258`) and currently holds a clean six. A seventh would leave a single orphaned
@@ -233,9 +235,9 @@ The existing length assertion fails the build if either entry is forgotten.
 
 Two changes, plus one explicit non-change.
 
-**Hero button label.** The label moves from "Read the newest guide" to "Back-to-school favorite".
-The `href` does not change — it stays on `/elementary-classroom-essentials`. Decision 6 records
-why the old label was already wrong and what "favorite" does and does not rest on.
+**Hero button label.** The label moves from "Read the newest guide" to "See the 15 classroom
+essentials". The `href` does not change — it stays on `/elementary-classroom-essentials`.
+Decision 6 records why the old label was wrong and why the first replacement was revised.
 
 **Featured slot.** No change. The classroom essentials guide keeps it (decision 5).
 
@@ -309,7 +311,7 @@ Adds `https://finds.billsworkshopcompany.com/retro-classroom-decor` and
 5. Manual check that no decor item collides with a live classroom-essentials item, since
    `verify-build` only catches wholesale collection collisions.
 6. `npm run dev` serves both new guides with the correct grid, confirming dev/prod parity.
-7. Home page: hero button reads "Back-to-school favorite" and still resolves to
+7. Home page: hero button reads "See the 15 classroom essentials" and still resolves to
    `/elementary-classroom-essentials`; the classroom essentials guide still occupies the featured
    slot; the card grid shows eight cards and does not repeat the featured guide.
 8. Every guide's TOC carries exactly two cross-links plus "All guides"; every internal link
@@ -325,8 +327,8 @@ Adds `https://finds.billsworkshopcompany.com/retro-classroom-decor` and
   grid card, two TOC cross-links and the sitemap only, during the one season it is most likely to
   perform. This is the accepted cost of not displacing the classroom guide in its peak week, and
   promoting it later is a one-line change.
-- **"Back-to-school favorite" is an unmeasured claim.** Web Analytics is not enabled, so neither
-  the label nor any future decision about which teacher guide to promote can be checked against
+- **No traffic data behind any promotion decision.** Web Analytics is not enabled, so neither
+  the hero target nor any future decision about which teacher guide to promote can be checked against
   traffic. Enabling it is the obvious follow-up and is out of scope here.
 - **Fire-code and mounting tips.** The wall-coverage cap and the clamp-mount requirement are the
   two tips on the decor page that prevent an unusable purchase, and both are easy to lose to

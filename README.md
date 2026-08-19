@@ -12,6 +12,8 @@ A lightweight multi-page affiliate guide site intended for `finds.billsworkshopc
 - 15 Gifts for Student Pilots, Sorted by Where They Are in Training guide
 - 15 Tools for a First Apartment, Sorted by What Just Went Wrong guide
 - 15 Holiday Gifts, Grouped by Who You're Buying For guide
+- 15 Retro Classroom Decor Finds That Warm Up a Cold Room guide
+- The Ultimate Pen Pal Starter Kit: 15 Things Worth Owning guide
 - About
 - Affiliate disclosure
 - Privacy policy

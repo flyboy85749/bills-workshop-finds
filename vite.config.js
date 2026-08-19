@@ -56,6 +56,8 @@ export default defineConfig({
         studentPilots: "student-pilot-gifts.html",
         firstApartment: "first-apartment-tools.html",
         holiday: "holiday-gifts.html",
+        retroClassroom: "retro-classroom-decor.html",
+        penPal: "pen-pal-starter-kit.html",
         about: "about.html",
         disclosure: "affiliate-disclosure.html",
         privacy: "privacy.html"

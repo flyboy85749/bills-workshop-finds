@@ -68,6 +68,13 @@ const GUIDES = [
     anchors: [1, 4, 7, 10, 13],
     contains: "Starter fountain pen",
     links: ["/retro-classroom-decor", "/holiday-gifts"]
+  },
+  {
+    file: "dist/adventure-travel-essentials.html",
+    cards: 15,
+    anchors: [1, 4, 7, 10, 13],
+    contains: "Roll-top dry bag",
+    links: ["/flight-attendant-travel-essentials", "/student-pilot-gifts"]
   }
 ];
 

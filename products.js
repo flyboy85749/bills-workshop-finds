@@ -8,6 +8,7 @@ import { firstApartmentTools } from "./guides/first-apartment-tools.js";
 import { holidayGifts } from "./guides/holiday-gifts.js";
 import { retroClassroomDecor } from "./guides/retro-classroom-decor.js";
 import { penPalStarterKit } from "./guides/pen-pal-starter-kit.js";
+import { adventureTravelEssentials } from "./guides/adventure-travel-essentials.js";
 
 export const collections = {
   "travel-essentials": travelEssentials,
@@ -18,7 +19,8 @@ export const collections = {
   "first-apartment-tools": firstApartmentTools,
   "holiday-gifts": holidayGifts,
   "retro-classroom-decor": retroClassroomDecor,
-  "pen-pal-starter-kit": penPalStarterKit
+  "pen-pal-starter-kit": penPalStarterKit,
+  "adventure-travel-essentials": adventureTravelEssentials
 };
 
 function escapeHtml(value) {

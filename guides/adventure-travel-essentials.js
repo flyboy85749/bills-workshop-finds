@@ -67,14 +67,14 @@ export const adventureTravelEssentials = [
     name: "Reef-safe mineral sunscreen stick",
     query: "reef safe mineral sunscreen stick zinc",
     reason: "Sun coming off water is relentless, and a stick goes on over wet skin one-handed on a moving boat, which a lotion does not.",
-    tip: "In some places this is an entry requirement rather than a preference. Hawaii and Palau restrict oxybenzone and octinoxate, and snorkel and dive operators turn people away over it. Look for non-nano zinc oxide in the ingredient list rather than the words reef safe on the front."
+    tip: "Palau restricts oxybenzone and octinoxate at the border and can confiscate sunscreen containing them. Hawaii bans their sale rather than their use, so you may bring your own but cannot restock there. Snorkel and dive operators in both turn people away over it. Look for non-nano zinc oxide in the ingredient list rather than the words reef safe on the front."
   },
   {
     category: "skin, bugs & scrapes",
     name: "Picaridin insect repellent",
     query: "picaridin insect repellent 20 percent lotion",
     reason: "Mosquito-borne illness is the realistic health risk on most of these trips, and dusk is when it happens, which is the one time of day people stop applying anything.",
-    tip: "Picaridin rather than DEET on this particular packing list. It works about as well, and DEET degrades synthetics — sunglasses frames, watch straps, technical fabric and dry-bag coatings, which is most of what else is in this guide. Look for 20 percent."
+    tip: "Picaridin rather than DEET on this particular packing list. It works about as well, and DEET is a plasticizer — it attacks sunglasses frames, watch straps, elastane waistbands and the coatings on dry bags, which is a good deal of what else is in this guide. Look for 20 percent."
   },
   {
     category: "skin, bugs & scrapes",
@@ -85,10 +85,10 @@ export const adventureTravelEssentials = [
   },
   {
     category: "the small things that save a day",
-    name: "Water-resistant rechargeable headlamp",
-    query: "water resistant rechargeable headlamp red mode ipx4",
-    reason: "Sunrise starts, cave floors and finding your things in a shared room all want light, and every one of them wants both your hands free.",
-    tip: "Get one with a red-light mode and a stated IPX rating. Red preserves night vision on a pre-dawn hike, and in a dorm or a shared tent it is the difference between finding your bag and waking everyone in the room. A headlamp on this list will be rained on, so a bare \"water-resistant\" claim with no IPX number behind it is not one."
+    name: "Electrolyte tablets",
+    query: "electrolyte tablets hydration travel",
+    reason: "A hot day of activity empties you faster than plain water refills you, and the headache that arrives at four in the afternoon is usually salt rather than sun.",
+    tip: "Tablets rather than powder sachets. They weigh nothing, survive a wet bag, and drop straight into the filtered bottle earlier in this list. Check the sodium figure — anything under about 300mg a serving is flavouring rather than rehydration."
   },
   {
     category: "the small things that save a day",

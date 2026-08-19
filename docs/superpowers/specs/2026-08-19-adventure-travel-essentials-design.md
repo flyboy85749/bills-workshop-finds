@@ -30,6 +30,12 @@ This does not revisit the standing "replace search-based recommendations with sp
 products" item in `README.md`. No new category card: `.category-grid` is `repeat(3, 1fr)` with a
 clean six, and the existing "Travel & Aviation" card already covers this guide.
 
+One trade-off is accepted rather than solved. `styles.css:372` drops the grid to `repeat(2, 1fr)`
+at 860px and below, where eight cards rendered a clean 2/2/2/2 and nine render 2/2/2/2/1. The
+branch therefore trades a short desktop row for a short row in the 681–860px band, iPad portrait
+included. The desktop grid is the one people browse guides on, and the next guide closes the tablet
+row as well, so this is recorded rather than fixed.
+
 **`.guide-card-grid` stays at three columns.** Changing it to `repeat(4, 1fr)` would render the
 current eight cards as a clean 4 / 4 with no new content, and was rejected: the shell is
 `min(1160px, …)` (`styles.css:56`), so four columns give roughly 278px per card against 376px at
@@ -90,9 +96,10 @@ exists, but one pair is close enough to record as a decision rather than leave i
 
 - **Rugged waterproof power bank** (item 6) against the live guide's **Compact portable charger**.
   The decision is to **keep both**, specified apart: the existing item is a slim bank for a long
-  flight, this one is IP-rated and survives a wet day. The precedent is the student pilot guide,
-  which kept an aviation headset despite the travel guide's consumer headphones — different product
-  category, different failure mode, different query. This is deliberately the opposite call from
+  flight, this one is IP-rated and survives a wet day. The pair stands on the product-category argument alone: different form factor, different failure
+  mode, different query, bought at different moments. No earlier guide set a precedent for this —
+  an earlier draft of this spec claimed one involving headphones, which do not exist anywhere on
+  the site. This is deliberately the opposite call from
   the decor guide's lighting exclusion, where the two items would have been the *same* product.
   **Cost:** this becomes the one item requiring manual review on every future travel guide.
 
@@ -136,6 +143,17 @@ node -e "const fs=require('fs');Promise.all(fs.readdirSync('guides').map(f=>impo
 This is not wired into `verify-build` deliberately: a duplicate name is sometimes the right answer
 (the sanctioned power bank pair differs by name but not by category), so it wants a human decision
 rather than a build failure.
+
+This happened twice. The first fix renamed the item to "Water-resistant rechargeable headlamp",
+which satisfied the name check while leaving the overlap intact one level down: the tip still led
+with the red-mode instruction and the query still contained `red mode`, which is the defining
+specification of the student pilot guide's red-lens headlamp, and `ipx4` is the baseline rating and
+narrowed nothing. The item was ultimately replaced with electrolyte tablets, which no other guide
+carries.
+
+The lesson the name check alone does not capture: when two guides want the same product category,
+renaming is not separation. Either the items must differ in what they actually specify, or one of
+them should not exist. Check the `tip` and `query`, not just the `name`.
 
 ## Design
 

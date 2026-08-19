@@ -21,8 +21,8 @@ arrives with no internal link equity and no category card of its own.
 ## Goal
 
 Publish two guides in one pass — `/retro-classroom-decor` and `/pen-pal-starter-kit`, fifteen
-items each — wired through the full checklist in `README.md`, and re-point the home page's
-back-to-school messaging at the new decor guide.
+items each — wired through the full checklist in `README.md`, and correct the stale label on the
+home page hero button while that page is open.
 
 ## Non-goals
 
@@ -54,23 +54,23 @@ the stationery audience (see "Home page" below). The partial extraction contempl
 4. **Five groups of three**, putting anchors on items 1, 4, 7, 10 and 13 — the pattern every
    guide since the classroom guide uses.
 
-5. **The retro decor guide takes the featured slot**, displacing the classroom essentials guide,
-   which moves down into the card grid. This reverses the recommendation made during design. The
-   reason is coherence rather than performance: the hero button now points at the decor guide
-   (decision 6), and leaving a *different* teacher guide in the featured block directly beneath
-   would put two competing teacher claims above the fold in the same week.
+5. **The classroom essentials guide keeps the featured slot**, and the retro decor guide goes
+   into the card grid alongside the other seven. Featuring the new guide was considered during
+   design and rejected: the classroom guide is in its peak back-to-school week and has a track
+   record, and the decor guide has neither. Promoting the decor guide is a one-line change
+   available whenever its own moment arrives — the same reasoning the student-pilot spec applied
+   to the pilot guide.
 
-6. **The hero button points at `/retro-classroom-decor` and reads "Back-to-school favorite".**
-   The button previously read "Read the newest guide" and pointed at
-   `/elementary-classroom-essentials`, which stopped being the newest guide two guides ago — the
-   label was already stale and is fixed here.
+6. **The hero button keeps its target and gets a corrected label.** It continues to point at
+   `/elementary-classroom-essentials`, but the label moves from "Read the newest guide" to
+   "Back-to-school favorite". The old label was already wrong — that guide stopped being the
+   newest two guides ago — so this fixes a stale claim rather than redirecting traffic.
 
-   **This is a bet, not a measurement, and is recorded as such.** Vercel Web Analytics is not
-   enabled on the project (`get_web_analytics` returns `404 Web Analytics not found`), so no
-   traffic data was available to identify the most popular back-to-school guide. The target was
-   chosen by the site owner on the expectation that the Throwback Kid trend outperforms. If it
-   does not, the fix is a one-line `href` change. Enabling Web Analytics would turn this class of
-   decision into a measurement; that is a suggestion, not part of this change.
+   The word "favorite" is not backed by measurement, and that is recorded here rather than
+   implied. Vercel Web Analytics is not enabled on the project (`get_web_analytics` returns
+   `404 Web Analytics not found`), so no traffic data was available. The claim rests on the
+   classroom guide having held the featured slot since launch, not on data. Enabling Web
+   Analytics is the obvious follow-up and is out of scope here.
 
 7. **No "Writing & Stationery" category card.** `.category-grid` is `repeat(3, 1fr)`
    (`styles.css:258`) and currently holds a clean six. A seventh would leave a single orphaned
@@ -222,19 +222,15 @@ The existing length assertion fails the build if either entry is forgotten.
 
 ### `index.html` — home page (modify)
 
-Three changes.
+Two changes, plus one explicit non-change.
 
-**Hero button.** `href` moves from `/elementary-classroom-essentials` to `/retro-classroom-decor`
-and the label moves from "Read the newest guide" to "Back-to-school favorite". Decision 6 records
-that this target is a bet rather than a measurement.
+**Hero button label.** The label moves from "Read the newest guide" to "Back-to-school favorite".
+The `href` does not change — it stays on `/elementary-classroom-essentials`. Decision 6 records
+why the old label was already wrong and what "favorite" does and does not rest on.
 
-**Featured slot.** The featured guide becomes retro classroom decor — visual number `15`, caption
-"Retro decor that warms up a cinderblock room", eyebrow "Teachers", chips Walls · Signage ·
-Reading corner · Display. The classroom essentials guide moves down into the card grid.
+**Featured slot.** No change. The classroom essentials guide keeps it (decision 5).
 
-**Card grid.** Goes from six cards to eight: the classroom essentials guide arrives from the
-featured slot, and the pen pal guide is added. The retro decor guide does not appear here, because
-it now occupies the featured slot.
+**Card grid.** Goes from six cards to eight, adding the two new guides at the end.
 
 | Slot | Card | Eyebrow |
 |---|---|---|
@@ -244,8 +240,11 @@ it now occupies the featured slot.
 | 4 | 15 Gifts for Dog Lovers That Aren't Junk | Dog lovers |
 | 5 | 15 Tools for a First Apartment | Everyday workshop |
 | 6 | 15 Holiday Gifts With Personality | Seasonal finds |
-| 7 | 15 Classroom Essentials Elementary Teachers Use All Year | Teachers |
+| 7 | 15 Retro Classroom Decor Finds | Teachers |
 | 8 | The Ultimate Pen Pal Starter Kit | Writing & stationery |
+
+The featured classroom essentials guide is still not repeated as a grid card, preserving the
+de-duplication the student-pilot spec introduced.
 
 `.guide-card-grid` is `repeat(3, 1fr)` at desktop (`styles.css:246`), so eight cards render as
 3 / 3 / 2 with a short final row. This is accepted rather than padded. The alternative — repeating
@@ -295,9 +294,9 @@ Adds `https://finds.billsworkshopcompany.com/retro-classroom-decor` and
 5. Manual check that no decor item collides with a live classroom-essentials item, since
    `verify-build` only catches wholesale collection collisions.
 6. `npm run dev` serves both new guides with the correct grid, confirming dev/prod parity.
-7. Home page: hero button reads "Back-to-school favorite" and resolves to `/retro-classroom-decor`;
-   retro decor occupies the featured slot; the card grid shows eight cards with no duplicate of the
-   featured guide.
+7. Home page: hero button reads "Back-to-school favorite" and still resolves to
+   `/elementary-classroom-essentials`; the classroom essentials guide still occupies the featured
+   slot; the card grid shows eight cards and does not repeat the featured guide.
 8. Every guide's TOC carries exactly two cross-links plus "All guides"; every internal link
    resolves extensionless.
 
@@ -307,12 +306,13 @@ Adds `https://finds.billsworkshopcompany.com/retro-classroom-decor` and
   queries in the same season. The decor/function split is the mitigation, but it is editorial and
   unenforced — nothing in the build stops a future edit from drifting the decor guide back toward
   essentials.
-- **Displacing a guide in its peak week.** The classroom essentials guide loses both the hero
-  button and the featured slot during back-to-school, in favour of a page with no track record.
-  Decision 6 records this as a deliberate bet; both changes are one-line reversions.
-- **No analytics to check the bet against.** Web Analytics is not enabled, so there is no way to
-  tell afterwards whether the swap helped. Enabling it is the obvious follow-up and is out of
-  scope here.
+- **The decor guide launches with no promotion above the fold.** It reaches readers through a
+  grid card, two TOC cross-links and the sitemap only, during the one season it is most likely to
+  perform. This is the accepted cost of not displacing the classroom guide in its peak week, and
+  promoting it later is a one-line change.
+- **"Back-to-school favorite" is an unmeasured claim.** Web Analytics is not enabled, so neither
+  the label nor any future decision about which teacher guide to promote can be checked against
+  traffic. Enabling it is the obvious follow-up and is out of scope here.
 - **Fire-code and mounting tips.** The wall-coverage cap and the clamp-mount requirement are the
   two tips on the decor page that prevent an unusable purchase, and both are easy to lose to
   editing for brevity.

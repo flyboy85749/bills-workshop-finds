@@ -2,14 +2,14 @@ export const retroClassroomDecor = [
   {
     category: "walls & charts",
     name: "Vintage pull-down map reproduction",
-    query: "vintage pull down world map wall hanging",
+    query: "vintage style pull down world map reproduction wall hanging",
     reason: "One large map does more for a bare cinderblock wall than a dozen small posters, and it is the rare decorative object children will actually walk up to and study.",
     tip: "Genuine mid-century maps still show the USSR, Yugoslavia and Rhodesia. That is charming above a bookshelf and confusing above a reading table, so buy a reproduction for a wall children read from and save an original for a wall they only look at."
   },
   {
     category: "walls & charts",
     name: "Retro science and botanical charts",
-    query: "vintage science chart poster set botanical anatomy",
+    query: "vintage science chart poster set botanical",
     reason: "Reproduction pull-down charts carry the warmth of an old schoolroom while still being about something, which is what separates them from generic wall filler.",
     tip: "Check whether the set ships rolled or folded. Folded prints arrive with creases across the middle that never fully flatten, and a creased chart looks cheap on a wall it is meant to anchor."
   },
@@ -32,7 +32,7 @@ export const retroClassroomDecor = [
     name: "Wooden schoolhouse-style sign",
     query: "wooden schoolhouse sign vintage classroom wall decor",
     reason: "A single wooden sign by the door names the room and does the same job as a laminated printout, without looking like a laminated printout.",
-    tip: "Check the weight against the hanging hardware. Classroom walls are usually cinderblock or tile over plaster, so a heavy sign needs adhesive strips rated well above its weight, or a hook the custodian installs. Screws are rarely yours to place."
+    tip: "Check the weight against the wall before the wall against the sign. Classroom walls are usually cinderblock or tile over plaster, and adhesive mounting strips are not rated for rough masonry no matter what weight the packet claims, so anything heavy needs a hook the custodian installs. Screws are rarely yours to place. Keep the adhesive route for a light sign on a smooth painted surface."
   },
   {
     category: "signage & letters",

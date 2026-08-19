@@ -63,14 +63,16 @@ the stationery audience (see "Home page" below). The partial extraction contempl
 
 6. **The hero button keeps its target and gets a corrected label.** It continues to point at
    `/elementary-classroom-essentials`, but the label moves from "Read the newest guide" to
-   "Back-to-school favorite". The old label was already wrong — that guide stopped being the
-   newest two guides ago — so this fixes a stale claim rather than redirecting traffic.
+   "See the 15 classroom essentials". The old label was already wrong — that guide stopped being
+   the newest two guides ago — so this fixes a stale claim rather than redirecting traffic.
 
-   The word "favorite" is not backed by measurement, and that is recorded here rather than
-   implied. Vercel Web Analytics is not enabled on the project (`get_web_analytics` returns
-   `404 Web Analytics not found`), so no traffic data was available. The claim rests on the
-   classroom guide having held the featured slot since launch, not on data. Enabling Web
-   Analytics is the obvious follow-up and is out of scope here.
+   The label went through one revision. It was first changed to "Back-to-school favorite", which
+   fixed the stale claim but introduced two new problems: it asserted a popularity ranking with no
+   data behind it (Vercel Web Analytics is not enabled on the project — `get_web_analytics`
+   returns `404 Web Analytics not found`), and it carried no verb, so the link no longer said what
+   it did when read out of context in a screen-reader link list. The final wording is verb-led,
+   describes its destination, and claims nothing that cannot be checked. Enabling Web Analytics
+   remains the obvious follow-up and is out of scope here.
 
 7. **No "Writing & Stationery" category card.** `.category-grid` is `repeat(3, 1fr)`
    (`styles.css:258`) and currently holds a clean six. A seventh would leave a single orphaned
@@ -104,6 +106,15 @@ Two further near-misses were avoided by specification rather than exclusion:
 This is a content constraint, not a build-enforced one. `verify-build` compares the sorted set of
 Amazon queries per guide and only catches a wholesale collection collision, not two or three
 shared items. Manual review is required on every future teacher guide.
+
+Reviewed after implementation: the separation holds at product and query level — no duplicate
+queries anywhere on the site, and the only token the two teacher guides share is the word
+"classroom". It is thinner at the level of intent. Three decor items argue from function rather
+than appearance in their `reason` copy: the library pockets (a checkout system), the crank pencil
+sharpener (durability versus electric) and the reading rug (seating). None duplicates a classroom
+essentials product, but the drift the risks section warns about starts at 3/15 rather than 0/15,
+so the next teacher guide needs a manual item-by-item diff against both existing ones rather than
+a query check alone.
 
 ## Design
 
@@ -224,9 +235,9 @@ The existing length assertion fails the build if either entry is forgotten.
 
 Two changes, plus one explicit non-change.
 
-**Hero button label.** The label moves from "Read the newest guide" to "Back-to-school favorite".
-The `href` does not change — it stays on `/elementary-classroom-essentials`. Decision 6 records
-why the old label was already wrong and what "favorite" does and does not rest on.
+**Hero button label.** The label moves from "Read the newest guide" to "See the 15 classroom
+essentials". The `href` does not change — it stays on `/elementary-classroom-essentials`.
+Decision 6 records why the old label was wrong and why the first replacement was revised.
 
 **Featured slot.** No change. The classroom essentials guide keeps it (decision 5).
 
@@ -267,9 +278,13 @@ are absorbed by swapping links rather than lengthening any list:
 | classroom essentials | **retro classroom decor** (replaces first apartment tools) · dog lover gifts |
 | holiday gifts | dog lover gifts · **pen pal starter kit** (replaces student pilots) |
 
-Neither dropped link orphans its target: `first-apartment-tools` keeps its inbound link from the
-classroom guide's own reciprocal entry in the first-apartment TOC, and `student-pilot-gifts` keeps
-its inbound link from the travel essentials TOC.
+Neither dropped link orphans its target, but the two cases are not equally strong.
+`student-pilot-gifts` keeps a genuine inbound TOC cross-link from the travel essentials guide.
+`first-apartment-tools` does not: after this swap its only editorial inbound links are an inline
+body link in the holiday gifts guide and its home page card. The first-apartment TOC's own entry
+pointing at the classroom guide is outbound and does not count. It is not orphaned, but it becomes
+the most weakly linked guide on the site, and the next guide added should route a TOC cross-link
+back to it.
 
 ### Footer (no change)
 
@@ -288,13 +303,15 @@ Adds `https://finds.billsworkshopcompany.com/retro-classroom-decor` and
    once.
 2. `npm run verify` passes — `lint:html` clean across all thirteen pages, then verify-build
    reporting 9 guides, 135 cards, all anchor targets present, all nine product signatures distinct.
+   Note that `lint:html` globs the source pages, where the product grid containers are still empty,
+   so the 135 injected cards are never linted. `verify-build` is what checks the rendered output.
 3. Raw `dist/retro-classroom-decor.html` and `dist/pen-pal-starter-kit.html` contain the new
    product names, tips and tagged Amazon URLs — not an empty container.
 4. All nine guides' rendered grids differ from one another.
 5. Manual check that no decor item collides with a live classroom-essentials item, since
    `verify-build` only catches wholesale collection collisions.
 6. `npm run dev` serves both new guides with the correct grid, confirming dev/prod parity.
-7. Home page: hero button reads "Back-to-school favorite" and still resolves to
+7. Home page: hero button reads "See the 15 classroom essentials" and still resolves to
    `/elementary-classroom-essentials`; the classroom essentials guide still occupies the featured
    slot; the card grid shows eight cards and does not repeat the featured guide.
 8. Every guide's TOC carries exactly two cross-links plus "All guides"; every internal link
@@ -310,8 +327,8 @@ Adds `https://finds.billsworkshopcompany.com/retro-classroom-decor` and
   grid card, two TOC cross-links and the sitemap only, during the one season it is most likely to
   perform. This is the accepted cost of not displacing the classroom guide in its peak week, and
   promoting it later is a one-line change.
-- **"Back-to-school favorite" is an unmeasured claim.** Web Analytics is not enabled, so neither
-  the label nor any future decision about which teacher guide to promote can be checked against
+- **No traffic data behind any promotion decision.** Web Analytics is not enabled, so neither
+  the hero target nor any future decision about which teacher guide to promote can be checked against
   traffic. Enabling it is the obvious follow-up and is out of scope here.
 - **Fire-code and mounting tips.** The wall-coverage cap and the clamp-mount requirement are the
   two tips on the decor page that prevent an unusable purchase, and both are easy to lose to

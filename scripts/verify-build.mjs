@@ -8,7 +8,8 @@ const GUIDES = [
     file: "dist/flight-attendant-travel-essentials.html",
     cards: 15,
     anchors: [1, 3, 4, 6, 8, 11],
-    contains: "Compression packing cubes"
+    contains: "Compression packing cubes",
+    links: ["/adventure-travel-essentials", "/student-pilot-gifts"]
   },
   {
     file: "dist/flight-attendant-dog-gifts.html",
@@ -33,7 +34,8 @@ const GUIDES = [
     file: "dist/student-pilot-gifts.html",
     cards: 15,
     anchors: [1, 4, 7, 10, 13],
-    contains: "Non-polarized aviation sunglasses"
+    contains: "Non-polarized aviation sunglasses",
+    links: ["/flight-attendant-travel-essentials", "/adventure-travel-essentials"]
   },
   {
     file: "dist/first-apartment-tools.html",
@@ -68,6 +70,13 @@ const GUIDES = [
     anchors: [1, 4, 7, 10, 13],
     contains: "Starter fountain pen",
     links: ["/retro-classroom-decor", "/holiday-gifts"]
+  },
+  {
+    file: "dist/adventure-travel-essentials.html",
+    cards: 15,
+    anchors: [1, 4, 7, 10, 13],
+    contains: "Roll-top dry bag",
+    links: ["/flight-attendant-travel-essentials", "/student-pilot-gifts"]
   }
 ];
 
@@ -136,6 +145,21 @@ for (const [file, signature] of signatures) {
     failures.push(`${file}: renders the same products as ${twin} — the collections are crossed`);
   } else {
     seenSignature.set(signature, file);
+  }
+}
+
+const namesSeen = new Map();
+for (const [key, items] of Object.entries(collections)) {
+  for (const item of items) {
+    if (!namesSeen.has(item.name)) namesSeen.set(item.name, []);
+    namesSeen.get(item.name).push(key);
+  }
+}
+for (const [name, keys] of namesSeen) {
+  if (keys.length > 1) {
+    failures.push(
+      `product name "${name}" appears in ${keys.length} guides (${keys.join(", ")}) — rename one, or sanction the pair in its guide's spec and add it to an allowlist here`
+    );
   }
 }
 

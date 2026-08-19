@@ -58,6 +58,7 @@ export default defineConfig({
         holiday: "holiday-gifts.html",
         retroClassroom: "retro-classroom-decor.html",
         penPal: "pen-pal-starter-kit.html",
+        adventure: "adventure-travel-essentials.html",
         about: "about.html",
         disclosure: "affiliate-disclosure.html",
         privacy: "privacy.html"

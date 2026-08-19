@@ -14,6 +14,7 @@ A lightweight multi-page affiliate guide site intended for `finds.billsworkshopc
 - 15 Holiday Gifts, Grouped by Who You're Buying For guide
 - 15 Retro Classroom Decor Finds That Warm Up a Cold Room guide
 - The Ultimate Pen Pal Starter Kit: 15 Things Worth Owning guide
+- 15 Adventure Travel Essentials Worth Packing guide
 - About
 - Affiliate disclosure
 - Privacy policy
@@ -72,7 +73,8 @@ an entry to `GUIDES` in `scripts/verify-build.mjs`. The build fails if a registe
 never injected, so a half-wired guide cannot ship.
 
 A guide that builds and verifies is not yet reachable. Also link it in: add a card on the home
-page (featured guide or guide-card grid), add its extensionless path to `public/sitemap.xml`, and
+page (featured guide or guide-card grid), add its extensionless path to `public/sitemap.xml`, add it to the Pages list at the top of this
+file, and
 add TOC cross-links. The footer deliberately carries no per-guide links — it collapses to a single
 "All guides" link so it does not grow with the guide count. Each guide's TOC aside is capped at two
 cross-links plus "All guides", so adding a guide means swapping a link on the two nearest guides

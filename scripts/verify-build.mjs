@@ -52,6 +52,13 @@ const GUIDES = [
       "/elementary-classroom-essentials",
       "/first-apartment-tools"
     ]
+  },
+  {
+    file: "dist/retro-classroom-decor.html",
+    cards: 15,
+    anchors: [1, 4, 7, 10, 13],
+    contains: "Vintage pull-down map reproduction",
+    links: ["/elementary-classroom-essentials", "/pen-pal-starter-kit"]
   }
 ];
 

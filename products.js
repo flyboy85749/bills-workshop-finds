@@ -6,6 +6,7 @@ import { dogLoverGifts } from "./guides/dog-lover-gifts.js";
 import { studentPilotGifts } from "./guides/student-pilot-gifts.js";
 import { firstApartmentTools } from "./guides/first-apartment-tools.js";
 import { holidayGifts } from "./guides/holiday-gifts.js";
+import { retroClassroomDecor } from "./guides/retro-classroom-decor.js";
 
 export const collections = {
   "travel-essentials": travelEssentials,
@@ -14,7 +15,8 @@ export const collections = {
   "dog-lover-gifts": dogLoverGifts,
   "student-pilot-gifts": studentPilotGifts,
   "first-apartment-tools": firstApartmentTools,
-  "holiday-gifts": holidayGifts
+  "holiday-gifts": holidayGifts,
+  "retro-classroom-decor": retroClassroomDecor
 };
 
 function escapeHtml(value) {

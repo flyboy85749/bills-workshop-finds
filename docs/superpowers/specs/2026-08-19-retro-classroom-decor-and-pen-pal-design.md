@@ -105,6 +105,15 @@ This is a content constraint, not a build-enforced one. `verify-build` compares 
 Amazon queries per guide and only catches a wholesale collection collision, not two or three
 shared items. Manual review is required on every future teacher guide.
 
+Reviewed after implementation: the separation holds at product and query level — no duplicate
+queries anywhere on the site, and the only token the two teacher guides share is the word
+"classroom". It is thinner at the level of intent. Three decor items argue from function rather
+than appearance in their `reason` copy: the library pockets (a checkout system), the crank pencil
+sharpener (durability versus electric) and the reading rug (seating). None duplicates a classroom
+essentials product, but the drift the risks section warns about starts at 3/15 rather than 0/15,
+so the next teacher guide needs a manual item-by-item diff against both existing ones rather than
+a query check alone.
+
 ## Design
 
 ### `guides/retro-classroom-decor.js` (new)
@@ -267,9 +276,13 @@ are absorbed by swapping links rather than lengthening any list:
 | classroom essentials | **retro classroom decor** (replaces first apartment tools) · dog lover gifts |
 | holiday gifts | dog lover gifts · **pen pal starter kit** (replaces student pilots) |
 
-Neither dropped link orphans its target: `first-apartment-tools` keeps its inbound link from the
-classroom guide's own reciprocal entry in the first-apartment TOC, and `student-pilot-gifts` keeps
-its inbound link from the travel essentials TOC.
+Neither dropped link orphans its target, but the two cases are not equally strong.
+`student-pilot-gifts` keeps a genuine inbound TOC cross-link from the travel essentials guide.
+`first-apartment-tools` does not: after this swap its only editorial inbound links are an inline
+body link in the holiday gifts guide and its home page card. The first-apartment TOC's own entry
+pointing at the classroom guide is outbound and does not count. It is not orphaned, but it becomes
+the most weakly linked guide on the site, and the next guide added should route a TOC cross-link
+back to it.
 
 ### Footer (no change)
 
@@ -288,6 +301,8 @@ Adds `https://finds.billsworkshopcompany.com/retro-classroom-decor` and
    once.
 2. `npm run verify` passes — `lint:html` clean across all thirteen pages, then verify-build
    reporting 9 guides, 135 cards, all anchor targets present, all nine product signatures distinct.
+   Note that `lint:html` globs the source pages, where the product grid containers are still empty,
+   so the 135 injected cards are never linted. `verify-build` is what checks the rendered output.
 3. Raw `dist/retro-classroom-decor.html` and `dist/pen-pal-starter-kit.html` contain the new
    product names, tips and tagged Amazon URLs — not an empty container.
 4. All nine guides' rendered grids differ from one another.

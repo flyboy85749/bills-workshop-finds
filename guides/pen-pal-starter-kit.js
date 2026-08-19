@@ -32,7 +32,7 @@ export const penPalStarterKit = [
     name: "Bottled fountain pen ink",
     query: "fountain pen bottled ink",
     reason: "Bottled ink is where the hobby opens up. It costs less per page than cartridges, and it is the only way to write in a color that is recognizably yours.",
-    tip: "Only ink sold as fountain pen ink goes in a fountain pen. India ink, pigmented ink and calligraphy ink dry inside the feed and the pen is finished — this is not a difference in performance, it destroys the pen."
+    tip: "Only ink sold as fountain pen ink goes in a fountain pen. India ink and shellac-based calligraphy ink dry inside the feed and the pen is finished — this is not a difference in performance, it destroys the pen. Pigmented inks are the exception that proves the rule: a few are made for fountain pens and say so on the bottle, and the ones that do not say so are not worth the risk."
   },
   {
     category: "what you write with",
@@ -46,7 +46,7 @@ export const penPalStarterKit = [
     name: "Wax seal kit",
     query: "wax seal stamp kit sealing wax beads spoon",
     reason: "The seal is the part of a letter the recipient remembers, and a kit with a stamp, a melting spoon and loose wax beads is the entire setup for the price of a few greeting cards.",
-    tip: "A rigid seal makes the envelope non-machinable, so it needs the USPS non-machinable surcharge and hand-cancelling at the counter rather than a mailbox drop. Flexible glue-gun sealing wax survives sorting better than traditional brittle wax if you would rather not pay that every time."
+    tip: "A wax seal makes the envelope non-machinable, so it needs the USPS non-machinable surcharge and hand-cancelling at the counter rather than a mailbox drop — and the same applies to square envelopes, seal or no seal. Flexible glue-gun sealing wax survives the sorting machinery better than traditional brittle wax, but it does not change the surcharge."
   },
   {
     category: "sealing & sending",

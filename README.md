@@ -72,5 +72,8 @@ an entry to `GUIDES` in `scripts/verify-build.mjs`. The build fails if a registe
 never injected, so a half-wired guide cannot ship.
 
 A guide that builds and verifies is not yet reachable. Also link it in: add a card on the home
-page (featured guide or guide-card grid), add it to the footer links, add its extensionless path
-to `public/sitemap.xml`, and add a cross-link from each existing guide's TOC aside.
+page (featured guide or guide-card grid), add its extensionless path to `public/sitemap.xml`, and
+add TOC cross-links. The footer deliberately carries no per-guide links — it collapses to a single
+"All guides" link so it does not grow with the guide count. Each guide's TOC aside is capped at two
+cross-links plus "All guides", so adding a guide means swapping a link on the two nearest guides
+rather than appending to every guide's TOC.

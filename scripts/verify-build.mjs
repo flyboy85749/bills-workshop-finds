@@ -20,7 +20,8 @@ const GUIDES = [
     file: "dist/elementary-classroom-essentials.html",
     cards: 15,
     anchors: [1, 4, 7, 10, 13],
-    contains: "Rolling 10-drawer cart"
+    contains: "Rolling 10-drawer cart",
+    links: ["/retro-classroom-decor", "/dog-lover-gifts"]
   },
   {
     file: "dist/dog-lover-gifts.html",
@@ -50,7 +51,8 @@ const GUIDES = [
       "/flight-attendant-travel-essentials",
       "/student-pilot-gifts",
       "/elementary-classroom-essentials",
-      "/first-apartment-tools"
+      "/first-apartment-tools",
+      "/pen-pal-starter-kit"
     ]
   },
   {

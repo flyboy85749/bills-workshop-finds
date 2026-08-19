@@ -59,6 +59,13 @@ const GUIDES = [
     anchors: [1, 4, 7, 10, 13],
     contains: "Vintage pull-down map reproduction",
     links: ["/elementary-classroom-essentials", "/pen-pal-starter-kit"]
+  },
+  {
+    file: "dist/pen-pal-starter-kit.html",
+    cards: 15,
+    anchors: [1, 4, 7, 10, 13],
+    contains: "Starter fountain pen",
+    links: ["/retro-classroom-decor", "/holiday-gifts"]
   }
 ];
 

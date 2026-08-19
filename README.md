@@ -14,6 +14,7 @@ A lightweight multi-page affiliate guide site intended for `finds.billsworkshopc
 - 15 Holiday Gifts, Grouped by Who You're Buying For guide
 - 15 Retro Classroom Decor Finds That Warm Up a Cold Room guide
 - The Ultimate Pen Pal Starter Kit: 15 Things Worth Owning guide
+- 15 Adventure Travel Essentials Worth Packing guide
 - About
 - Affiliate disclosure
 - Privacy policy

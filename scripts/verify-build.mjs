@@ -8,7 +8,8 @@ const GUIDES = [
     file: "dist/flight-attendant-travel-essentials.html",
     cards: 15,
     anchors: [1, 3, 4, 6, 8, 11],
-    contains: "Compression packing cubes"
+    contains: "Compression packing cubes",
+    links: ["/adventure-travel-essentials", "/student-pilot-gifts"]
   },
   {
     file: "dist/flight-attendant-dog-gifts.html",

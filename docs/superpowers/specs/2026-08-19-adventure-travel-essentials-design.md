@@ -107,6 +107,36 @@ Two further near-misses were avoided by specification rather than exclusion:
 collision, not two or three shared items. Manual review remains required on every future travel
 guide, and this guide adds one named item to that watch list.
 
+### The collision check must cover every guide, not the nearest one
+
+Found during implementation review, and the reason this section now exists. The analysis above was
+written against `travel-essentials.js` alone, because that is the topically nearest guide. Item 13
+was originally named **"Rechargeable headlamp"**, which is a verbatim duplicate of a live item in
+`guides/first-apartment-tools.js` — a guide nobody thought to check, because an adventure packing
+list and an apartment tool kit are not topically adjacent.
+
+A site-wide scan confirmed it would have been the **only duplicated product name across all ten
+guides**, so it would have established a precedent rather than followed one. `verify-build` did not
+catch it and neither did the plan's own collision script, because both compare query strings and
+the two queries differed.
+
+Resolved by differentiating rather than removing — a headlamp genuinely belongs on both lists. The
+item is now **"Water-resistant rechargeable headlamp"** (query `water resistant rechargeable
+headlamp red mode ipx4`), distinguished on the axis this guide is actually about. The first
+apartment guide's dimmable one and the student pilot guide's red-lens one are untouched; the new
+guide is the one that differentiates itself.
+
+**The rule for the next guide:** diff the proposed item list against **all** existing guides, on
+**name** as well as on query, not just against the topically nearest one. The check is cheap:
+
+```bash
+node -e "const fs=require('fs');Promise.all(fs.readdirSync('guides').map(f=>import('./guides/'+f).then(m=>({f,items:Object.values(m)[0]})))).then(gs=>{const m=new Map();for(const g of gs)for(const i of g.items){if(!m.has(i.name))m.set(i.name,[]);m.get(i.name).push(g.f)}const d=[...m].filter(([,x])=>x.length>1);console.log(d.length?'DUPES: '+d.map(([n,x])=>n+' -> '+x.join(', ')).join(' | '):'no duplicate names')})"
+```
+
+This is not wired into `verify-build` deliberately: a duplicate name is sometimes the right answer
+(the sanctioned power bank pair differs by name but not by category), so it wants a human decision
+rather than a build failure.
+
 ## Design
 
 ### `guides/adventure-travel-essentials.js` (new)
@@ -120,7 +150,7 @@ category runs are contiguous and anchors land on 1, 4, 7, 10 and 13.
 | 4–6 | `the day pack` | packable daypack · filtered water bottle · rugged waterproof power bank |
 | 7–9 | `what you wear` | quick-dry water shoes · packable rain shell · blister prevention tape |
 | 10–12 | `skin, bugs & scrapes` | reef-safe mineral sunscreen stick · picaridin insect repellent · compact first-aid kit |
-| 13–15 | `the small things that save a day` | rechargeable headlamp · universal travel adapter · floating camera wrist strap |
+| 13–15 | `the small things that save a day` | water-resistant rechargeable headlamp · universal travel adapter · floating camera wrist strap |
 
 Six `tip` fields carry information the buyer cannot be expected to have. Three prevent a purchase
 that is wasted, destructive, or unsafe:
@@ -131,9 +161,12 @@ that is wasted, destructive, or unsafe:
 - **A filter is not a purifier.** Filters handle bacteria and protozoa; viruses need a purifier.
   In parts of Asia, Africa and Latin America the wrong choice is a stomach illness rather than a
   preference, and the two products look identical on a listing page.
-- **Airlines cap power banks at 100Wh in carry-on and prohibit them in checked baggage.** A bank
-  bought for its capacity can be confiscated at the gate. Applies to item 6 and is the reason its
-  tip names a watt-hour figure rather than a milliamp-hour one.
+- **Power banks fly in carry-on only, never in checked baggage, and watt-hours decide the rest.**
+  Up to 100Wh needs no permission, 100–160Wh needs the airline's approval, and above that is
+  refused. A bank bought for its capacity can be turned away at the gate. Applies to item 6 and is
+  the reason its tip names a watt-hour figure rather than a milliamp-hour one. An earlier draft of
+  this tip said airlines "cap" power banks at 100Wh, which overstated a hard limit; corrected
+  during review.
 - **Picaridin rather than DEET on this particular list.** Comparable effectiveness, and DEET
   degrades synthetics — sunglasses frames, watch straps, technical fabrics and dry-bag coatings,
   which is most of what this guide recommends. This is a compatibility argument specific to the

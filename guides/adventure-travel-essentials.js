@@ -39,7 +39,7 @@ export const adventureTravelEssentials = [
     name: "Rugged waterproof power bank",
     query: "rugged waterproof power bank ip67",
     reason: "A phone running navigation, photos and translation in the heat is flat by mid-afternoon, and on this kind of day the bank is in the same wet, dusty, dropped bag as everything else.",
-    tip: "Airlines cap power banks at 100 watt-hours in carry-on and prohibit them in checked baggage entirely. Listings advertise milliamp-hours, so convert: a 20,000 mAh bank at 3.7V is about 74Wh and is fine. Look for a stated IP67 rating rather than the word rugged in the title."
+    tip: "Airlines take power banks in carry-on only, never in checked baggage. Up to 100 watt-hours needs no permission; 100 to 160Wh needs the airline's approval; above that is refused. Listings advertise milliamp-hours, so convert: a 20,000 mAh bank at 3.7V is about 74Wh and is fine. Look for a stated IP67 rating rather than the word rugged in the title."
   },
   {
     category: "what you wear",
@@ -85,10 +85,10 @@ export const adventureTravelEssentials = [
   },
   {
     category: "the small things that save a day",
-    name: "Rechargeable headlamp",
-    query: "rechargeable headlamp red light lightweight",
-    reason: "Sunrise starts, cave floors, power cuts and finding your things in a shared room all want light, and every one of them wants both your hands free.",
-    tip: "Get one with a red-light mode. It preserves night vision on a pre-dawn hike, and in a dorm or a shared tent it is the difference between finding your bag and waking everyone in the room."
+    name: "Water-resistant rechargeable headlamp",
+    query: "water resistant rechargeable headlamp red mode ipx4",
+    reason: "Sunrise starts, cave floors and finding your things in a shared room all want light, and every one of them wants both your hands free.",
+    tip: "Get one with a red-light mode and a stated IPX rating. Red preserves night vision on a pre-dawn hike, and in a dorm or a shared tent it is the difference between finding your bag and waking everyone in the room. A headlamp on this list will be rained on, so a bare \"water-resistant\" claim with no IPX number behind it is not one."
   },
   {
     category: "the small things that save a day",

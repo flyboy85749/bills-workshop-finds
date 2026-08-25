@@ -9,6 +9,8 @@ import { holidayGifts } from "./guides/holiday-gifts.js";
 import { retroClassroomDecor } from "./guides/retro-classroom-decor.js";
 import { penPalStarterKit } from "./guides/pen-pal-starter-kit.js";
 import { adventureTravelEssentials } from "./guides/adventure-travel-essentials.js";
+import { cozyFallFinds } from "./guides/cozy-fall-finds.js";
+import { whimsicalKitchenFinds } from "./guides/whimsical-kitchen-finds.js";
 
 export const collections = {
   "travel-essentials": travelEssentials,
@@ -20,7 +22,9 @@ export const collections = {
   "holiday-gifts": holidayGifts,
   "retro-classroom-decor": retroClassroomDecor,
   "pen-pal-starter-kit": penPalStarterKit,
-  "adventure-travel-essentials": adventureTravelEssentials
+  "adventure-travel-essentials": adventureTravelEssentials,
+  "cozy-fall-finds": cozyFallFinds,
+  "whimsical-kitchen-finds": whimsicalKitchenFinds
 };
 
 function escapeHtml(value) {
@@ -32,9 +36,13 @@ function escapeHtml(value) {
     .replace(/'/g, "&#39;");
 }
 
-export function amazonUrl(query) {
+// Amazon's price facet is expressed in cents on the rh (refinement) parameter:
+// p_36:-4000 means "no lower bound, at most $40.00". Guides that make a price
+// claim in their title set maxPrice per item so the link honours the claim.
+export function amazonUrl(query, maxPrice) {
   const url = new URL("https://www.amazon.com/s");
   url.searchParams.set("k", query);
+  if (maxPrice) url.searchParams.set("rh", `p_36:-${Math.round(maxPrice * 100)}`);
   if (SITE.amazonTag) url.searchParams.set("tag", SITE.amazonTag);
   return url.toString();
 }
@@ -52,7 +60,7 @@ export function renderProductGrid(key) {
       <h3>${escapeHtml(item.name)}</h3>
       <p>${escapeHtml(item.reason)}</p>
       <p class="product-tip"><strong>What to look for:</strong> ${escapeHtml(item.tip)}</p>
-      <a class="button button-primary" href="${escapeHtml(amazonUrl(item.query))}" target="_blank" rel="sponsored nofollow noopener" aria-label="See ${escapeHtml(item.name)} options on Amazon">See options on Amazon <span aria-hidden="true">↗</span></a>
+      <a class="button button-primary" href="${escapeHtml(amazonUrl(item.query, item.maxPrice))}" target="_blank" rel="sponsored nofollow noopener" aria-label="See ${escapeHtml(item.name)} options on Amazon">See options on Amazon <span aria-hidden="true">↗</span></a>
     </article>
   `.trim()).join("");
 }

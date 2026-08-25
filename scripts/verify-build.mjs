@@ -77,6 +77,23 @@ const GUIDES = [
     anchors: [1, 4, 7, 10, 13],
     contains: "Roll-top dry bag",
     links: ["/flight-attendant-travel-essentials", "/student-pilot-gifts"]
+  },
+  {
+    file: "dist/cozy-fall-finds.html",
+    cards: 10,
+    anchors: [1, 4, 7, 9],
+    contains: "Chunky knit throw blanket",
+    links: ["/holiday-gifts", "/first-apartment-tools"],
+    // The title promises "Under $40", so every link must carry Amazon's
+    // price ceiling. Dropping a maxPrice would otherwise fail silently.
+    pricedCards: { max: 40, count: 10 }
+  },
+  {
+    file: "dist/whimsical-kitchen-finds.html",
+    cards: 7,
+    anchors: [1, 4, 6],
+    contains: "Nesting-doll measuring cups",
+    links: ["/first-apartment-tools", "/cozy-fall-finds"]
   }
 ];
 
@@ -121,6 +138,15 @@ for (const guide of GUIDES) {
 
   if (guide.contains && !html.includes(guide.contains)) {
     fail(`expected to find "${guide.contains}" but it is missing`);
+  }
+
+  if (guide.pricedCards) {
+    const { max, count: expected } = guide.pricedCards;
+    // renderProductGrid HTML-escapes the URL, so & arrives as &amp;.
+    const priced = count(`rh=p_36%3A-${max * 100}&amp;`);
+    if (priced !== expected) {
+      fail(`expected ${expected} links capped at $${max}, found ${priced}`);
+    }
   }
 
   for (const href of guide.links ?? []) {

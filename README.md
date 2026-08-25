@@ -15,6 +15,8 @@ A lightweight multi-page affiliate guide site intended for `finds.billsworkshopc
 - 15 Retro Classroom Decor Finds That Warm Up a Cold Room guide
 - The Ultimate Pen Pal Starter Kit: 15 Things Worth Owning guide
 - 15 Adventure Travel Essentials Worth Packing guide
+- 10 Cozy Amazon Fall Finds Under $40 guide
+- 7 Whimsical Amazon Kitchen Finds guide
 - About
 - Affiliate disclosure
 - Privacy policy

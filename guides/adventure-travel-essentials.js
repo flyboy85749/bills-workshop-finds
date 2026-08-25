@@ -4,7 +4,7 @@ export const adventureTravelEssentials = [
     name: "Roll-top dry bag",
     query: "roll top dry bag waterproof 10l 20l",
     reason: "Everything on an active day ends up in a boat, under a waterfall, or in the bottom of a bag with a wet swimsuit, and one dry bag is what separates a working phone and passport from a ruined pair of both.",
-    tip: "Roll the top down three times before clipping it, not once. A single fold looks closed and is not, and it is the most common reason a dry bag leaks. A 10 litre covers a day out; 20 litres carries clothes through a boat transfer."
+    tip: "Roll the top down three times before clipping it, not once. A single fold looks closed and is not, and it is the most common reason a dry bag leaks. A 10 liter covers a day out; 20 liters carries clothes through a boat transfer."
   },
   {
     category: "keeping gear dry",
@@ -45,7 +45,7 @@ export const adventureTravelEssentials = [
     category: "what you wear",
     name: "Quick-dry water shoes",
     query: "quick dry water shoes drainage men women",
-    reason: "Volcanic rock, boat ladders, river crossings and wet tile all punish bare feet and ruin trainers, and a shoe that drains is the one thing that handles all four.",
+    reason: "Volcanic rock, boat ladders, river crossings and wet tile all punish bare feet and ruin sneakers, and a shoe that drains is the one thing that handles all four.",
     tip: "Check that the sole has actual drainage ports rather than just a mesh upper. A shoe that holds water is heavier for the rest of the afternoon and produces exactly the blisters it was bought to prevent."
   },
   {
@@ -53,14 +53,14 @@ export const adventureTravelEssentials = [
     name: "Packable rain shell",
     query: "packable rain jacket lightweight waterproof",
     reason: "Tropical and mountain weather arrives without warning and a booked tour does not stop for it, so the choice is a shell in the daypack or a wet afternoon.",
-    tip: "Waterproof and water-resistant are different products. Look for a hydrostatic head stated in millimetres — around 10,000mm holds up to sustained rain, while water-resistant means a shower. Taped seams matter as much as the fabric rating."
+    tip: "Waterproof and water-resistant are different products. Look for a hydrostatic head stated in millimeters — around 10,000mm holds up to sustained rain, while water-resistant means a shower. Taped seams matter as much as the fabric rating."
   },
   {
     category: "what you wear",
     name: "Blister prevention tape",
     query: "blister prevention tape hiking leukotape",
     reason: "The most common thing that ends an active day early is a blister, and it costs almost nothing to prevent and most of a day to recover from.",
-    tip: "Apply it before the walk, on the spots that always go, rather than after something starts hurting. Rigid zinc-oxide tape stays put through water and sweat; moleskin and fabric plasters slide off once wet, which is precisely when they are needed."
+    tip: "Apply it before the walk, on the spots that always go, rather than after something starts hurting. Rigid zinc-oxide tape stays put through water and sweat; moleskin and fabric bandages slide off once wet, which is precisely when they are needed."
   },
   {
     category: "skin, bugs & scrapes",
@@ -81,7 +81,7 @@ export const adventureTravelEssentials = [
     name: "Compact travel first-aid kit",
     query: "compact travel first aid kit waterproof",
     reason: "Scrapes, reef cuts and small burns are routine on an active trip, and a pharmacy is rarely anywhere near the thing that caused them.",
-    tip: "Buy the kit for its case and restock it yourself. The bundled contents are usually plasters and little else, so add blister tape, antiseptic, rehydration salts and anything you personally take. Check the case actually seals if it is going into a wet bag."
+    tip: "Buy the kit for its case and restock it yourself. The bundled contents are usually bandages and little else, so add blister tape, antiseptic, rehydration salts and anything you personally take. Check the case actually seals if it is going into a wet bag."
   },
   {
     category: "the small things that save a day",

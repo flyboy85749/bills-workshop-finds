@@ -4,7 +4,7 @@ export const whimsicalKitchenFinds = [
     name: "Nesting-doll measuring cups",
     query: "nesting measuring cups matryoshka stacking set",
     reason: "Measuring cups live in a drawer looking like nothing, and a set that stacks into a single painted figure is the rare novelty that takes up less space than the thing it replaced.",
-    tip: "Check that the measurements are moulded or stamped into the cup rather than printed on the outside. Printed markings come off in a dishwasher within a few months and leave you with a decorative object you can no longer measure with. Confirm the set covers quarter through full cup — several of these skip a size to make the nesting work."
+    tip: "Check that the measurements are molded or stamped into the cup rather than printed on the outside. Printed markings come off in a dishwasher within a few months and leave you with a decorative object you can no longer measure with. Confirm the set covers quarter through full cup — several of these skip a size to make the nesting work."
   },
   {
     category: "whimsy you'd use daily",
@@ -46,6 +46,6 @@ export const whimsicalKitchenFinds = [
     name: "Sculptural cast bottle opener",
     query: "cast iron brass bottle opener sculptural novelty",
     reason: "A bottle opener is lost the moment it goes in a drawer, and one heavy enough to sit on the counter as an object is one you can always find.",
-    tip: "Weight is the whole quality signal here. Solid cast brass or iron holds up indefinitely; the same shapes exist as zinc alloy with a brass-coloured plating, which flakes at the lip within a year and is noticeably lighter. If the listing does not state the metal and the weight, it is the plated version."
+    tip: "Weight is the whole quality signal here. Solid cast brass or iron holds up indefinitely; the same shapes exist as zinc alloy with a brass-colored plating, which flakes at the lip within a year and is noticeably lighter. If the listing does not state the metal and the weight, it is the plated version."
   }
 ];

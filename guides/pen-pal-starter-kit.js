@@ -38,7 +38,7 @@ export const penPalStarterKit = [
     category: "what you write with",
     name: "Archival fine-tip rollerballs",
     query: "archival ink fine tip rollerball pens black",
-    reason: "Not every surface takes fountain ink. Envelopes, card stock and anything travelling through weather need a pen that will not smear, and archival ink is what keeps an address legible on arrival.",
+    reason: "Not every surface takes fountain ink. Envelopes, card stock and anything traveling through weather need a pen that will not smear, and archival ink is what keeps an address legible on arrival.",
     tip: "Look for pigment-based archival ink described as waterproof and fade-resistant. Standard gel ink runs if the envelope gets wet, which is exactly the moment the address matters most."
   },
   {
@@ -46,7 +46,7 @@ export const penPalStarterKit = [
     name: "Wax seal kit",
     query: "wax seal stamp kit sealing wax beads spoon",
     reason: "The seal is the part of a letter the recipient remembers, and a kit with a stamp, a melting spoon and loose wax beads is the entire setup for the price of a few greeting cards.",
-    tip: "A wax seal makes the envelope non-machinable, so it needs the USPS non-machinable surcharge and hand-cancelling at the counter rather than a mailbox drop — and the same applies to square envelopes, seal or no seal. Flexible glue-gun sealing wax survives the sorting machinery better than traditional brittle wax, but it does not change the surcharge."
+    tip: "A wax seal makes the envelope non-machinable, so it needs the USPS non-machinable surcharge and hand-canceling at the counter rather than a mailbox drop — and the same applies to square envelopes, seal or no seal. Flexible glue-gun sealing wax survives the sorting machinery better than traditional brittle wax, but it does not change the surcharge."
   },
   {
     category: "sealing & sending",

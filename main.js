@@ -1,4 +1,8 @@
+import { inject } from '@vercel/analytics';
 import { SITE } from "./site.js";
+
+// Initialize Vercel Web Analytics
+inject();
 
 function hydrateLinks() {
   document.querySelectorAll("[data-etsy-link]").forEach(link => link.href = SITE.etsyShop);

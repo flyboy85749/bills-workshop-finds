@@ -150,7 +150,21 @@ Self-hosted variable woff2 subsets in `public/fonts/`:
 - **Fraunces** — display serif for `h1`–`h3`, replacing Georgia
 - **Inter** — body, finally actually loaded
 
-Self-hosted rather than linked from Google Fonts: no third-party origin to reconcile with the security headers in `vercel.json`, and one fewer connection to open. `font-display: swap`, with both faces preloaded in each page head. Budget: under 80KB combined. Georgia and the current system stack remain as fallbacks, so a failed font load degrades to exactly today's rendering.
+Self-hosted rather than linked from Google Fonts: no third-party origin to reconcile with the security headers in `vercel.json`, and one fewer connection to open. `font-display: swap`, with both faces preloaded in each page head. Georgia and the current system stack remain as fallbacks, so a failed font load degrades to exactly today's rendering.
+
+**Weight budget, measured rather than estimated** (latin subset, variable woff2):
+
+| Face | Axis request | Bytes |
+|---|---|---|
+| Inter | `wght@400..800` | 48,256 |
+| Fraunces | `wght@600..800` | 36,620 |
+| | **Total** | **84,876 (≈83 KiB)** |
+
+Fraunces must be requested **without its `opsz` axis**. Including it returns a 67,304-byte file; dropping it and narrowing weight to 600–800 costs 36,620 — a 45% saving for axes this design never varies, since heading sizes are fixed by `clamp()` rather than driven by optical size. Inter's latin variable subset is 48,256 bytes at any requested range, so narrowing it buys nothing; requesting discrete weights (`400;700`) instead returns two static files totalling 96,512 and is strictly worse.
+
+This replaces the "under 80KB" figure carried in the first draft of this spec, which was an estimate written before the files were measured. The real budget is **under 90KB combined**.
+
+Consequence for the retune: with Fraunces declared `font-weight: 600 800` and Inter `400 800`, the three rules currently asking for `font-weight: 850` (`.button`) and `900` (`.eyebrow`, `.board-stamp`) clamp silently to 800. They are normalized to 800 so the stylesheet states what actually renders.
 
 ### Palette
 

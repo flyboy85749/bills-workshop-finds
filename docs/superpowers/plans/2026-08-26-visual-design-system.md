@@ -690,22 +690,24 @@ Apply the identical change to `student-pilot-gifts.html`, using `data-guide-art=
 
 - [ ] **Step 8: Place the two badge markers**
 
-On `index.html`, inside the `<article class="guide-card">` for each of the two guides, insert the marker as the **first** child, above the `<p class="eyebrow">`:
+On `index.html`, inside the `<article class="guide-card">` for each of the two guides, insert the marker **directly above the `<a class="button">`**, after the description paragraph:
 
 ```html
-            <article class="guide-card">
+              </p>
               <div data-guide-badge="cozy-fall-finds"></div>
-              <p class="eyebrow">Seasonal finds</p>
-              <h3>10 Cozy Fall Finds Under $40</h3>
+              <a class="button button-secondary" href="/cozy-fall-finds"
+                >Read the guide <span aria-hidden="true">→</span></a
+              >
 ```
 
 and:
 
 ```html
-            <article class="guide-card">
+              </p>
               <div data-guide-badge="student-pilot-gifts"></div>
-              <p class="eyebrow">Student pilots</p>
-              <h3>15 Gifts for Student Pilots</h3>
+              <a class="button button-secondary" href="/student-pilot-gifts"
+                >Read the guide <span aria-hidden="true">→</span></a
+              >
 ```
 
 - [ ] **Step 9: Build and verify**
@@ -1312,7 +1314,7 @@ using that guide's own two values from the table above. `no-inline-style` is swi
 
 - [ ] **Step 4: Place ten badge markers**
 
-Add `<div data-guide-badge="<slug>"></div>` as the first child of each remaining `.guide-card` in `index.html`, matching Task 3, Step 8. All twelve cards must end up with exactly one.
+Add `<div data-guide-badge="<slug>"></div>` to each remaining `.guide-card` in `index.html`, placed **directly above that card's `<a class="button">`**, after its description paragraph — matching Task 3, Step 8. All twelve cards must end up with exactly one, in that same slot.
 
 - [ ] **Step 5: Swap the featured visual**
 

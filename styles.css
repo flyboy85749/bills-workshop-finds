@@ -285,13 +285,17 @@ p { margin-top: 0; }
   background: rgba(255,255,255,.66);
 }
 .guide-card p { color: var(--muted); }
-.guide-card .button { margin-top: auto; align-self: flex-start; }
+.guide-card .button { align-self: flex-start; }
 
 .guide-badge {
   color: var(--accent);
-  margin: -1.7rem -1.7rem 1.2rem;
+  /* auto top margin pushes the art and the button below it to the card's
+     foot, so both line up across a row of cards with different text lengths.
+     The negative side margins cancel .guide-card's 1.7rem padding so the art
+     bleeds to the card edges while the copy stays inset. */
+  margin: auto -1.7rem 1.2rem;
   background: var(--accent-soft);
-  border-bottom: 1px solid rgba(16, 42, 67, .12);
+  border-block: 1px solid rgba(16, 42, 67, .12);
   line-height: 0;
   overflow: hidden;
 }

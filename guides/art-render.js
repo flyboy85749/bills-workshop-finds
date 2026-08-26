@@ -1,4 +1,4 @@
-import { guideArt } from "./art.js";
+import { guideArt, homeArt } from "./art.js";
 
 function lookup(slug) {
   const art = guideArt[slug];
@@ -23,4 +23,9 @@ export function renderGuideScene(slug) {
 export function renderGuideBadge(slug) {
   const art = lookup(slug);
   return `<div class="guide-badge" aria-hidden="true" style="--accent: ${art.accent}; --accent-soft: ${art.accentSoft}"><svg viewBox="0 0 480 320" xmlns="http://www.w3.org/2000/svg" focusable="false" preserveAspectRatio="xMidYMid meet">${art.badge}</svg></div>`;
+}
+
+// The home hero. Decorative: the <h1> beside it already carries the message.
+export function renderHomeArt() {
+  return `<div class="home-art" aria-hidden="true"><svg viewBox="0 0 800 560" xmlns="http://www.w3.org/2000/svg" focusable="false" preserveAspectRatio="xMidYMid meet">${homeArt}</svg></div>`;
 }

@@ -126,8 +126,90 @@ export const guideArt = {
   }
 };
 
-// Filled in Task 5.
-export const homeArt = "";
+// The home hero. A navy pegboard with one motif per category, replacing the
+// travel board — the hero used to say "travel" while the site now spans dogs,
+// teachers, kitchens and tools.
+export const homeArt = `
+  <rect width="800" height="560" rx="34" fill="#071b2d"/>
+  <g fill="#dbeaf0" opacity=".13">
+    ${Array.from({ length: 8 }, (_, row) =>
+      Array.from({ length: 12 }, (_, col) =>
+        `<circle cx="${64 + col * 62}" cy="${70 + row * 62}" r="4"/>`
+      ).join("")
+    ).join("")}
+  </g>
+  <path d="M70 300 C 240 232, 380 366, 540 292 S 740 236, 760 268"
+        fill="none" stroke="#dbeaf0" stroke-width="2"
+        stroke-dasharray="11 10" opacity=".38"/>
+
+  <g transform="translate(78 92)">
+    <rect width="168" height="118" rx="16" fill="#fbf6ed"/>
+    <g transform="translate(30 26)" stroke="#102a43" stroke-width="2.5" fill="none">
+      <rect x="14" y="22" width="58" height="42" rx="7" fill="#e46f55"/>
+      <path d="M28 22 v -9 a 8 8 0 0 1 8 -8 h 14 a 8 8 0 0 1 8 8 v 9"/>
+      <path d="M72 44 h 30" stroke-dasharray="6 5"/>
+    </g>
+    <text x="30" y="102" font-family="Georgia, serif" font-size="15"
+          fill="#102a43">Travel</text>
+  </g>
+
+  <g transform="translate(288 66)">
+    <rect width="168" height="118" rx="16" fill="#fbf6ed"/>
+    <g transform="translate(44 30)" stroke="#102a43" stroke-width="2.5">
+      <ellipse cx="18" cy="34" rx="15" ry="19" fill="#c99c54"/>
+      <circle cx="4" cy="10" r="7.5" fill="#c99c54"/>
+      <circle cx="24" cy="4" r="7.5" fill="#c99c54"/>
+      <circle cx="44" cy="12" r="7.5" fill="#c99c54"/>
+      <circle cx="52" cy="32" r="7.5" fill="#c99c54"/>
+    </g>
+    <text x="30" y="102" font-family="Georgia, serif" font-size="15"
+          fill="#102a43">Dog lovers</text>
+  </g>
+
+  <g transform="translate(498 96)">
+    <rect width="168" height="118" rx="16" fill="#fbf6ed"/>
+    <g transform="translate(46 24)" stroke="#102a43" stroke-width="2.5" fill="none">
+      <rect x="0" y="20" width="70" height="46" rx="6" fill="#2f6f73"/>
+      <path d="M0 34 h 70"/>
+      <path d="M35 20 v -10 m -14 0 h 28"/>
+    </g>
+    <text x="30" y="102" font-family="Georgia, serif" font-size="15"
+          fill="#102a43">Gifts</text>
+  </g>
+
+  <g transform="translate(112 336)">
+    <rect width="168" height="118" rx="16" fill="#fbf6ed"/>
+    <g transform="translate(40 26)" stroke="#102a43" stroke-width="2.5" fill="none">
+      <rect x="0" y="6" width="82" height="54" rx="5" fill="#102a43"/>
+      <path d="M12 24 h 40 M12 38 h 26" stroke="#fbf6ed"/>
+      <path d="M0 60 h 82" stroke="#c99c54" stroke-width="4"/>
+    </g>
+    <text x="30" y="102" font-family="Georgia, serif" font-size="15"
+          fill="#102a43">Teachers</text>
+  </g>
+
+  <g transform="translate(322 362)">
+    <rect width="168" height="118" rx="16" fill="#fbf6ed"/>
+    <g transform="translate(50 22)" stroke="#102a43" stroke-width="2.5" fill="none">
+      <path d="M34 4 l 9 22 h 23 l -19 16 7 24 -20 -14 -20 14 7 -24 -19 -16 h 23 Z"
+            fill="#e46f55"/>
+    </g>
+    <text x="30" y="102" font-family="Georgia, serif" font-size="15"
+          fill="#102a43">Seasonal</text>
+  </g>
+
+  <g transform="translate(532 332)">
+    <rect width="168" height="118" rx="16" fill="#fbf6ed"/>
+    <g transform="translate(44 28)" stroke="#102a43" stroke-width="2.5" fill="none">
+      <path d="M6 50 L 44 12" stroke-width="8" stroke-linecap="round"/>
+      <path d="M42 6 l 18 18 -10 10 -18 -18 Z" fill="#c99c54"/>
+    </g>
+    <text x="30" y="102" font-family="Georgia, serif" font-size="15"
+          fill="#102a43">Workshop</text>
+  </g>
+
+  <text x="600" y="524" font-size="13" letter-spacing="3.4"
+        fill="#dbeaf0" font-weight="700">CURATED BY BILL</text>`;
 
 // Filled in Task 6.
 export const categoryArt = {};

@@ -1,7 +1,7 @@
 import { defineConfig } from "vite";
 import { collections, renderProductGrid } from "./products.js";
 import { guideArt } from "./guides/art.js";
-import { renderGuideScene, renderGuideBadge } from "./guides/art-render.js";
+import { renderGuideScene, renderGuideBadge, renderHomeArt } from "./guides/art-render.js";
 
 // The leading lookbehind guards against a prefixed attribute such as
 // data-x-data-product-grid="k" being mistaken for the real marker.
@@ -11,6 +11,7 @@ const markerPattern = attribute =>
 const GRID_PATTERN = markerPattern("data-product-grid");
 const SCENE_PATTERN = markerPattern("data-guide-art");
 const BADGE_PATTERN = markerPattern("data-guide-badge");
+const HOME_PATTERN = markerPattern("data-home-art");
 
 function prerenderProducts() {
   const injected = new Map();
@@ -44,7 +45,10 @@ function prerenderProducts() {
           .replace(BADGE_PATTERN, (_m, open, key, _ws, close) => {
             bump(badges, key);
             return open + renderGuideBadge(key) + close;
-          });
+          })
+          .replace(HOME_PATTERN, (_m, open, _key, _ws, close) =>
+            open + renderHomeArt() + close
+          );
       }
     },
     closeBundle() {

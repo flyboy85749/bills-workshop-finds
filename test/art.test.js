@@ -43,6 +43,16 @@ test("badge is decorative, never labelled", () => {
   assert.doesNotMatch(html, /aria-label=/);
 });
 
+test("a decorative scene is hidden instead of named", () => {
+  const html = renderGuideScene(SLUG, { decorative: true });
+  assert.match(html, /aria-hidden="true"/);
+  assert.doesNotMatch(html, /role="img"/);
+  assert.doesNotMatch(html, /aria-label=/);
+  // Still the same art and the same accent plumbing -- only the naming differs.
+  assert.ok(html.includes(guideArt[SLUG].accent), "accent not emitted");
+  assert.match(html, /class="guide-art"/);
+});
+
 test("labels are quote-safe, since they land in an HTML attribute", () => {
   for (const [slug, art] of Object.entries(guideArt)) {
     assert.doesNotMatch(art.label, /["<>&]/, `${slug}.label needs escaping`);

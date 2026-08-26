@@ -19,9 +19,18 @@ function lookup(slug) {
 // from the viewBox's own 8:5 ratio, so the two behave identically there;
 // object-fit could not do the cropping, since an inline SVG is not a
 // replaced element.
-export function renderGuideScene(slug) {
+//
+// decorative: true drops the name, for the home page's featured block. There
+// the scene is background art behind a numeral and a heading that already say
+// what the guide is, so announcing it would repeat them -- the same reason
+// renderGuideBadge is unconditionally hidden. On a guide page the scene is the
+// only thing carrying the motif, so it keeps role="img" and its label.
+export function renderGuideScene(slug, { decorative = false } = {}) {
   const art = lookup(slug);
-  return `<div class="guide-art" role="img" aria-label="${art.label}" style="--accent: ${art.accent}; --accent-soft: ${art.accentSoft}"><svg viewBox="0 0 800 500" xmlns="http://www.w3.org/2000/svg" focusable="false" preserveAspectRatio="xMidYMid slice">${art.scene}</svg></div>`;
+  const naming = decorative
+    ? `aria-hidden="true"`
+    : `role="img" aria-label="${art.label}"`;
+  return `<div class="guide-art" ${naming} style="--accent: ${art.accent}; --accent-soft: ${art.accentSoft}"><svg viewBox="0 0 800 500" xmlns="http://www.w3.org/2000/svg" focusable="false" preserveAspectRatio="xMidYMid slice">${art.scene}</svg></div>`;
 }
 
 // Home-page card art. Decorative: the card's own heading and link already name

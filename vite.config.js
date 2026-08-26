@@ -15,6 +15,7 @@ const markerPattern = attribute =>
 
 const GRID_PATTERN = markerPattern("data-product-grid");
 const SCENE_PATTERN = markerPattern("data-guide-art");
+const SCENE_DECORATIVE_PATTERN = markerPattern("data-guide-scene-decorative");
 const BADGE_PATTERN = markerPattern("data-guide-badge");
 const HOME_PATTERN = markerPattern("data-home-art");
 const ICON_PATTERN = markerPattern("data-category-icon");
@@ -48,6 +49,10 @@ function prerenderProducts() {
             bump(scenes, key);
             return open + renderGuideScene(key) + close;
           })
+          .replace(SCENE_DECORATIVE_PATTERN, (_m, open, key, _ws, close) => {
+            bump(scenes, key);
+            return open + renderGuideScene(key, { decorative: true }) + close;
+          })
           .replace(BADGE_PATTERN, (_m, open, key, _ws, close) => {
             bump(badges, key);
             return open + renderGuideBadge(key) + close;
@@ -70,23 +75,26 @@ function prerenderProducts() {
             : `collection "${key}" was injected ${count} times, expected exactly 1`
         );
 
-      // Scenes are checked "at least once" rather than "exactly once" because
-      // a later task reuses one guide's scene inside the home page's featured
-      // block, so a scene can legitimately appear twice. Badges stay
-      // "exactly once": a guide card appearing twice on the home page would
-      // be a real bug.
+      // Scenes are "at least once": the home page's featured block reuses one
+      // guide's scene, so a scene can legitimately appear twice. Badges are
+      // "at most once" for the mirror-image reason -- the guide that carries
+      // that featured scene needs no card badge, while the same guide showing
+      // as two cards is still a real bug.
+      //
+      // Neither bound proves a guide reached the home page, because this
+      // plugin only counts injections and cannot see which page each landed
+      // on. That completeness check lives in verify-build.mjs, which reads the
+      // built dist/index.html and asks per slug whether it is represented.
       for (const key of Object.keys(guideArt)) {
         if ((scenes.get(key) ?? 0) < 1) {
           problems.push(
-            `art "${key}" has a scene that was never injected — no page carries data-guide-art="${key}"`
+            `art "${key}" has a scene that was never injected — no page carries data-guide-art="${key}" or data-guide-scene-decorative="${key}"`
           );
         }
         const badgeCount = badges.get(key) ?? 0;
-        if (badgeCount !== 1) {
+        if (badgeCount > 1) {
           problems.push(
-            badgeCount === 0
-              ? `art "${key}" has a badge that was never injected — no page carries data-guide-badge="${key}"`
-              : `art "${key}" was injected as a badge ${badgeCount} times, expected exactly 1`
+            `art "${key}" was injected as a badge ${badgeCount} times, expected at most 1`
           );
         }
       }

@@ -179,11 +179,11 @@ export const guideArt = {
       </g>
       <g transform="translate(292 122) scale(.9)">
         <path d="M24 12 C 4 -14, 22 -46, 54 -42 C 82 -38, 84 -12, 56 -6"
-              fill="none" stroke="#102a43" stroke-width="2.5"/>
+              fill="none" stroke="#102a43" stroke-width="2.2"/>
         <rect x="0" y="0" width="152" height="104" rx="16"
-              fill="#fffdf8" stroke="#102a43" stroke-width="2.5"/>
+              fill="#fffdf8" stroke="#102a43" stroke-width="2.2"/>
         <circle cx="24" cy="24" r="8" fill="none"
-                stroke="#102a43" stroke-width="2.5"/>
+                stroke="#102a43" stroke-width="2.2"/>
         <path d="M30 58 h 96" stroke="currentColor" stroke-width="8"/>
         <path d="M30 80 h 62" stroke="currentColor" stroke-width="8"/>
       </g>`
@@ -223,20 +223,20 @@ export const guideArt = {
       </g>
       <g transform="translate(590 200) scale(.72)">
         <path d="M-26 -14 C -70 -22, -128 -14, -152 4 C -126 16, -66 18, -26 6 Z"
-              fill="#c99c54" stroke="#102a43" stroke-width="2"/>
+              fill="#c99c54" stroke="#102a43" stroke-width="2.8"/>
         <path d="M26 -14 C 70 -22, 128 -14, 152 4 C 126 16, 66 18, 26 6 Z"
-              fill="#c99c54" stroke="#102a43" stroke-width="2"/>
+              fill="#c99c54" stroke="#102a43" stroke-width="2.8"/>
         <path d="M-46 -8 v 16 M-70 -8 v 18 M-94 -4 v 16
                  M46 -8 v 16 M70 -8 v 18 M94 -4 v 16"
-              stroke="#102a43" stroke-width="2" opacity=".5"/>
+              stroke="#102a43" stroke-width="2.8" opacity=".5"/>
         <path d="M-26 -26 h 52 v 30 C 26 22, 6 32, 0 38 C -6 32, -26 22, -26 4 Z"
-              fill="currentColor" stroke="#102a43" stroke-width="2"/>
+              fill="currentColor" stroke="#102a43" stroke-width="2.8"/>
       </g>
       <g transform="translate(620 370) scale(.66)">
         <path d="M-34 -12 C -34 -32, -66 -32, -66 -12 C -84 -12, -84 12, -66 12
                  C -66 32, -34 32, -34 12 h 68 C 34 32, 66 32, 66 12
                  C 84 12, 84 -12, 66 -12 C 66 -32, 34 -32, 34 -12 Z"
-              fill="#fffdf8" stroke="#102a43" stroke-width="2"/>
+              fill="#fffdf8" stroke="#102a43" stroke-width="3"/>
       </g>`,
     badge: `
       <path d="M20 254 C 132 232, 212 160, 312 130 S 450 88, 468 66"
@@ -244,40 +244,40 @@ export const guideArt = {
             stroke-dasharray="9 8" opacity=".45"/>
       <g transform="translate(34 46) scale(.8)">
         <rect x="0" y="0" width="264" height="244" rx="12"
-              fill="#fffdf8" stroke="#102a43" stroke-width="3"/>
+              fill="#fffdf8" stroke="#102a43" stroke-width="2.5"/>
         <path d="M132 0 V 244 M0 122 H 264"
-              stroke="#102a43" stroke-width="3" opacity=".45"/>
+              stroke="#102a43" stroke-width="2.5" opacity=".45"/>
         <g transform="translate(132 96)">
           <path d="M-58 148 v -34 a 58 42 0 0 1 116 0 v 34 Z"
-                fill="currentColor" stroke="#102a43" stroke-width="3"/>
+                fill="currentColor" stroke="#102a43" stroke-width="2.5"/>
           <path d="M-38 6 C -72 12, -76 66, -52 88 C -36 100, -26 86, -30 66 Z"
-                fill="currentColor" stroke="#102a43" stroke-width="3"/>
+                fill="currentColor" stroke="#102a43" stroke-width="2.5"/>
           <path d="M38 6 C 72 12, 76 66, 52 88 C 36 100, 26 86, 30 66 Z"
-                fill="currentColor" stroke="#102a43" stroke-width="3"/>
+                fill="currentColor" stroke="#102a43" stroke-width="2.5"/>
           <ellipse cx="0" cy="30" rx="46" ry="42"
-                   fill="currentColor" stroke="#102a43" stroke-width="3"/>
+                   fill="currentColor" stroke="#102a43" stroke-width="2.5"/>
           <ellipse cx="0" cy="54" rx="19" ry="14"
-                   fill="#fffdf8" stroke="#102a43" stroke-width="3"/>
+                   fill="#fffdf8" stroke="#102a43" stroke-width="2.5"/>
           <circle cx="0" cy="44" r="7" fill="#102a43"/>
           <circle cx="-17" cy="22" r="5" fill="#102a43"/>
           <circle cx="17" cy="22" r="5" fill="#102a43"/>
         </g>
         <rect x="-16" y="244" width="296" height="18" rx="6"
-              fill="#c99c54" stroke="#102a43" stroke-width="3"/>
+              fill="#c99c54" stroke="#102a43" stroke-width="2.5"/>
       </g>
       <g transform="translate(362 176) scale(.6)">
         <path d="M-26 -14 C -70 -22, -128 -14, -152 4 C -126 16, -66 18, -26 6 Z"
-              fill="#c99c54" stroke="#102a43" stroke-width="3"/>
+              fill="#c99c54" stroke="#102a43" stroke-width="3.3"/>
         <path d="M26 -14 C 70 -22, 128 -14, 152 4 C 126 16, 66 18, 26 6 Z"
-              fill="#c99c54" stroke="#102a43" stroke-width="3"/>
+              fill="#c99c54" stroke="#102a43" stroke-width="3.3"/>
         <path d="M-26 -26 h 52 v 30 C 26 22, 6 32, 0 38 C -6 32, -26 22, -26 4 Z"
-              fill="currentColor" stroke="#102a43" stroke-width="3"/>
+              fill="currentColor" stroke="#102a43" stroke-width="3.3"/>
       </g>`
   },
 
   "elementary-classroom-essentials": {
-    accent: "#2f6f73",
-    accentSoft: "#dde9ea",
+    accent: "#3f6152",
+    accentSoft: "#dfe8e3",
     label: "A rolling classroom cart, a cup of pencils and a name tag",
     scene: `
       ${FRAME}
@@ -360,24 +360,24 @@ export const guideArt = {
       <g transform="translate(308 142) scale(.9)">
         <g transform="translate(16 -72) rotate(-8)">
           <path d="M0 0 L 8.5 -20 L 17 0 Z"
-                fill="#fffdf8" stroke="#102a43" stroke-width="3"/>
+                fill="#fffdf8" stroke="#102a43" stroke-width="2.2"/>
           <rect x="0" y="0" width="17" height="96"
-                fill="#c99c54" stroke="#102a43" stroke-width="3"/>
+                fill="#c99c54" stroke="#102a43" stroke-width="2.2"/>
         </g>
         <g transform="translate(42 -84)">
           <path d="M0 0 L 8.5 -20 L 17 0 Z"
-                fill="#fffdf8" stroke="#102a43" stroke-width="3"/>
+                fill="#fffdf8" stroke="#102a43" stroke-width="2.2"/>
           <rect x="0" y="0" width="17" height="108"
-                fill="currentColor" stroke="#102a43" stroke-width="3"/>
+                fill="currentColor" stroke="#102a43" stroke-width="2.2"/>
         </g>
         <g transform="translate(68 -74) rotate(9)">
           <path d="M0 0 L 8.5 -20 L 17 0 Z"
-                fill="#fffdf8" stroke="#102a43" stroke-width="3"/>
+                fill="#fffdf8" stroke="#102a43" stroke-width="2.2"/>
           <rect x="0" y="0" width="17" height="96"
-                fill="#c99c54" stroke="#102a43" stroke-width="3"/>
+                fill="#c99c54" stroke="#102a43" stroke-width="2.2"/>
         </g>
         <path d="M0 0 h 100 l -11 112 h -78 Z"
-              fill="#fffdf8" stroke="#102a43" stroke-width="3"/>
+              fill="#fffdf8" stroke="#102a43" stroke-width="2.2"/>
         <path d="M4 34 h 92" stroke="currentColor" stroke-width="10"/>
       </g>`
   },
@@ -430,7 +430,7 @@ export const guideArt = {
         <rect x="-11" y="-4" width="22" height="26" rx="6"
               fill="#c99c54" stroke="#102a43" stroke-width="2"/>
         <path d="M0 22 v 10 a 12 12 0 1 0 12 8"
-              fill="none" stroke="#102a43" stroke-width="3"/>
+              fill="none" stroke="#102a43" stroke-width="2"/>
       </g>
       <g transform="translate(470 336)">
         <path d="M0 0 C 0 74, 176 74, 176 0 Z"
@@ -445,7 +445,7 @@ export const guideArt = {
             fill="none" stroke="#102a43" stroke-width="2"
             stroke-dasharray="9 8" opacity=".45"/>
       <g transform="translate(66 214) rotate(-14)"
-         fill="currentColor" stroke="#102a43" stroke-width="3">
+         fill="currentColor" stroke="#102a43" stroke-width="2">
         <ellipse cx="0" cy="16" rx="27" ry="22"/>
         <circle cx="-25" cy="-12" r="10"/>
         <circle cx="-9" cy="-25" r="10"/>
@@ -453,7 +453,7 @@ export const guideArt = {
         <circle cx="26" cy="-11" r="10"/>
       </g>
       <g transform="translate(146 174) rotate(-4)"
-         fill="#c99c54" stroke="#102a43" stroke-width="3">
+         fill="#c99c54" stroke="#102a43" stroke-width="2">
         <ellipse cx="0" cy="16" rx="27" ry="22"/>
         <circle cx="-25" cy="-12" r="10"/>
         <circle cx="-9" cy="-25" r="10"/>
@@ -461,7 +461,7 @@ export const guideArt = {
         <circle cx="26" cy="-11" r="10"/>
       </g>
       <g transform="translate(226 136) rotate(6)"
-         fill="currentColor" stroke="#102a43" stroke-width="3">
+         fill="currentColor" stroke="#102a43" stroke-width="2">
         <ellipse cx="0" cy="16" rx="27" ry="22"/>
         <circle cx="-25" cy="-12" r="10"/>
         <circle cx="-9" cy="-25" r="10"/>
@@ -470,11 +470,11 @@ export const guideArt = {
       </g>
       <g transform="translate(292 158) scale(.9)">
         <path d="M0 0 C 0 74, 176 74, 176 0 Z"
-              fill="currentColor" stroke="#102a43" stroke-width="3"/>
+              fill="currentColor" stroke="#102a43" stroke-width="2.2"/>
         <path d="M10 26 C 46 50, 130 50, 166 26"
               fill="none" stroke="#c99c54" stroke-width="9"/>
         <ellipse cx="88" cy="0" rx="88" ry="19"
-                 fill="#fffdf8" stroke="#102a43" stroke-width="3"/>
+                 fill="#fffdf8" stroke="#102a43" stroke-width="2.2"/>
       </g>`
   },
 
@@ -527,25 +527,25 @@ export const guideArt = {
             stroke-dasharray="9 8" opacity=".45"/>
       <g transform="translate(150 56) rotate(-6) scale(.86)">
         <rect x="0" y="0" width="300" height="64" rx="10"
-              fill="currentColor" stroke="#102a43" stroke-width="3"/>
+              fill="currentColor" stroke="#102a43" stroke-width="2.3"/>
         <path d="M42 0 v 64 M258 0 v 64"
-              stroke="#102a43" stroke-width="3" opacity=".35"/>
+              stroke="#102a43" stroke-width="2.3" opacity=".35"/>
         <rect x="110" y="16" width="80" height="32" rx="16"
-              fill="#fffdf8" stroke="#102a43" stroke-width="3"/>
+              fill="#fffdf8" stroke="#102a43" stroke-width="2.3"/>
         <circle cx="150" cy="32" r="11"
-                fill="#c99c54" stroke="#102a43" stroke-width="3"/>
+                fill="#c99c54" stroke="#102a43" stroke-width="2.3"/>
       </g>
       <g transform="translate(60 262) rotate(-24) scale(.86)">
         <rect x="0" y="0" width="112" height="54" rx="20"
-              fill="currentColor" stroke="#102a43" stroke-width="3"/>
+              fill="currentColor" stroke="#102a43" stroke-width="2.3"/>
         <path d="M36 8 v 38 M64 8 v 38"
-              stroke="#102a43" stroke-width="3" opacity=".45"/>
+              stroke="#102a43" stroke-width="2.3" opacity=".45"/>
         <rect x="112" y="16" width="24" height="22"
-              fill="#c99c54" stroke="#102a43" stroke-width="3"/>
+              fill="#c99c54" stroke="#102a43" stroke-width="2.3"/>
         <rect x="136" y="21" width="108" height="12"
-              fill="#fffdf8" stroke="#102a43" stroke-width="3"/>
+              fill="#fffdf8" stroke="#102a43" stroke-width="2.3"/>
         <path d="M244 15 h 26 v 24 h -26 Z"
-              fill="#fffdf8" stroke="#102a43" stroke-width="3"/>
+              fill="#fffdf8" stroke="#102a43" stroke-width="2.3"/>
       </g>`
   },
 
@@ -563,14 +563,14 @@ export const guideArt = {
               fill="currentColor" stroke="#102a43" stroke-width="2"/>
         <path d="M105 118 v 158" stroke="#c99c54" stroke-width="16"/>
         <path d="M0 190 h 210" stroke="#c99c54" stroke-width="16"/>
-        <rect x="44" y="0" width="138" height="118" rx="8"
+        <rect x="36" y="0" width="138" height="118" rx="8"
               fill="#fffdf8" stroke="#102a43" stroke-width="2"/>
-        <path d="M113 0 v 118" stroke="currentColor" stroke-width="14"/>
-        <path d="M113 0 C 88 -12, 70 -36, 92 -44 C 110 -50, 112 -16, 113 0 Z"
+        <path d="M105 0 v 118" stroke="currentColor" stroke-width="14"/>
+        <path d="M105 0 C 80 -12, 62 -36, 84 -44 C 102 -50, 104 -16, 105 0 Z"
               fill="currentColor" stroke="#102a43" stroke-width="2"/>
-        <path d="M113 0 C 138 -12, 156 -36, 134 -44 C 116 -50, 114 -16, 113 0 Z"
+        <path d="M105 0 C 130 -12, 148 -36, 126 -44 C 108 -50, 106 -16, 105 0 Z"
               fill="currentColor" stroke="#102a43" stroke-width="2"/>
-        <circle cx="113" cy="-2" r="9"
+        <circle cx="105" cy="-2" r="9"
                 fill="#c99c54" stroke="#102a43" stroke-width="2"/>
       </g>
       <g transform="translate(570 200)">
@@ -593,24 +593,24 @@ export const guideArt = {
               fill="currentColor" stroke="#102a43" stroke-width="3"/>
         <path d="M105 118 v 158" stroke="#c99c54" stroke-width="16"/>
         <path d="M0 190 h 210" stroke="#c99c54" stroke-width="16"/>
-        <rect x="44" y="0" width="138" height="118" rx="8"
+        <rect x="36" y="0" width="138" height="118" rx="8"
               fill="#fffdf8" stroke="#102a43" stroke-width="3"/>
-        <path d="M113 0 v 118" stroke="currentColor" stroke-width="14"/>
-        <path d="M113 0 C 88 -12, 70 -36, 92 -44 C 110 -50, 112 -16, 113 0 Z"
+        <path d="M105 0 v 118" stroke="currentColor" stroke-width="14"/>
+        <path d="M105 0 C 80 -12, 62 -36, 84 -44 C 102 -50, 104 -16, 105 0 Z"
               fill="currentColor" stroke="#102a43" stroke-width="3"/>
-        <path d="M113 0 C 138 -12, 156 -36, 134 -44 C 116 -50, 114 -16, 113 0 Z"
+        <path d="M105 0 C 130 -12, 148 -36, 126 -44 C 108 -50, 106 -16, 105 0 Z"
               fill="currentColor" stroke="#102a43" stroke-width="3"/>
-        <circle cx="113" cy="-2" r="9"
+        <circle cx="105" cy="-2" r="9"
                 fill="#c99c54" stroke="#102a43" stroke-width="3"/>
       </g>
       <g transform="translate(250 110) scale(.94)">
         <path d="M20 40 C -12 18, -22 -30, 26 -54"
-              fill="none" stroke="#102a43" stroke-width="2.5"/>
+              fill="none" stroke="#102a43" stroke-width="2.1"/>
         <path d="M32 0 h 126 a 14 14 0 0 1 14 14 v 84 a 14 14 0 0 1 -14 14
                  h -126 L 0 56 Z"
-              fill="#fffdf8" stroke="#102a43" stroke-width="2.5"/>
+              fill="#fffdf8" stroke="#102a43" stroke-width="2.1"/>
         <circle cx="30" cy="56" r="8" fill="none"
-                stroke="#102a43" stroke-width="2.5"/>
+                stroke="#102a43" stroke-width="2.1"/>
         <path d="M58 42 h 92" stroke="currentColor" stroke-width="8"/>
         <path d="M58 70 h 60" stroke="currentColor" stroke-width="8"/>
       </g>`
@@ -673,18 +673,18 @@ export const guideArt = {
       </g>
       <g transform="translate(370 176)">
         <path d="M22 -64 C 40 -80, 64 -72, 62 -52 C 44 -42, 26 -50, 22 -64 Z"
-              fill="#2f6f73" stroke="#102a43" stroke-width="3"/>
+              fill="#2f6f73" stroke="#102a43" stroke-width="2"/>
         <path d="M0 -30 C 2 -48, 10 -60, 22 -64"
-              fill="none" stroke="#102a43" stroke-width="5"/>
+              fill="none" stroke="#102a43" stroke-width="4"/>
         <path d="M0 -30 C -34 -50, -70 -22, -62 20 C -56 56, -26 78, 0 60
                  C 26 78, 56 56, 62 20 C 70 -22, 34 -50, 0 -30 Z"
-              fill="currentColor" stroke="#102a43" stroke-width="3"/>
+              fill="currentColor" stroke="#102a43" stroke-width="2"/>
       </g>`
   },
 
   "pen-pal-starter-kit": {
-    accent: "#3f5f8f",
-    accentSoft: "#e0e6f0",
+    accent: "#6b4a2f",
+    accentSoft: "#f0e5d9",
     label: "An envelope, a fountain pen nib and a stamped wax seal",
     scene: `
       ${FRAME}
@@ -694,7 +694,7 @@ export const guideArt = {
       <g transform="translate(96 202)">
         <rect x="0" y="0" width="304" height="204" rx="12"
               fill="#fffdf8" stroke="#102a43" stroke-width="2"/>
-        <path d="M0 194 L 122 106 M304 194 L 182 106"
+        <path d="M0 194 L 152 120 M304 194 L 152 120"
               stroke="#102a43" stroke-width="2" opacity=".4"/>
         <path d="M6 3 L 152 120 L 298 3 Z"
               fill="currentColor" stroke="#102a43" stroke-width="2"/>
@@ -723,7 +723,7 @@ export const guideArt = {
       <g transform="translate(34 92) scale(.64)">
         <rect x="0" y="0" width="304" height="204" rx="12"
               fill="#fffdf8" stroke="#102a43" stroke-width="3"/>
-        <path d="M0 194 L 122 106 M304 194 L 182 106"
+        <path d="M0 194 L 152 120 M304 194 L 152 120"
               stroke="#102a43" stroke-width="3" opacity=".4"/>
         <path d="M6 3 L 152 120 L 298 3 Z"
               fill="currentColor" stroke="#102a43" stroke-width="3"/>
@@ -731,10 +731,10 @@ export const guideArt = {
       <g transform="translate(356 60) scale(.95)">
         <path d="M0 0 C -40 6, -56 60, -34 118 C -22 150, -8 168, 0 176
                  C 8 168, 22 150, 34 118 C 56 60, 40 6, 0 0 Z"
-              fill="#c99c54" stroke="#102a43" stroke-width="3"/>
+              fill="#c99c54" stroke="#102a43" stroke-width="2.1"/>
         <circle cx="0" cy="66" r="12"
-                fill="#fbf6ed" stroke="#102a43" stroke-width="3"/>
-        <path d="M0 78 V 176" stroke="#102a43" stroke-width="3"/>
+                fill="#fbf6ed" stroke="#102a43" stroke-width="2.1"/>
+        <path d="M0 78 V 176" stroke="#102a43" stroke-width="2.1"/>
       </g>`
   },
 
@@ -805,17 +805,17 @@ export const guideArt = {
       </g>
       <g transform="translate(300 69) scale(.78)">
         <rect x="26" y="0" width="44" height="40" rx="8"
-              fill="#c99c54" stroke="#102a43" stroke-width="3"/>
+              fill="#c99c54" stroke="#102a43" stroke-width="2.55"/>
         <path d="M0 40 h 96 v 190 a 18 18 0 0 1 -18 18 h -60
                  a 18 18 0 0 1 -18 -18 Z"
-              fill="#fffdf8" stroke="#102a43" stroke-width="3"/>
+              fill="#fffdf8" stroke="#102a43" stroke-width="2.55"/>
         <path d="M2 132 C 26 118, 70 146, 94 132 v 96 a 16 16 0 0 1 -16 16
                  h -60 a 16 16 0 0 1 -16 -16 Z" fill="currentColor"/>
         <rect x="34" y="86" width="28" height="44" rx="7"
-              fill="none" stroke="#102a43" stroke-width="3"/>
+              fill="none" stroke="#102a43" stroke-width="2.55"/>
         <path d="M0 40 h 96 v 190 a 18 18 0 0 1 -18 18 h -60
                  a 18 18 0 0 1 -18 -18 Z"
-              fill="none" stroke="#102a43" stroke-width="3"/>
+              fill="none" stroke="#102a43" stroke-width="2.55"/>
       </g>`
   },
 
@@ -847,15 +847,15 @@ export const guideArt = {
       <g transform="translate(524 330) scale(.62)">
         <path d="M0 -60 C -34 -60, -46 -26, -40 4 C -50 40, -46 84, 0 84
                  C 46 84, 50 40, 40 4 C 46 -26, 34 -60, 0 -60 Z"
-              fill="#c99c54" stroke="#102a43" stroke-width="2"/>
+              fill="#c99c54" stroke="#102a43" stroke-width="3.2"/>
         <path d="M0 -46 C -20 -46, -26 -20, -18 -8 C -10 0, 10 0, 18 -8
                  C 26 -20, 20 -46, 0 -46 Z"
-              fill="#fffdf8" stroke="#102a43" stroke-width="2"/>
+              fill="#fffdf8" stroke="#102a43" stroke-width="3.2"/>
         <circle cx="-7" cy="-28" r="3.5" fill="#102a43"/>
         <circle cx="7" cy="-28" r="3.5" fill="#102a43"/>
         <path d="M-34 26 C -20 12, 20 12, 34 26 C 36 58, 20 78, 0 78
                  C -20 78, -36 58, -34 26 Z"
-              fill="#fffdf8" stroke="#102a43" stroke-width="2"/>
+              fill="#fffdf8" stroke="#102a43" stroke-width="3.2"/>
       </g>
       <g transform="translate(430 296)">
         <path d="M0 -60 C -34 -60, -46 -26, -40 4 C -50 40, -46 84, 0 84
@@ -911,19 +911,19 @@ export const guideArt = {
       <g transform="translate(348 172) scale(1.1)">
         <path d="M0 -60 C -34 -60, -46 -26, -40 4 C -50 40, -46 84, 0 84
                  C 46 84, 50 40, 40 4 C 46 -26, 34 -60, 0 -60 Z"
-              fill="currentColor" stroke="#102a43" stroke-width="2.5"/>
+              fill="currentColor" stroke="#102a43" stroke-width="1.8"/>
         <path d="M0 -46 C -20 -46, -26 -20, -18 -8 C -10 0, 10 0, 18 -8
                  C 26 -20, 20 -46, 0 -46 Z"
-              fill="#fffdf8" stroke="#102a43" stroke-width="2.5"/>
+              fill="#fffdf8" stroke="#102a43" stroke-width="1.8"/>
         <circle cx="-7" cy="-28" r="3.5" fill="#102a43"/>
         <circle cx="7" cy="-28" r="3.5" fill="#102a43"/>
         <circle cx="-15" cy="-17" r="4" fill="#c99c54"/>
         <circle cx="15" cy="-17" r="4" fill="#c99c54"/>
         <path d="M-34 26 C -20 12, 20 12, 34 26 C 36 58, 20 78, 0 78
                  C -20 78, -36 58, -34 26 Z"
-              fill="#fffdf8" stroke="#102a43" stroke-width="2.5"/>
+              fill="#fffdf8" stroke="#102a43" stroke-width="1.8"/>
         <circle cx="0" cy="44" r="10"
-                fill="#c99c54" stroke="#102a43" stroke-width="2.5"/>
+                fill="#c99c54" stroke="#102a43" stroke-width="1.8"/>
       </g>`
   }
 };

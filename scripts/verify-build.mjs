@@ -224,12 +224,30 @@ for (const [name, keys] of namesSeen) {
   }
 }
 
-const home = readFileSync("dist/index.html", "utf8");
-const badges = home.split('class="guide-badge"').length - 1;
-if (badges !== GUIDES.length) {
-  failures.push(
-    `dist/index.html: expected ${GUIDES.length} guide card badges, found ${badges}`
-  );
+// Every guide must reach the home page somehow -- as a card badge, or, for the
+// featured guide, as the scene behind the featured block. A count of badges
+// would miss a guide dropped from the page entirely whenever another gained a
+// duplicate; asking per slug cannot. The marker attributes survive the build:
+// the prerender plugin replaces element contents and keeps the opening tag.
+let home;
+try {
+  home = readFileSync("dist/index.html", "utf8");
+} catch {
+  failures.push('dist/index.html: cannot read. Run "npm run build" first.');
+  home = "";
+}
+if (home) {
+  for (const guide of GUIDES) {
+    const badged = home.includes(`data-guide-badge="${guide.slug}"`);
+    const scened =
+      home.includes(`data-guide-art="${guide.slug}"`) ||
+      home.includes(`data-guide-scene-decorative="${guide.slug}"`);
+    if (!badged && !scened) {
+      failures.push(
+        `dist/index.html: guide "${guide.slug}" is not represented on the home page — it needs either a card badge or the featured scene`
+      );
+    }
+  }
 }
 
 if (failures.length > 0) {

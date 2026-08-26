@@ -1,28 +1,50 @@
 import { defineConfig } from "vite";
 import { collections, renderProductGrid } from "./products.js";
+import { guideArt } from "./guides/art.js";
+import { renderGuideScene, renderGuideBadge } from "./guides/art-render.js";
 
 // The leading lookbehind guards against a prefixed attribute such as
 // data-x-data-product-grid="k" being mistaken for the real marker.
-const GRID_PATTERN = /(<div[^>]*(?<![-\w])data-product-grid="([\w-]+)"[^>]*>)(\s*)(<\/div>)/g;
+const markerPattern = attribute =>
+  new RegExp(`(<div[^>]*(?<![-\\w])${attribute}="([\\w-]+)"[^>]*>)(\\s*)(<\\/div>)`, "g");
+
+const GRID_PATTERN = markerPattern("data-product-grid");
+const SCENE_PATTERN = markerPattern("data-guide-art");
+const BADGE_PATTERN = markerPattern("data-guide-badge");
 
 function prerenderProducts() {
   const injected = new Map();
+  const scenes = new Map();
+  const badges = new Map();
+
+  const bump = (map, key) => map.set(key, (map.get(key) ?? 0) + 1);
 
   return {
     name: "prerender-products",
     buildStart() {
       injected.clear();
+      scenes.clear();
+      badges.clear();
     },
     transformIndexHtml: {
       order: "pre",
       handler(html) {
-        // No .test() guard: GRID_PATTERN is global, so .test() would advance
-        // lastIndex and desync the next page. .replace() is a no-op when nothing
-        // matches, which is the same guard for free.
-        return html.replace(GRID_PATTERN, (_match, open, key, _whitespace, close) => {
-          injected.set(key, (injected.get(key) ?? 0) + 1);
-          return open + renderProductGrid(key) + close;
-        });
+        // No .test() guard: the patterns are global, so .test() would advance
+        // lastIndex and desync the next page. .replace() is a no-op when
+        // nothing matches, which is the same guard for free.
+        return html
+          .replace(GRID_PATTERN, (_m, open, key, _ws, close) => {
+            bump(injected, key);
+            return open + renderProductGrid(key) + close;
+          })
+          .replace(SCENE_PATTERN, (_m, open, key, _ws, close) => {
+            bump(scenes, key);
+            return open + renderGuideScene(key) + close;
+          })
+          .replace(BADGE_PATTERN, (_m, open, key, _ws, close) => {
+            bump(badges, key);
+            return open + renderGuideBadge(key) + close;
+          });
       }
     },
     closeBundle() {
@@ -34,6 +56,27 @@ function prerenderProducts() {
             ? `collection "${key}" was never injected — no page carries data-product-grid="${key}"`
             : `collection "${key}" was injected ${count} times, expected exactly 1`
         );
+
+      // Scenes are checked "at least once" rather than "exactly once" because
+      // a later task reuses one guide's scene inside the home page's featured
+      // block, so a scene can legitimately appear twice. Badges stay
+      // "exactly once": a guide card appearing twice on the home page would
+      // be a real bug.
+      for (const key of Object.keys(guideArt)) {
+        if ((scenes.get(key) ?? 0) < 1) {
+          problems.push(
+            `art "${key}" has a scene that was never injected — no page carries data-guide-art="${key}"`
+          );
+        }
+        const badgeCount = badges.get(key) ?? 0;
+        if (badgeCount !== 1) {
+          problems.push(
+            badgeCount === 0
+              ? `art "${key}" has a badge that was never injected — no page carries data-guide-badge="${key}"`
+              : `art "${key}" was injected as a badge ${badgeCount} times, expected exactly 1`
+          );
+        }
+      }
 
       if (problems.length > 0) {
         throw new Error(`prerender-products: ${problems.join("; ")}.`);

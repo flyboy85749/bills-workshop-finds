@@ -314,7 +314,7 @@ test("an unknown slug throws rather than rendering nothing", () => {
 In `package.json`, add to `"scripts"`:
 
 ```json
-    "test": "node --test test/",
+    "test": "node --test test/*.test.js",
 ```
 
 and change `"verify"` to:

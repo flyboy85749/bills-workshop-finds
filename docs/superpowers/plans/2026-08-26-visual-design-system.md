@@ -333,7 +333,7 @@ Expected: FAIL — `Cannot find module '.../guides/art.js'`.
 
 - [ ] **Step 3: Write `guides/art.js` with two entries**
 
-Both motifs use the shared substrate the spec defines: cream ground, brass hairline frame, dashed navy route line, flat 2px strokes, no gradients inside objects. `currentColor` is used wherever the accent should apply, so the wrapper's `color` drives it.
+Both motifs use the shared substrate the spec defines: cream ground, a brass hairline frame on scenes only, dashed navy route line, flat 2px strokes, no gradients inside objects. `currentColor` is used wherever the accent should apply, so the wrapper's `color` drives it.
 
 ```js
 // Per-guide illustration registry. Data only — rendering lives in art-render.js.
@@ -346,7 +346,6 @@ Both motifs use the shared substrate the spec defines: cream ground, brass hairl
 // wrapper — so a motif recolors without editing its path data.
 
 const FRAME = `<rect x="1" y="1" width="798" height="498" rx="18" fill="#fbf6ed" stroke="#c99c54" stroke-width="2"/>`;
-const BADGE_FRAME = `<rect x="1" y="1" width="478" height="318" rx="14" fill="none" stroke="#c99c54" stroke-width="2"/>`;
 
 export const guideArt = {
   "cozy-fall-finds": {
@@ -384,7 +383,6 @@ export const guideArt = {
         </g>
       </g>`,
     badge: `
-      ${BADGE_FRAME}
       <path d="M20 200 C 130 160, 220 240, 320 190 S 440 150, 462 172"
             fill="none" stroke="#102a43" stroke-width="2"
             stroke-dasharray="9 8" opacity=".45"/>
@@ -441,7 +439,6 @@ export const guideArt = {
         <path d="M-46 0 h 92" stroke="#102a43" stroke-width="2" opacity=".4"/>
       </g>`,
     badge: `
-      ${BADGE_FRAME}
       <path d="M24 268 C 130 236, 180 120, 300 100 S 440 74, 460 52"
             fill="none" stroke="#102a43" stroke-width="2"
             stroke-dasharray="9 8" opacity=".45"/>
@@ -1247,13 +1244,15 @@ than the flask that was standing in for it."
 
 ## Task 7: The remaining ten motifs
 
-This is the largest task by volume and the most mechanical. Every entry follows the shape established in Task 2 — same `FRAME` and `BADGE_FRAME` constants, same 800×500 and 480×320 viewBoxes, same flat 2px strokes, same `currentColor` accent convention.
+This is the largest task by volume and the most mechanical. Every entry follows the shape established in Task 2 — same `FRAME` constant on scenes, same 800×500 and 480×320 viewBoxes, same flat 2px strokes, same `currentColor` accent convention.
+
+**Badges carry no frame.** Scenes keep the brass `FRAME` because they sit alone on a guide page. Badges do not, because they sit edge-to-edge inside a `.guide-card` that already has its own rounded border — a frame inside a frame reads as boxy. Do not reintroduce a `BADGE_FRAME`.
 
 **Files:**
 - Modify: `guides/art.js`, `index.html`, the ten remaining guide `*.html` files, `scripts/verify-build.mjs`
 
 **Interfaces:**
-- Consumes: `guideArt` shape and the `FRAME` / `BADGE_FRAME` constants from Task 2; markers from Task 3; `.page-hero-grid` styling from Task 4.
+- Consumes: `guideArt` shape and the `FRAME` constant from Task 2 (scenes only — badges are unframed); markers from Task 3; `.page-hero-grid` styling from Task 4.
 - Produces: a complete registry — `Object.keys(guideArt)` equals `Object.keys(collections)`.
 
 - [ ] **Step 1: Add the ten entries**
@@ -1602,7 +1601,7 @@ build if a registry key is never injected, and `verify-build.mjs` fails if
 `collections`, `guideArt` and its own `GUIDES` table do not name exactly the same
 slugs. A new guide therefore has to be added in all three places or none.
 
-Motifs share one substrate — cream ground, brass hairline frame, dashed navy route
+Motifs share one substrate — cream ground, a brass hairline frame on scenes only, dashed navy route
 line, flat 2px strokes, no gradients inside objects — and use `currentColor` for
 anything that should pick up the accent.
 ```

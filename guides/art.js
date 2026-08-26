@@ -1,14 +1,18 @@
 // Per-guide illustration registry. Data only — rendering lives in art-render.js.
 //
 // Every scene is 800x500 (16:10) and every badge is 480x320 (3:2). Motifs share
-// one substrate so twelve guides read as one site: cream ground, brass hairline
-// frame, a dashed navy route line, flat 2px strokes, no gradients inside objects.
+// one substrate so twelve guides read as one site: a dashed navy route line,
+// flat 2px strokes, no gradients inside objects.
+//
+// Scenes carry FRAME -- a cream ground inside a brass hairline -- because they
+// sit alone on a guide page. Badges carry neither: they sit edge-to-edge inside
+// a .guide-card that already has its own rounded border, so a frame inside a
+// frame reads as boxy, and their ground comes from the card's --accent-soft.
 //
 // `currentColor` resolves to the accent — art-render.js sets `color` on the
 // wrapper — so a motif recolors without editing its path data.
 
 const FRAME = `<rect x="1" y="1" width="798" height="498" rx="18" fill="#fbf6ed" stroke="#c99c54" stroke-width="2"/>`;
-const BADGE_FRAME = `<rect x="1" y="1" width="478" height="318" rx="14" fill="none" stroke="#c99c54" stroke-width="2"/>`;
 
 export const guideArt = {
   "cozy-fall-finds": {
@@ -46,7 +50,6 @@ export const guideArt = {
         </g>
       </g>`,
     badge: `
-      ${BADGE_FRAME}
       <path d="M20 200 C 130 160, 220 240, 320 190 S 440 150, 462 172"
             fill="none" stroke="#102a43" stroke-width="2"
             stroke-dasharray="9 8" opacity=".45"/>
@@ -103,7 +106,6 @@ export const guideArt = {
         <path d="M-46 0 h 92" stroke="#102a43" stroke-width="2" opacity=".4"/>
       </g>`,
     badge: `
-      ${BADGE_FRAME}
       <path d="M24 268 C 130 236, 180 120, 300 100 S 440 74, 460 52"
             fill="none" stroke="#102a43" stroke-width="2"
             stroke-dasharray="9 8" opacity=".45"/>

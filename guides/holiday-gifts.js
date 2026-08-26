@@ -85,7 +85,7 @@ export const holidayGifts = [
     query: "felt tip pens fine point set",
     reason:
       "Teachers are startlingly specific about pens, and the ones they like get stolen by students, colleagues and their own children. A large set of good ones gets used up, which is the highest compliment a consumable can earn.",
-    tip: "Buy the big multi-colour set rather than a small premium one — grading, planning and display each want a different colour, and quantity is what makes it feel generous. Skip gel pens for grading: they smear under a hand."
+    tip: "Buy the big multi-color set rather than a small premium one — grading, planning and display each want a different color, and quantity is what makes it feel generous. Skip gel pens for grading: they smear under a hand."
   },
   {
     category: "for the teacher",

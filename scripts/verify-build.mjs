@@ -1,11 +1,13 @@
 import { readFileSync } from "node:fs";
 import { collections } from "../products.js";
+import { guideArt } from "../guides/art.js";
 
 const AMAZON_TAG = "billsworkshop-20";
 
 const GUIDES = [
   {
     file: "dist/flight-attendant-travel-essentials.html",
+    slug: "travel-essentials",
     cards: 15,
     anchors: [1, 3, 4, 6, 8, 11],
     contains: "Compression packing cubes",
@@ -13,12 +15,14 @@ const GUIDES = [
   },
   {
     file: "dist/flight-attendant-dog-gifts.html",
+    slug: "flight-attendant-dog-gifts",
     cards: 15,
     anchors: [1, 4, 7, 10, 13],
     contains: "Treat-tossing pet camera"
   },
   {
     file: "dist/elementary-classroom-essentials.html",
+    slug: "elementary-classroom-essentials",
     cards: 15,
     anchors: [1, 4, 7, 10, 13],
     contains: "Rolling 10-drawer cart",
@@ -26,12 +30,14 @@ const GUIDES = [
   },
   {
     file: "dist/dog-lover-gifts.html",
+    slug: "dog-lover-gifts",
     cards: 15,
     anchors: [1, 4, 7, 10, 13],
     contains: "Snuffle mat"
   },
   {
     file: "dist/student-pilot-gifts.html",
+    slug: "student-pilot-gifts",
     cards: 15,
     anchors: [1, 4, 7, 10, 13],
     contains: "Non-polarized aviation sunglasses",
@@ -39,12 +45,14 @@ const GUIDES = [
   },
   {
     file: "dist/first-apartment-tools.html",
+    slug: "first-apartment-tools",
     cards: 15,
     anchors: [1, 4, 7, 10, 13],
     contains: "Flange plunger"
   },
   {
     file: "dist/holiday-gifts.html",
+    slug: "holiday-gifts",
     cards: 15,
     anchors: [1, 4, 7, 10, 13],
     contains: "First-solo shirttail display frame",
@@ -59,6 +67,7 @@ const GUIDES = [
   },
   {
     file: "dist/retro-classroom-decor.html",
+    slug: "retro-classroom-decor",
     cards: 15,
     anchors: [1, 4, 7, 10, 13],
     contains: "Vintage pull-down map reproduction",
@@ -66,6 +75,7 @@ const GUIDES = [
   },
   {
     file: "dist/pen-pal-starter-kit.html",
+    slug: "pen-pal-starter-kit",
     cards: 15,
     anchors: [1, 4, 7, 10, 13],
     contains: "Starter fountain pen",
@@ -73,6 +83,7 @@ const GUIDES = [
   },
   {
     file: "dist/adventure-travel-essentials.html",
+    slug: "adventure-travel-essentials",
     cards: 15,
     anchors: [1, 4, 7, 10, 13],
     contains: "Roll-top dry bag",
@@ -80,6 +91,7 @@ const GUIDES = [
   },
   {
     file: "dist/cozy-fall-finds.html",
+    slug: "cozy-fall-finds",
     cards: 10,
     anchors: [1, 4, 7, 9],
     contains: "Chunky knit throw blanket",
@@ -90,6 +102,7 @@ const GUIDES = [
   },
   {
     file: "dist/whimsical-kitchen-finds.html",
+    slug: "whimsical-kitchen-finds",
     cards: 7,
     anchors: [1, 4, 6],
     contains: "Nesting-doll measuring cups",
@@ -97,9 +110,20 @@ const GUIDES = [
   }
 ];
 
-if (GUIDES.length !== Object.keys(collections).length) {
+const collectionKeys = Object.keys(collections).sort();
+const artKeys = Object.keys(guideArt).sort();
+const guideSlugs = GUIDES.map(g => g.slug).sort();
+
+if (collectionKeys.join() !== artKeys.join()) {
   console.error(
-    `verify-build FAILED:\n  - GUIDES has ${GUIDES.length} entries but collections has ${Object.keys(collections).length} — a guide is registered but not checked, or checked but not registered.`
+    `verify-build FAILED:\n  - guideArt and collections disagree.\n    collections: ${collectionKeys.join(", ")}\n    guideArt:    ${artKeys.join(", ")}`
+  );
+  process.exit(1);
+}
+
+if (collectionKeys.join() !== guideSlugs.join()) {
+  console.error(
+    `verify-build FAILED:\n  - GUIDES slugs and collections disagree.\n    collections: ${collectionKeys.join(", ")}\n    GUIDES:      ${guideSlugs.join(", ")}`
   );
   process.exit(1);
 }
@@ -138,6 +162,21 @@ for (const guide of GUIDES) {
 
   if (guide.contains && !html.includes(guide.contains)) {
     fail(`expected to find "${guide.contains}" but it is missing`);
+  }
+
+  const art = guideArt[guide.slug];
+  if (!html.includes(`aria-label="${art.label}"`)) {
+    fail(`hero art is missing its aria-label "${art.label}"`);
+  }
+  const bodyTag = html.match(/<body[^>]*>/)?.[0] ?? "";
+  if (!bodyTag.includes(`--accent: ${art.accent}`)) {
+    fail(`<body> is missing "--accent: ${art.accent}" — the accent cannot cascade to the product badges, TOC rule or callout`);
+  }
+  if (!bodyTag.includes(`--accent-soft: ${art.accentSoft}`)) {
+    fail(`<body> is missing "--accent-soft: ${art.accentSoft}"`);
+  }
+  if (count('class="guide-art"') !== 1) {
+    fail(`expected exactly 1 hero art container, found ${count('class="guide-art"')}`);
   }
 
   if (guide.pricedCards) {
@@ -186,6 +225,32 @@ for (const [name, keys] of namesSeen) {
     failures.push(
       `product name "${name}" appears in ${keys.length} guides (${keys.join(", ")}) — rename one, or sanction the pair in its guide's spec and add it to an allowlist here`
     );
+  }
+}
+
+// Every guide must reach the home page somehow -- as a card badge, or, for the
+// featured guide, as the scene behind the featured block. A count of badges
+// would miss a guide dropped from the page entirely whenever another gained a
+// duplicate; asking per slug cannot. The marker attributes survive the build:
+// the prerender plugin replaces element contents and keeps the opening tag.
+let home;
+try {
+  home = readFileSync("dist/index.html", "utf8");
+} catch {
+  failures.push('dist/index.html: cannot read. Run "npm run build" first.');
+  home = "";
+}
+if (home) {
+  for (const guide of GUIDES) {
+    const badged = home.includes(`data-guide-badge="${guide.slug}"`);
+    const scened =
+      home.includes(`data-guide-art="${guide.slug}"`) ||
+      home.includes(`data-guide-scene-decorative="${guide.slug}"`);
+    if (!badged && !scened) {
+      failures.push(
+        `dist/index.html: guide "${guide.slug}" is not represented on the home page — it needs either a card badge or the featured scene`
+      );
+    }
   }
 }
 

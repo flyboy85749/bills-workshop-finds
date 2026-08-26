@@ -1,3 +1,19 @@
+@font-face {
+  font-family: "Inter var";
+  src: url("/fonts/inter-latin-var.woff2") format("woff2");
+  font-weight: 400 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Fraunces var";
+  src: url("/fonts/fraunces-latin-var.woff2") format("woff2");
+  font-weight: 600 800;
+  font-style: normal;
+  font-display: swap;
+}
+
 :root {
   --navy: #102a43;
   --navy-deep: #071b2d;
@@ -12,6 +28,12 @@
   --line: #d9d9d0;
   --shadow: 0 18px 55px rgba(16, 42, 67, 0.12);
   --radius: 24px;
+  --font-body: "Inter var", Inter, ui-sans-serif, system-ui, -apple-system,
+    BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --font-display: "Fraunces var", Georgia, "Times New Roman", serif;
+  --accent: var(--teal);
+  --accent-soft: var(--sky);
+  --grain: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='g'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.82' numOctaves='3'/%3E%3C/filter%3E%3Crect width='140' height='140' filter='url(%23g)' opacity='.38'/%3E%3C/svg%3E");
 }
 
 * { box-sizing: border-box; }
@@ -24,8 +46,18 @@ body {
   background:
     radial-gradient(circle at 12% 3%, rgba(219, 234, 240, .72), transparent 28rem),
     linear-gradient(180deg, var(--cream), #fff 58%);
-  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-family: var(--font-body);
   line-height: 1.65;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  background-image: var(--grain);
+  opacity: .5;
+  pointer-events: none;
 }
 
 a { color: inherit; }
@@ -83,7 +115,7 @@ button, a { -webkit-tap-highlight-color: transparent; }
   color: white;
   background: var(--navy);
   box-shadow: 4px 4px 0 var(--coral);
-  font-family: Georgia, serif;
+  font-family: var(--font-display);
   font-size: .92rem;
 }
 
@@ -107,7 +139,7 @@ button, a { -webkit-tap-highlight-color: transparent; }
   margin: 0 0 .8rem;
   color: var(--coral);
   font-size: .78rem;
-  font-weight: 900;
+  font-weight: 800;
   letter-spacing: .16em;
   text-transform: uppercase;
 }
@@ -115,7 +147,7 @@ button, a { -webkit-tap-highlight-color: transparent; }
 h1, h2, h3 {
   margin-top: 0;
   color: var(--navy);
-  font-family: Georgia, "Times New Roman", serif;
+  font-family: var(--font-display);
   line-height: 1.08;
   letter-spacing: -.035em;
 }
@@ -151,7 +183,7 @@ p { margin-top: 0; }
   border: 1px solid var(--navy);
   border-radius: 999px;
   text-decoration: none;
-  font-weight: 850;
+  font-weight: 800;
   line-height: 1.2;
   transition: transform .18s ease, box-shadow .18s ease, background .18s ease;
 }
@@ -161,56 +193,36 @@ p { margin-top: 0; }
 .button-secondary { background: transparent; }
 .button-coral { color: white; background: var(--coral); border-color: var(--coral); }
 
-.travel-board {
-  min-height: 500px;
-  position: relative;
+.home-art {
   border-radius: 40px 40px 40px 10px;
-  background: linear-gradient(145deg, var(--navy), var(--navy-deep));
   box-shadow: var(--shadow);
   overflow: hidden;
+  line-height: 0;
 }
 
-.travel-board::before {
-  content: "";
-  position: absolute;
-  width: 290px;
-  height: 290px;
-  right: -70px;
-  top: -80px;
-  border: 2px dashed rgba(255,255,255,.25);
-  border-radius: 50%;
-}
-
-.route-line {
-  position: absolute;
-  inset: 9% 8% auto;
-  height: 46%;
-  border: 2px dashed rgba(219, 234, 240, .52);
-  border-left-color: transparent;
-  border-bottom-color: transparent;
-  border-radius: 50%;
-  transform: rotate(-12deg);
-}
-
-.plane { position: absolute; right: 16%; top: 15%; color: var(--coral); font-size: 2.4rem; transform: rotate(18deg); }
-
-.board-card {
-  position: absolute;
-  padding: 1rem 1.15rem;
-  border-radius: 18px;
-  background: var(--paper);
-  box-shadow: 0 18px 40px rgba(0,0,0,.18);
-}
-
-.board-card strong { display: block; font-family: Georgia, serif; font-size: 1.15rem; color: var(--navy); }
-.board-card span { color: var(--muted); font-size: .82rem; }
-.board-card:nth-of-type(1) { left: 8%; top: 19%; transform: rotate(-6deg); }
-.board-card:nth-of-type(2) { right: 8%; top: 44%; transform: rotate(5deg); }
-.board-card:nth-of-type(3) { left: 13%; bottom: 12%; transform: rotate(3deg); }
-.board-stamp { position: absolute; right: 12%; bottom: 10%; color: var(--sky); font-size: .76rem; letter-spacing: .18em; text-transform: uppercase; font-weight: 900; }
+.home-art svg { width: 100%; height: auto; display: block; }
 
 .section { padding: clamp(4rem, 8vw, 7rem) 0; }
-.section-soft { background: rgba(219, 234, 240, .42); border-block: 1px solid rgba(16, 42, 67, .08); }
+
+.section-soft {
+  position: relative;
+  background: rgba(219, 234, 240, .42);
+}
+
+.section-soft::before,
+.section-soft::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 26px;
+  background: inherit;
+  pointer-events: none;
+}
+
+.section-soft::before { top: -25px; border-radius: 50% 50% 0 0 / 100% 100% 0 0; }
+.section-soft::after { bottom: -25px; border-radius: 0 0 50% 50% / 0 0 100% 100%; }
+
 .section-heading { max-width: 720px; margin-bottom: 2.5rem; }
 .section-heading p { color: var(--muted); font-size: 1.05rem; }
 
@@ -221,21 +233,42 @@ p { margin-top: 0; }
   background: var(--paper);
   box-shadow: var(--shadow);
   overflow: hidden;
+  /* The classroom scene sits at z-index -1 inside .featured-visual. Without a
+     stacking context here it would paint behind this element's own opaque
+     paper background and vanish; with one it lands between that background
+     and .featured-visual's scrim, which is where the art belongs. */
+  isolation: isolate;
 }
 
 .featured-visual {
   min-height: 410px;
   padding: 2.5rem;
   color: white;
-  background:
-    linear-gradient(140deg, rgba(16, 42, 67, .15), rgba(7, 27, 45, .75)),
-    repeating-linear-gradient(45deg, var(--teal), var(--teal) 28px, #31666d 28px, #31666d 56px);
+  background: linear-gradient(140deg, rgba(7, 27, 45, .68), rgba(7, 27, 45, .88));
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
 
-.featured-visual .number { font-family: Georgia, serif; font-size: 7.5rem; line-height: .8; }
+.featured-visual { position: relative; }
+/* .featured-visual is a column flex container split by justify-content:
+   space-between; the [data-guide-scene-decorative] marker is a zero-height
+   flex child that would otherwise eat one of the free-space gaps and push
+   the numeral down. Taking it out of flow restores the two-child split. */
+.featured-visual > [data-guide-scene-decorative] { position: absolute; inset: 0; }
+.featured-visual .guide-art {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  border-radius: 0;
+  box-shadow: none;
+  overflow: hidden;
+}
+/* Filling the panel, not object-fit: an inline SVG is not a replaced element,
+   so the cropping is done by the scene's preserveAspectRatio="slice". */
+.featured-visual .guide-art svg { width: 100%; height: 100%; }
+
+.featured-visual .number { font-family: var(--font-display); font-size: 7.5rem; line-height: .8; }
 .featured-visual p { max-width: 260px; font-weight: 800; }
 .featured-copy { padding: clamp(2rem, 5vw, 4.2rem); }
 .featured-copy p { color: var(--muted); }
@@ -251,9 +284,35 @@ p { margin-top: 0; }
   border: 1px solid rgba(16, 42, 67, .12);
   border-radius: 20px;
   background: rgba(255,255,255,.66);
+  overflow: hidden;
+  transition: transform .18s ease, box-shadow .18s ease;
 }
 .guide-card p { color: var(--muted); }
-.guide-card .button { margin-top: auto; align-self: flex-start; }
+.guide-card .button { align-self: flex-start; }
+
+/* The build injects the badge's markup inside the [data-guide-badge] marker
+   div, which is .guide-card's actual flex item; .guide-badge itself is just
+   a block child of that marker. So the auto top margin that pushes the art
+   and the button below it down to the card's foot -- lining both up across a
+   row of cards with different text lengths -- has to live on the marker, not
+   here. .guide-badge keeps the negative side margins, which cancel
+   .guide-card's 1.7rem padding so the art bleeds to the card edges while the
+   copy stays inset. */
+.guide-card > [data-guide-badge] { margin-top: auto; }
+
+.guide-badge {
+  color: var(--accent);
+  margin: 0 -1.7rem 1.2rem;
+  background: var(--accent-soft);
+  border-block: 1px solid rgba(16, 42, 67, .12);
+  line-height: 0;
+  overflow: hidden;
+}
+
+.guide-badge svg { width: 100%; height: auto; display: block; transition: transform .3s ease; }
+
+.guide-card:hover { transform: translateY(-3px); box-shadow: var(--shadow); }
+.guide-card:hover .guide-badge svg { transform: scale(1.03); }
 
 .category-grid, .values-grid {
   display: grid;
@@ -268,8 +327,53 @@ p { margin-top: 0; }
   background: rgba(255,255,255,.66);
 }
 
-.category-card .icon, .value-card .icon { font-size: 1.8rem; margin-bottom: 1rem; }
+.category-card .icon { margin-bottom: 1rem; line-height: 0; }
+.category-icon { width: 46px; height: 46px; display: block; }
+
+.category-card:nth-of-type(1) .icon { color: var(--navy); }
+.category-card:nth-of-type(2) .icon { color: var(--gold); }
+.category-card:nth-of-type(3) .icon { color: var(--coral); }
+.category-card:nth-of-type(4) .icon { color: var(--teal); }
+.category-card:nth-of-type(5) .icon { color: #7b5ea7; }
+.category-card:nth-of-type(6) .icon { color: #b4552f; }
+
+.value-number {
+  display: inline-grid;
+  place-items: center;
+  width: 46px;
+  height: 46px;
+  margin-bottom: 1rem;
+  border-radius: 50%;
+  color: var(--navy);
+  background: rgba(201, 156, 84, .28);
+  border: 2px solid var(--gold);
+  font-family: var(--font-display);
+  font-size: 1.35rem;
+  font-weight: 700;
+}
+
 .category-card p, .value-card p { color: var(--muted); margin-bottom: 0; }
+
+.guide-card, .category-card, .value-card {
+  border-color: rgba(201, 156, 84, .3);
+  background: var(--paper);
+  box-shadow: 0 2px 0 rgba(16, 42, 67, .04);
+}
+
+.category-card, .value-card {
+  transition: transform .18s ease, box-shadow .18s ease;
+}
+
+.category-card:hover, .value-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 30px rgba(16, 42, 67, .1);
+}
+
+.product-card { transition: transform .18s ease, box-shadow .18s ease; }
+.product-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 14px 36px rgba(16, 42, 67, .1);
+}
 
 .newsletter {
   display: grid;
@@ -288,8 +392,35 @@ p { margin-top: 0; }
 .page-hero h1 { max-width: 920px; font-size: clamp(2.7rem, 7vw, 5rem); margin-bottom: 1rem; }
 .page-hero .lede { max-width: 760px; color: var(--muted); font-size: 1.15rem; }
 
+.page-hero-grid {
+  display: grid;
+  grid-template-columns: 1.05fr .95fr;
+  align-items: center;
+  gap: clamp(2rem, 5vw, 4.5rem);
+}
+
+.guide-art {
+  color: var(--accent);
+  border-radius: 26px 26px 26px 8px;
+  box-shadow: var(--shadow);
+  overflow: hidden;
+  line-height: 0;
+}
+
+.guide-art svg { width: 100%; height: auto; display: block; }
+
 .breadcrumb { display: flex; flex-wrap: wrap; gap: .45rem; color: var(--muted); font-size: .86rem; margin-bottom: 1.5rem; }
-.breadcrumb a { color: var(--teal); }
+.breadcrumb a { color: var(--accent-ink); }
+
+/* The accent doubles as link text in two places, and three of the twelve are
+   light enough to fail 4.5:1 against cream. Those three get a darkened
+   same-hue ink for text only -- their art, badges and grounds keep the accent
+   itself, where the text-contrast rule does not apply. Same-hue rather than a
+   flat navy so each page keeps its identity. */
+body { --accent-ink: var(--accent); }
+body[style*="#c99c54"] { --accent-ink: #7d5f28; }  /* retro classroom  5.51:1 */
+body[style*="#a8621c"] { --accent-ink: #8f5217; }  /* dog lover        5.76:1 */
+body[style*="#b8536b"] { --accent-ink: #943f54; }  /* whimsical kitchen 6.30:1 */
 
 .disclosure-note {
   max-width: 850px;
@@ -321,7 +452,9 @@ p { margin-top: 0; }
   background: var(--paper);
 }
 .toc strong { display: block; margin-bottom: .7rem; color: var(--navy); }
+.toc strong { border-left: 3px solid var(--accent); padding-left: .55rem; }
 .toc a { display: block; padding: .25rem 0; color: var(--teal); text-decoration: none; font-size: .9rem; }
+.toc a:hover, .toc a:focus-visible { color: var(--accent-ink); }
 
 .product-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.1rem; margin-top: 2rem; }
 
@@ -335,7 +468,11 @@ p { margin-top: 0; }
   background: var(--paper);
   box-shadow: 0 8px 30px rgba(16, 42, 67, .06);
 }
-.product-number { display: inline-grid; place-items: center; width: 40px; height: 40px; margin-bottom: 1rem; border-radius: 50%; color: white; background: var(--teal); font-family: Georgia, serif; font-size: 1.1rem; }
+.product-number { display: inline-grid; place-items: center; width: 40px; height: 40px; margin-bottom: 1rem; border-radius: 50%; color: white; font-family: var(--font-display); font-size: 1.1rem; }
+.product-number { background: var(--accent); }
+/* Brand gold is too light for white text. The one guide that uses it as its
+   accent gets navy numerals instead. */
+body[style*="#c99c54"] .product-number { color: var(--navy); }
 .product-card h3 { margin-bottom: .65rem; }
 .product-card p { color: var(--muted); font-size: .94rem; }
 .product-tip { padding-top: .7rem; border-top: 1px solid var(--line); font-size: .86rem !important; }
@@ -343,13 +480,29 @@ p { margin-top: 0; }
 .product-card .button { margin-top: auto; width: 100%; }
 
 .related-callout {
+  position: relative;
+  overflow: hidden;
   margin-top: 3rem;
   padding: 2rem;
   border-radius: 24px;
   background: var(--sky);
 }
+.related-callout { background: var(--accent-soft); }
 .related-callout p { color: #365463; }
 .related-callout .button-row { display: flex; flex-wrap: wrap; gap: .8rem; }
+
+.related-callout::after {
+  content: "";
+  position: absolute;
+  right: -40px;
+  bottom: -50px;
+  width: 220px;
+  height: 220px;
+  border: 3px dashed var(--accent);
+  border-radius: 50%;
+  opacity: .16;
+  pointer-events: none;
+}
 
 .prose { max-width: 780px; }
 .prose h2 { margin-top: 2.8rem; font-size: 2rem; }
@@ -367,8 +520,8 @@ p { margin-top: 0; }
 .copyright { margin-top: 3rem; padding-top: 1.3rem; border-top: 1px solid rgba(255,255,255,.12); color: #94adbb; font-size: .82rem; }
 
 @media (max-width: 860px) {
-  .hero-grid, .featured-guide, .guide-layout, .newsletter { grid-template-columns: 1fr; }
-  .travel-board { min-height: 430px; }
+  .hero-grid, .featured-guide, .guide-layout, .newsletter, .page-hero-grid { grid-template-columns: 1fr; }
+  .page-hero-copy { order: -1; }
   .category-grid, .values-grid, .guide-card-grid { grid-template-columns: repeat(2, 1fr); }
   .toc { position: static; order: -1; }
   .footer-grid { grid-template-columns: 1fr 1fr; }
@@ -395,11 +548,13 @@ p { margin-top: 0; }
   .brand-text { font-size: .9rem; }
   .hero { padding-top: 3.5rem; }
   .hero-actions .button { width: 100%; }
-  .travel-board { min-height: 390px; }
-  .board-card { padding: .8rem; }
   .category-grid, .values-grid, .product-grid, .guide-card-grid, .footer-grid { grid-template-columns: 1fr; }
   .featured-visual { min-height: 310px; }
   .footer-grid { gap: 1.2rem; }
+  .section { padding: 3rem 0; }
+  .page-hero { padding: 2.5rem 0 1.5rem; }
+  .guide-badge { margin: 0 -1.7rem 1rem; }
+  .product-grid { gap: .9rem; }
 }
 
 @media (prefers-reduced-motion: reduce) {

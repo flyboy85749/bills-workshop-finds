@@ -20,10 +20,24 @@
       property="og:description"
       content="A practical guide to organization, comfort, electronics and crew-bag essentials."
     />
+    <link
+      rel="preload"
+      href="/fonts/inter-latin-var.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      href="/fonts/fraunces-latin-var.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
     <link rel="stylesheet" href="/styles.css" />
     <script type="module" src="/main.js" defer></script>
   </head>
-  <body>
+  <body style="--accent: #1f5f8b; --accent-soft: #dde8f0">
     <a class="skip-link" href="#main">Skip to content</a>
     <header class="site-header">
       <nav class="nav-shell" aria-label="Main navigation">
@@ -51,24 +65,27 @@
 
     <main id="main">
       <header class="page-hero">
-        <div class="shell">
-          <nav class="breadcrumb" aria-label="Breadcrumb">
-            <a href="/">Home</a><span>/</span><span>Travel &amp; Aviation</span>
-          </nav>
-          <p class="eyebrow">Travel &amp; aviation</p>
-          <h1>
-            15 Flight Attendant Travel Essentials That Make Every Trip Easier
-          </h1>
-          <p class="lede">
-            Practical packing, comfort and organization finds chosen to solve
-            the little problems that repeat themselves on every trip.
-          </p>
-          <div class="disclosure-note">
-            <strong>Affiliate disclosure:</strong> This guide contains paid
-            affiliate links. As an Amazon Associate I earn from qualifying
-            purchases, at no additional cost to you. Recommendations are
-            selected independently.
+        <div class="shell page-hero-grid">
+          <div class="page-hero-copy">
+            <nav class="breadcrumb" aria-label="Breadcrumb">
+              <a href="/">Home</a><span>/</span><span>Travel &amp; Aviation</span>
+            </nav>
+            <p class="eyebrow">Travel &amp; aviation</p>
+            <h1>
+              15 Flight Attendant Travel Essentials That Make Every Trip Easier
+            </h1>
+            <p class="lede">
+              Practical packing, comfort and organization finds chosen to solve
+              the little problems that repeat themselves on every trip.
+            </p>
+            <div class="disclosure-note">
+              <strong>Affiliate disclosure:</strong> This guide contains paid
+              affiliate links. As an Amazon Associate I earn from qualifying
+              purchases, at no additional cost to you. Recommendations are
+              selected independently.
+            </div>
           </div>
+          <div data-guide-art="travel-essentials"></div>
         </div>
       </header>
 

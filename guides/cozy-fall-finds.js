@@ -5,7 +5,7 @@ export const cozyFallFinds = [
     query: "chunky knit throw blanket chenille 50x60",
     maxPrice: 40,
     reason: "The first cold evening of the year is the one nobody has turned the heating on for yet, and a throw on the end of the sofa settles that argument for about three weeks without touching the thermostat.",
-    tip: "Check the fibre before the photograph. Acrylic chenille is the one under $40 and it pills at the folds within a season; a cotton or cotton-blend knit costs the same and survives a wash. Look for a stated weight — anything under about 3lb for a 50x60 drapes thin and slides off."
+    tip: "Check the fiber before the photograph. Acrylic chenille is the one under $40 and it pills at the folds within a season; a cotton or cotton-blend knit costs the same and survives a wash. Look for a stated weight — anything under about 3lb for a 50x60 drapes thin and slides off."
   },
   {
     category: "warmth you wrap up in",
@@ -13,7 +13,7 @@ export const cozyFallFinds = [
     query: "sherpa lined house slippers rubber sole indoor outdoor",
     maxPrice: 40,
     reason: "Cold floors are what actually make a house feel cold in October, and slippers fix that faster and cheaper than heating the room the floor is in.",
-    tip: "Buy the ones with a real rubber outsole rather than a suede or fabric bottom. The fabric-soled pairs cannot go outside to the bin or the car, they go slick on tile, and they wear through at the ball of the foot by midwinter. Size up if the listing mentions memory foam — it compresses and the fit tightens."
+    tip: "Buy the ones with a real rubber outsole rather than a suede or fabric bottom. The fabric-soled pairs cannot go outside to the trash or the car, they go slick on tile, and they wear through at the ball of the foot by midwinter. Size up if the listing mentions memory foam — it compresses and the fit tightens."
   },
   {
     category: "warmth you wrap up in",
@@ -21,7 +21,7 @@ export const cozyFallFinds = [
     query: "waffle knit robe cotton lightweight unisex",
     maxPrice: 40,
     reason: "A heavy fleece robe is too warm indoors by November and useless in September, whereas a waffle weave carries the same job across the whole shoulder season.",
-    tip: "Waffle robes come in cotton and in polyester that photographs identically. Polyester does not absorb, so it is a warm layer but not a post-shower one. Read the fibre content, and check the listed length — most are cut short, and 'mid-calf' on a listing usually means knee."
+    tip: "Waffle robes come in cotton and in polyester that photographs identically. Polyester does not absorb, so it is a warm layer but not a post-shower one. Read the fiber content, and check the listed length — most are cut short, and 'mid-calf' on a listing usually means knee."
   },
   {
     category: "light and scent",
@@ -37,7 +37,7 @@ export const cozyFallFinds = [
     query: "battery warm white string lights timer indoor 33ft",
     maxPrice: 40,
     reason: "Plug-in lights strand you next to an outlet, and the places that want light in autumn — a mantel, a bannister, the back of a shelf — are rarely near one.",
-    tip: "Check the colour temperature, stated in kelvin. Warm white is around 2700K; anything at 4000K or above reads as blue and hospital-like against wood. Look for a built-in timer that repeats daily, otherwise you are switching thirty feet of lights on and off by hand every evening."
+    tip: "Check the color temperature, stated in kelvin. Warm white is around 2700K; anything at 4000K or above reads as blue and hospital-like against wood. Look for a built-in timer that repeats daily, otherwise you are switching thirty feet of lights on and off by hand every evening."
   },
   {
     category: "light and scent",
@@ -61,7 +61,7 @@ export const cozyFallFinds = [
     query: "handheld milk frother battery whisk stainless",
     maxPrice: 40,
     reason: "The difference between coffee at home and coffee out is mostly foam, and the battery whisk that produces it costs under fifteen dollars.",
-    tip: "Warm the milk first — a frother whips cold milk into large bubbles that collapse in under a minute. Whole milk holds foam best; skim froths high and falls fast, and most plant milks need a barista-labelled version to hold at all. Check that the whisk head detaches for rinsing, because the fixed ones sour."
+    tip: "Warm the milk first — a frother whips cold milk into large bubbles that collapse in under a minute. Whole milk holds foam best; skim froths high and falls fast, and most plant milks need a barista-labeled version to hold at all. Check that the whisk head detaches for rinsing, because the fixed ones sour."
   },
   {
     category: "keeping the cold out",

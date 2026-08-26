@@ -9,6 +9,20 @@
       content="Practical, carefully explained finds for travel, aviation, dog lovers, teachers, letter writers and everyday life from Bill's Workshop Company."
     />
     <link rel="canonical" href="https://finds.billsworkshopcompany.com/" />
+    <link
+      rel="preload"
+      href="/fonts/inter-latin-var.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      href="/fonts/fraunces-latin-var.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
     <link rel="stylesheet" href="/styles.css" />
     <script type="module" src="/main.js" defer></script>
   </head>
@@ -62,27 +76,7 @@
               >
             </div>
           </div>
-          <div
-            class="travel-board"
-            role="img"
-            aria-label="Illustrated travel planning board"
-          >
-            <div class="route-line"></div>
-            <span class="plane" aria-hidden="true">✈</span>
-            <div class="board-card">
-              <strong>Pack smarter</strong
-              ><span>Organization that earns its space</span>
-            </div>
-            <div class="board-card">
-              <strong>Travel easier</strong
-              ><span>Comfort for long duty days</span>
-            </div>
-            <div class="board-card">
-              <strong>Give better</strong
-              ><span>Gift ideas with a clear purpose</span>
-            </div>
-            <div class="board-stamp">Curated by Bill</div>
-          </div>
+          <div data-home-art="home"></div>
         </div>
       </section>
 
@@ -98,6 +92,7 @@
           </div>
           <article class="featured-guide">
             <div class="featured-visual">
+              <div data-guide-scene-decorative="elementary-classroom-essentials"></div>
               <span class="number">15</span>
               <p>Classroom essentials that survive a full school year</p>
               <span>Teachers · 10 min read</span>
@@ -134,6 +129,7 @@
                 Packing, comfort and organization finds for the problems that
                 repeat on every trip.
               </p>
+              <div data-guide-badge="travel-essentials"></div>
               <a class="button button-secondary" href="/flight-attendant-travel-essentials"
                 >Read the guide <span aria-hidden="true">→</span></a
               >
@@ -145,6 +141,7 @@
                 Remote pet care, crew-bag practicality and wearable picks for the
                 crew member who spends the week missing their dog.
               </p>
+              <div data-guide-badge="flight-attendant-dog-gifts"></div>
               <a class="button button-secondary" href="/flight-attendant-dog-gifts"
                 >Read the guide <span aria-hidden="true">→</span></a
               >
@@ -156,6 +153,7 @@
                 Grouped by how far along their training is—first lessons,
                 pre-solo, cross-country, checkride and first passenger.
               </p>
+              <div data-guide-badge="student-pilot-gifts"></div>
               <a class="button button-secondary" href="/student-pilot-gifts"
                 >Read the guide <span aria-hidden="true">→</span></a
               >
@@ -167,6 +165,7 @@
                 Picked by what the dog is actually like—the new puppy, the stiff
                 old one, or the one that goes everywhere.
               </p>
+              <div data-guide-badge="dog-lover-gifts"></div>
               <a class="button button-secondary" href="/dog-lover-gifts"
                 >Read the guide <span aria-hidden="true">→</span></a
               >
@@ -178,6 +177,7 @@
                 Grouped by what just went wrong—flat-pack day, hanging things,
                 a clogged drain, a dead outlet, and where it all lives.
               </p>
+              <div data-guide-badge="first-apartment-tools"></div>
               <a class="button button-secondary" href="/first-apartment-tools"
                 >Read the guide <span aria-hidden="true">→</span></a
               >
@@ -190,6 +190,7 @@
                 lover, the flight attendant, the student pilot, the teacher and
                 the first apartment.
               </p>
+              <div data-guide-badge="holiday-gifts"></div>
               <a class="button button-secondary" href="/holiday-gifts"
                 >Read the guide <span aria-hidden="true">→</span></a
               >
@@ -202,6 +203,7 @@
                 gives a cinderblock room some character, and the fire-code rule
                 to check first.
               </p>
+              <div data-guide-badge="retro-classroom-decor"></div>
               <a class="button button-secondary" href="/retro-classroom-decor"
                 >Read the guide <span aria-hidden="true">→</span></a
               >
@@ -213,6 +215,7 @@
                 What to write on, what to write with, how to seal and send it,
                 and which inks will quietly destroy a fountain pen.
               </p>
+              <div data-guide-badge="pen-pal-starter-kit"></div>
               <a class="button button-secondary" href="/pen-pal-starter-kit"
                 >Read the guide <span aria-hidden="true">→</span></a
               >
@@ -225,6 +228,7 @@
                 all day—dry bags, a filtered bottle, and the voltage rule that
                 costs people a hair dryer.
               </p>
+              <div data-guide-badge="adventure-travel-essentials"></div>
               <a
                 class="button button-secondary"
                 href="/adventure-travel-essentials"
@@ -236,9 +240,10 @@
               <h3>10 Cozy Fall Finds Under $40</h3>
               <p>
                 Warmth, light and two ways to keep a drink hot, all of it under
-                forty dollars—plus the fibre and kelvin ratings that separate
+                forty dollars—plus the fiber and kelvin ratings that separate
                 the good ones from the ones that pill.
               </p>
+              <div data-guide-badge="cozy-fall-finds"></div>
               <a class="button button-secondary" href="/cozy-fall-finds"
                 >Read the guide <span aria-hidden="true">→</span></a
               >
@@ -251,6 +256,7 @@
                 judged on whether they still work as tools once the novelty
                 wears off.
               </p>
+              <div data-guide-badge="whimsical-kitchen-finds"></div>
               <a class="button button-secondary" href="/whimsical-kitchen-finds"
                 >Read the guide <span aria-hidden="true">→</span></a
               >
@@ -267,7 +273,7 @@
           </div>
           <div class="category-grid">
             <article class="category-card">
-              <div class="icon" aria-hidden="true">✈️</div>
+              <div class="icon" data-category-icon="travel"></div>
               <h3>Travel &amp; Aviation</h3>
               <p>
                 Crew-bag organization, pilot gifts and practical products for
@@ -275,7 +281,7 @@
               </p>
             </article>
             <article class="category-card">
-              <div class="icon" aria-hidden="true">🐾</div>
+              <div class="icon" data-category-icon="dogs"></div>
               <h3>Dog Lovers</h3>
               <p>
                 Useful dog-parent finds, breed-inspired gifts and travel gear
@@ -283,7 +289,7 @@
               </p>
             </article>
             <article class="category-card">
-              <div class="icon" aria-hidden="true">🎁</div>
+              <div class="icon" data-category-icon="gifts"></div>
               <h3>Gifts</h3>
               <p>
                 Thoughtful collections for specific personalities, professions
@@ -291,7 +297,7 @@
               </p>
             </article>
             <article class="category-card">
-              <div class="icon" aria-hidden="true">🧪</div>
+              <div class="icon" data-category-icon="teachers"></div>
               <h3>Teachers</h3>
               <p>
                 Classroom helpers and gifts that respect how hard teachers
@@ -299,7 +305,7 @@
               </p>
             </article>
             <article class="category-card">
-              <div class="icon" aria-hidden="true">❄️</div>
+              <div class="icon" data-category-icon="seasonal"></div>
               <h3>Seasonal Finds</h3>
               <p>
                 Holiday ideas with personality, including dog-lover and aviation
@@ -307,7 +313,7 @@
               </p>
             </article>
             <article class="category-card">
-              <div class="icon" aria-hidden="true">🧰</div>
+              <div class="icon" data-category-icon="workshop"></div>
               <h3>Everyday Workshop</h3>
               <p>
                 Simple, useful products that reduce friction in work and
@@ -326,7 +332,7 @@
           </div>
           <div class="values-grid">
             <article class="value-card">
-              <div class="icon" aria-hidden="true">①</div>
+              <div class="value-number" aria-hidden="true">1</div>
               <h3>A clear use</h3>
               <p>
                 Every item must solve a specific problem or make a recurring
@@ -334,7 +340,7 @@
               </p>
             </article>
             <article class="value-card">
-              <div class="icon" aria-hidden="true">②</div>
+              <div class="value-number" aria-hidden="true">2</div>
               <h3>Practical criteria</h3>
               <p>
                 Guides tell you what features matter so you can compare products
@@ -342,7 +348,7 @@
               </p>
             </article>
             <article class="value-card">
-              <div class="icon" aria-hidden="true">③</div>
+              <div class="value-number" aria-hidden="true">3</div>
               <h3>Honest context</h3>
               <p>
                 Affiliate relationships are disclosed clearly, and

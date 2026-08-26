@@ -38,7 +38,7 @@ function escapeHtml(value) {
 
 // Amazon's price facet is expressed in cents on the rh (refinement) parameter:
 // p_36:-4000 means "no lower bound, at most $40.00". Guides that make a price
-// claim in their title set maxPrice per item so the link honours the claim.
+// claim in their title set maxPrice per item so the link honors the claim.
 export function amazonUrl(query, maxPrice) {
   const url = new URL("https://www.amazon.com/s");
   url.searchParams.set("k", query);

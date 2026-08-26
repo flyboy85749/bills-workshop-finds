@@ -740,7 +740,7 @@ badges stay exactly-once."
 ## Task 4: Style the hero, the badge and the accent cascade
 
 **Files:**
-- Modify: `styles.css`
+- Modify: `styles.css`, `cozy-fall-finds.html`, `student-pilot-gifts.html`
 
 **Interfaces:**
 - Consumes: `.guide-art` and `.guide-badge` containers with inline `--accent` / `--accent-soft`, from Task 2; `.page-hero-grid` and `.page-hero-copy` wrappers, from Task 3.
@@ -797,15 +797,31 @@ Add after the existing `.page-hero .lede` rule:
 
 `color: var(--accent)` is what makes `currentColor` inside the SVG resolve to the guide's accent.
 
-- [ ] **Step 3: Cascade the accent to the rest of the guide page**
+- [ ] **Step 3: Set the accent on the two wave-1 guide pages' `<body>`**
 
-The hero sets `--accent` on itself, but the product cards are siblings further down the page, so the property has to reach them. Set it on `.page-hero` instead by having the hero grid inherit upward — simplest correct approach is a page-level hook. Add:
+The injected `.guide-art` carries `--accent` as an inline custom property, but the product cards are **siblings** of the hero, not descendants of it, so the property never reaches them from there. A custom property has to sit on a common ancestor, which means `<body>`.
+
+In `cozy-fall-finds.html`:
+
+```html
+  <body style="--accent: #b4552f; --accent-soft: #f6e7dc">
+```
+
+In `student-pilot-gifts.html`:
+
+```html
+  <body style="--accent: #2f6f73; --accent-soft: #dde9ea">
+```
+
+Both pairs are that guide's own values from the registry written in Task 2 — they must match exactly, because Task 7's verifier asserts the accent string appears in the built page. `no-inline-style` is switched off in `.htmlvalidate.json`, so this passes lint.
+
+The other ten guide pages get the same treatment in Task 7, Step 3.
+
+- [ ] **Step 4: Cascade the accent to the rest of the guide page**
+
+Now that `--accent` is on `<body>`, these rules can consume it:
 
 ```css
-/* The injected .guide-art carries the accent as an inline custom property.
-   Lifting it to the page requires it on a common ancestor, so guide pages
-   also set it on <body> — see Task 7, where each guide page gains
-   style="--accent: …" on its body element. These rules consume it. */
 .product-number { background: var(--accent); }
 .breadcrumb a { color: var(--accent); }
 .toc strong { border-left: 3px solid var(--accent); padding-left: .55rem; }
@@ -815,7 +831,7 @@ The hero sets `--accent` on itself, but the product cards are siblings further d
 
 Note the ordering constraint: `.product-number` currently sets `background: var(--teal)` inline in its own rule at `styles.css:338`. Delete `background: var(--teal);` from that rule rather than relying on source order.
 
-- [ ] **Step 4: Style the home-page card badge**
+- [ ] **Step 5: Style the home-page card badge**
 
 ```css
 .guide-badge {
@@ -837,7 +853,7 @@ Note the ordering constraint: `.product-number` currently sets `background: var(
 
 The negative margin equals `.guide-card`'s `1.7rem` padding, so the art runs edge to edge while the copy stays inset.
 
-- [ ] **Step 5: Handle the breakpoints**
+- [ ] **Step 6: Handle the breakpoints**
 
 In the existing `@media (max-width: 860px)` block, add `.page-hero-grid` to the list of grids that collapse:
 
@@ -851,7 +867,7 @@ Then, in the same block, make the art follow the copy so the headline stays firs
   .page-hero-copy { order: -1; }
 ```
 
-- [ ] **Step 6: Build and look at both guide pages**
+- [ ] **Step 7: Build and look at both guide pages**
 
 ```bash
 npm run build && npm run verify && npm run dev
@@ -863,10 +879,10 @@ Check in the browser at 1440px and at 390px:
 - Home page — the two guide cards with art show it edge-to-edge above their copy, and lift on hover.
 - Confirm the grain is visible but subtle, and that clicking through it works (it must not intercept pointer events).
 
-- [ ] **Step 7: Commit**
+- [ ] **Step 8: Commit**
 
 ```bash
-git add styles.css
+git add styles.css cozy-fall-finds.html student-pilot-gifts.html
 git commit -m "Style the guide hero art, card badges and accent cascade
 
 Adds the paper grain overlay, the two-column guide hero that collapses
@@ -1282,9 +1298,9 @@ Apply the Task 3, Step 7 hero transformation to each of the ten remaining guide 
 | `adventure-travel-essentials.html` | `adventure-travel-essentials` |
 | `whimsical-kitchen-finds.html` | `whimsical-kitchen-finds` |
 
-- [ ] **Step 3: Set the accent on each guide page's body**
+- [ ] **Step 3: Set the accent on the remaining ten guide pages' body**
 
-Task 4 established that the accent must live on a common ancestor of both the hero and the product grid. Add to each of the twelve guide pages' `<body>` tag — including the two from Task 3:
+Task 4 established that the accent must live on a common ancestor of both the hero and the product grid, and already did this for `cozy-fall-finds` and `student-pilot-gifts`. Add to the `<body>` tag of the **ten other** guide pages:
 
 ```html
   <body style="--accent: #b4552f; --accent-soft: #f6e7dc">

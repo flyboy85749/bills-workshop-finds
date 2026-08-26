@@ -1,6 +1,6 @@
 @font-face {
   font-family: "Inter var";
-  src: url("/fonts/inter-latin-var.woff2") format("woff2-variations");
+  src: url("/fonts/inter-latin-var.woff2") format("woff2");
   font-weight: 400 800;
   font-style: normal;
   font-display: swap;
@@ -8,7 +8,7 @@
 
 @font-face {
   font-family: "Fraunces var";
-  src: url("/fonts/fraunces-latin-var.woff2") format("woff2-variations");
+  src: url("/fonts/fraunces-latin-var.woff2") format("woff2");
   font-weight: 600 800;
   font-style: normal;
   font-display: swap;

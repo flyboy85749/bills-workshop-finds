@@ -675,6 +675,8 @@ with:
           <nav class="breadcrumb" aria-label="Breadcrumb">
 ```
 
+**Reindent the wrapped content.** Everything that moves inside `.page-hero-copy` gains a nesting level, so its indentation must deepen by two spaces — the `<nav>`, `<p class="eyebrow">`, `<h1>`, `<p class="lede">` and `<div class="disclosure-note">` all move from 10 spaces to 12, along with their own children, and the wrapper's closing tag sits at 10. Leaving the content at its old depth is a visible formatting regression in a repo that is otherwise consistently indented.
+
 and close it by replacing the `</div>\n      </header>` that ends the block with:
 
 ```html
@@ -1283,7 +1285,7 @@ Draw each motif against the substrate. Verify every entry parses by running `npm
 
 - [ ] **Step 2: Place ten scene markers**
 
-Apply the Task 3, Step 7 hero transformation to each of the ten remaining guide pages, using that page's own slug in `data-guide-art`. The file-to-slug map, which is **not** derivable from the filename in the first case:
+Apply the Task 3, Step 7 hero transformation to each of the ten remaining guide pages, using that page's own slug in `data-guide-art`. **Reindent the wrapped content by two spaces**, as that step requires — the content moving inside `.page-hero-copy` gains a nesting level. The file-to-slug map, which is **not** derivable from the filename in the first case:
 
 | File | Slug |
 |---|---|

@@ -11,6 +11,7 @@ import { penPalStarterKit } from "./guides/pen-pal-starter-kit.js";
 import { adventureTravelEssentials } from "./guides/adventure-travel-essentials.js";
 import { cozyFallFinds } from "./guides/cozy-fall-finds.js";
 import { whimsicalKitchenFinds } from "./guides/whimsical-kitchen-finds.js";
+import { hotelRoomEssentials } from "./guides/hotel-room-essentials.js";
 
 export const collections = {
   "travel-essentials": travelEssentials,
@@ -24,7 +25,8 @@ export const collections = {
   "pen-pal-starter-kit": penPalStarterKit,
   "adventure-travel-essentials": adventureTravelEssentials,
   "cozy-fall-finds": cozyFallFinds,
-  "whimsical-kitchen-finds": whimsicalKitchenFinds
+  "whimsical-kitchen-finds": whimsicalKitchenFinds,
+  "hotel-room-essentials": hotelRoomEssentials
 };
 
 function escapeHtml(value) {

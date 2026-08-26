@@ -925,6 +925,125 @@ export const guideArt = {
         <circle cx="0" cy="44" r="10"
                 fill="#c99c54" stroke="#102a43" stroke-width="1.8"/>
       </g>`
+  },
+
+  "hotel-room-essentials": {
+    accent: "#46508c",
+    accentSoft: "#e3e5f2",
+    label: "A hotel bed, a lit bedside lamp and half-drawn curtains at night",
+    scene: `
+      ${FRAME}
+      <path d="M56 388 C 150 330, 190 236, 268 190 S 400 140, 462 122"
+            fill="none" stroke="#102a43" stroke-width="2"
+            stroke-dasharray="10 9" opacity=".45"/>
+      <circle cx="56" cy="388" r="8" fill="#c99c54"
+              stroke="#102a43" stroke-width="2"/>
+      <circle cx="462" cy="122" r="8" fill="#c99c54"
+              stroke="#102a43" stroke-width="2"/>
+      <path d="M64 414 h 672" stroke="#102a43" stroke-width="2" opacity=".35"/>
+      <g transform="translate(520 92)">
+        <path d="M-44 -14 h 298" stroke="#c99c54" stroke-width="6"/>
+        <rect x="0" y="0" width="210" height="170" rx="8"
+              fill="currentColor" stroke="#102a43" stroke-width="2"/>
+        <circle cx="150" cy="44" r="20" fill="#fffdf8"
+                stroke="#102a43" stroke-width="2"/>
+        <circle cx="58" cy="34" r="4" fill="#c99c54"/>
+        <circle cx="92" cy="76" r="3" fill="#c99c54"/>
+        <path d="M-40 -8 h 60 v 200 h -60 Z"
+              fill="#fffdf8" stroke="#102a43" stroke-width="2"/>
+        <path d="M-22 -8 v 200 M -4 -8 v 200"
+              stroke="#102a43" stroke-width="2" opacity=".45"/>
+        <path d="M190 -8 h 60 v 200 h -60 Z"
+              fill="#fffdf8" stroke="#102a43" stroke-width="2"/>
+        <path d="M208 -8 v 200 M 226 -8 v 200"
+              stroke="#102a43" stroke-width="2" opacity=".45"/>
+      </g>
+      <g transform="translate(96 262)">
+        <rect x="0" y="0" width="28" height="152" rx="8"
+              fill="currentColor" stroke="#102a43" stroke-width="2"/>
+        <rect x="28" y="114" width="248" height="26" rx="10"
+              fill="currentColor" stroke="#102a43" stroke-width="2"/>
+        <path d="M44 140 v 12 M 260 140 v 12"
+              stroke="#102a43" stroke-width="2"/>
+        <rect x="28" y="62" width="248" height="56" rx="14"
+              fill="#fffdf8" stroke="#102a43" stroke-width="2"/>
+        <path d="M186 90 h 90" stroke="#c99c54" stroke-width="10"/>
+        <rect x="44" y="30" width="76" height="36" rx="14"
+              fill="#fffdf8" stroke="#102a43" stroke-width="2"/>
+      </g>
+      <g transform="translate(398 262)">
+        <path d="M4 44 h -20 M 72 44 h 20 M 38 20 v -16"
+              stroke="#c99c54" stroke-width="2"/>
+        <path d="M6 68 L 70 68 L 58 26 L 18 26 Z"
+              fill="#c99c54" stroke="#102a43" stroke-width="2"/>
+        <path d="M38 68 V 76" stroke="#102a43" stroke-width="2"/>
+        <rect x="0" y="76" width="76" height="76" rx="8"
+              fill="#fffdf8" stroke="#102a43" stroke-width="2"/>
+        <path d="M0 110 h 76" stroke="#102a43" stroke-width="2" opacity=".45"/>
+        <circle cx="38" cy="93" r="4" fill="none"
+                stroke="#102a43" stroke-width="2"/>
+      </g>
+      <g transform="translate(600 330)">
+        <path d="M30 18 V 8 a 10 10 0 0 1 10 -10 h 40 a 10 10 0 0 1 10 10 V 18"
+              fill="none" stroke="#102a43" stroke-width="2"/>
+        <rect x="0" y="18" width="120" height="66" rx="12"
+              fill="currentColor" stroke="#102a43" stroke-width="2"/>
+        <path d="M0 46 h 120" stroke="#c99c54" stroke-width="8"/>
+      </g>`,
+    badge: `
+      <path d="M16 250 C 70 214, 96 160, 150 134 S 226 104, 258 94"
+            fill="none" stroke="#102a43" stroke-width="2"
+            stroke-dasharray="9 8" opacity=".45"/>
+      <path d="M16 265 h 448" stroke="#102a43" stroke-width="2" opacity=".35"/>
+      <g transform="translate(292 90) scale(.6)">
+        <path d="M-44 -14 h 298" stroke="#c99c54" stroke-width="8"/>
+        <rect x="0" y="0" width="210" height="170" rx="8"
+              fill="currentColor" stroke="#102a43" stroke-width="3.3"/>
+        <circle cx="150" cy="44" r="20" fill="#fffdf8"
+                stroke="#102a43" stroke-width="3.3"/>
+        <circle cx="58" cy="34" r="5" fill="#c99c54"/>
+        <circle cx="92" cy="76" r="4" fill="#c99c54"/>
+        <path d="M-40 -8 h 60 v 200 h -60 Z"
+              fill="#fffdf8" stroke="#102a43" stroke-width="3.3"/>
+        <path d="M-22 -8 v 200 M -4 -8 v 200"
+              stroke="#102a43" stroke-width="3.3" opacity=".45"/>
+        <path d="M190 -8 h 60 v 200 h -60 Z"
+              fill="#fffdf8" stroke="#102a43" stroke-width="3.3"/>
+        <path d="M208 -8 v 200 M 226 -8 v 200"
+              stroke="#102a43" stroke-width="3.3" opacity=".45"/>
+      </g>
+      <g transform="translate(10 174) scale(.6)">
+        <rect x="0" y="0" width="28" height="152" rx="8"
+              fill="currentColor" stroke="#102a43" stroke-width="3.3"/>
+        <rect x="28" y="114" width="248" height="26" rx="10"
+              fill="currentColor" stroke="#102a43" stroke-width="3.3"/>
+        <path d="M44 140 v 12 M 260 140 v 12"
+              stroke="#102a43" stroke-width="3.3"/>
+        <rect x="28" y="62" width="248" height="56" rx="14"
+              fill="#fffdf8" stroke="#102a43" stroke-width="3.3"/>
+        <path d="M186 90 h 90" stroke="#c99c54" stroke-width="14"/>
+        <rect x="44" y="30" width="76" height="36" rx="14"
+              fill="#fffdf8" stroke="#102a43" stroke-width="3.3"/>
+      </g>
+      <g transform="translate(186 174) scale(.6)">
+        <path d="M4 44 h -20 M 72 44 h 20 M 38 20 v -16"
+              stroke="#c99c54" stroke-width="3.3"/>
+        <path d="M6 68 L 70 68 L 58 26 L 18 26 Z"
+              fill="#c99c54" stroke="#102a43" stroke-width="3.3"/>
+        <path d="M38 68 V 76" stroke="#102a43" stroke-width="3.3"/>
+        <rect x="0" y="76" width="76" height="76" rx="8"
+              fill="#fffdf8" stroke="#102a43" stroke-width="3.3"/>
+        <path d="M0 110 h 76" stroke="#102a43" stroke-width="3.3" opacity=".45"/>
+        <circle cx="38" cy="93" r="5" fill="none"
+                stroke="#102a43" stroke-width="3.3"/>
+      </g>
+      <g transform="translate(280 215) scale(.6)">
+        <path d="M30 18 V 8 a 10 10 0 0 1 10 -10 h 40 a 10 10 0 0 1 10 10 V 18"
+              fill="none" stroke="#102a43" stroke-width="3.3"/>
+        <rect x="0" y="18" width="120" height="66" rx="12"
+              fill="currentColor" stroke="#102a43" stroke-width="3.3"/>
+        <path d="M0 46 h 120" stroke="#c99c54" stroke-width="12"/>
+      </g>`
   }
 };
 

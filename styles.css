@@ -217,6 +217,7 @@ p { margin-top: 0; }
   right: 0;
   height: 26px;
   background: inherit;
+  pointer-events: none;
 }
 
 .section-soft::before { top: -25px; border-radius: 50% 50% 0 0 / 100% 100% 0 0; }
@@ -250,6 +251,11 @@ p { margin-top: 0; }
 }
 
 .featured-visual { position: relative; }
+/* .featured-visual is a column flex container split by justify-content:
+   space-between; the [data-guide-scene-decorative] marker is a zero-height
+   flex child that would otherwise eat one of the free-space gaps and push
+   the numeral down. Taking it out of flow restores the two-child split. */
+.featured-visual > [data-guide-scene-decorative] { position: absolute; inset: 0; }
 .featured-visual .guide-art {
   position: absolute;
   inset: 0;
@@ -284,13 +290,19 @@ p { margin-top: 0; }
 .guide-card p { color: var(--muted); }
 .guide-card .button { align-self: flex-start; }
 
+/* The build injects the badge's markup inside the [data-guide-badge] marker
+   div, which is .guide-card's actual flex item; .guide-badge itself is just
+   a block child of that marker. So the auto top margin that pushes the art
+   and the button below it down to the card's foot -- lining both up across a
+   row of cards with different text lengths -- has to live on the marker, not
+   here. .guide-badge keeps the negative side margins, which cancel
+   .guide-card's 1.7rem padding so the art bleeds to the card edges while the
+   copy stays inset. */
+.guide-card > [data-guide-badge] { margin-top: auto; }
+
 .guide-badge {
   color: var(--accent);
-  /* auto top margin pushes the art and the button below it to the card's
-     foot, so both line up across a row of cards with different text lengths.
-     The negative side margins cancel .guide-card's 1.7rem padding so the art
-     bleeds to the card edges while the copy stays inset. */
-  margin: auto -1.7rem 1.2rem;
+  margin: 0 -1.7rem 1.2rem;
   background: var(--accent-soft);
   border-block: 1px solid rgba(16, 42, 67, .12);
   line-height: 0;
@@ -398,7 +410,6 @@ p { margin-top: 0; }
 .guide-art svg { width: 100%; height: auto; display: block; }
 
 .breadcrumb { display: flex; flex-wrap: wrap; gap: .45rem; color: var(--muted); font-size: .86rem; margin-bottom: 1.5rem; }
-.breadcrumb a { color: var(--teal); }
 .breadcrumb a { color: var(--accent-ink); }
 
 /* The accent doubles as link text in two places, and three of the twelve are
@@ -542,7 +553,7 @@ body[style*="#c99c54"] .product-number { color: var(--navy); }
   .footer-grid { gap: 1.2rem; }
   .section { padding: 3rem 0; }
   .page-hero { padding: 2.5rem 0 1.5rem; }
-  .guide-badge { margin: -1.7rem -1.7rem 1rem; }
+  .guide-badge { margin: 0 -1.7rem 1rem; }
   .product-grid { gap: .9rem; }
 }
 

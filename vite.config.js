@@ -24,6 +24,8 @@ function prerenderProducts() {
   const injected = new Map();
   const scenes = new Map();
   const badges = new Map();
+  let homeArtCount = 0;
+  let categoryIconCount = 0;
 
   const bump = (map, key) => map.set(key, (map.get(key) ?? 0) + 1);
 
@@ -33,6 +35,8 @@ function prerenderProducts() {
       injected.clear();
       scenes.clear();
       badges.clear();
+      homeArtCount = 0;
+      categoryIconCount = 0;
     },
     transformIndexHtml: {
       order: "pre",
@@ -57,12 +61,14 @@ function prerenderProducts() {
             bump(badges, key);
             return open + renderGuideBadge(key) + close;
           })
-          .replace(HOME_PATTERN, (_m, open, _key, _ws, close) =>
-            open + renderHomeArt() + close
-          )
-          .replace(ICON_PATTERN, (_m, open, key, _ws, close) =>
-            open + renderCategoryIcon(key) + close
-          );
+          .replace(HOME_PATTERN, (_m, open, _key, _ws, close) => {
+            homeArtCount++;
+            return open + renderHomeArt() + close;
+          })
+          .replace(ICON_PATTERN, (_m, open, key, _ws, close) => {
+            categoryIconCount++;
+            return open + renderCategoryIcon(key) + close;
+          });
       }
     },
     closeBundle() {
@@ -97,6 +103,17 @@ function prerenderProducts() {
             `art "${key}" was injected as a badge ${badgeCount} times, expected at most 1`
           );
         }
+      }
+
+      if (homeArtCount !== 1) {
+        problems.push(
+          `data-home-art was injected ${homeArtCount} times, expected exactly 1`
+        );
+      }
+      if (categoryIconCount !== 6) {
+        problems.push(
+          `data-category-icon was injected ${categoryIconCount} times, expected exactly 6`
+        );
       }
 
       if (problems.length > 0) {

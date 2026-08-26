@@ -168,8 +168,12 @@ for (const guide of GUIDES) {
   if (!html.includes(`aria-label="${art.label}"`)) {
     fail(`hero art is missing its aria-label "${art.label}"`);
   }
-  if (!html.includes(art.accent)) {
-    fail(`accent ${art.accent} never appears — the body style or hero art is missing`);
+  const bodyTag = html.match(/<body[^>]*>/)?.[0] ?? "";
+  if (!bodyTag.includes(`--accent: ${art.accent}`)) {
+    fail(`<body> is missing "--accent: ${art.accent}" — the accent cannot cascade to the product badges, TOC rule or callout`);
+  }
+  if (!bodyTag.includes(`--accent-soft: ${art.accentSoft}`)) {
+    fail(`<body> is missing "--accent-soft: ${art.accentSoft}"`);
   }
   if (count('class="guide-art"') !== 1) {
     fail(`expected exactly 1 hero art container, found ${count('class="guide-art"')}`);

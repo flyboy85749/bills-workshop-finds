@@ -125,6 +125,806 @@ export const guideArt = {
               fill="currentColor" stroke="#102a43" stroke-width="3"/>
         <path d="M-46 0 h 92" stroke="#102a43" stroke-width="3" opacity=".4"/>
       </g>`
+  },
+
+  "travel-essentials": {
+    accent: "#1f5f8b",
+    accentSoft: "#dde8f0",
+    label: "A rolling cabin bag, a luggage tag and a dashed route arc",
+    scene: `
+      ${FRAME}
+      <path d="M56 392 C 210 316, 330 208, 470 178 S 700 138, 750 92"
+            fill="none" stroke="#102a43" stroke-width="2"
+            stroke-dasharray="10 9" opacity=".45"/>
+      <circle cx="56" cy="392" r="8" fill="#c99c54"
+              stroke="#102a43" stroke-width="2"/>
+      <circle cx="750" cy="92" r="8" fill="#c99c54"
+              stroke="#102a43" stroke-width="2"/>
+      <g transform="translate(120 140)">
+        <path d="M52 40 V 12 a 12 12 0 0 1 12 -12 h 52 a 12 12 0 0 1 12 12 V 40"
+              fill="none" stroke="#102a43" stroke-width="2"/>
+        <rect x="0" y="40" width="180" height="230" rx="24"
+              fill="currentColor" stroke="#102a43" stroke-width="2"/>
+        <path d="M0 96 h 180" stroke="#102a43" stroke-width="2" opacity=".45"/>
+        <path d="M0 150 h 180" stroke="#c99c54" stroke-width="10"/>
+        <circle cx="36" cy="288" r="16" fill="#fffdf8"
+                stroke="#102a43" stroke-width="2"/>
+        <circle cx="144" cy="288" r="16" fill="#fffdf8"
+                stroke="#102a43" stroke-width="2"/>
+      </g>
+      <g transform="translate(520 168)">
+        <path d="M24 12 C 4 -14, 22 -46, 54 -42 C 82 -38, 84 -12, 56 -6"
+              fill="none" stroke="#102a43" stroke-width="2"/>
+        <rect x="0" y="0" width="152" height="104" rx="16"
+              fill="#fffdf8" stroke="#102a43" stroke-width="2"/>
+        <circle cx="24" cy="24" r="8" fill="none"
+                stroke="#102a43" stroke-width="2"/>
+        <path d="M30 58 h 96" stroke="currentColor" stroke-width="8"/>
+        <path d="M30 80 h 62" stroke="currentColor" stroke-width="8"/>
+      </g>`,
+    badge: `
+      <path d="M18 262 C 120 208, 210 150, 306 118 S 448 62, 466 44"
+            fill="none" stroke="#102a43" stroke-width="2"
+            stroke-dasharray="9 8" opacity=".45"/>
+      <g transform="translate(56 52) scale(.66)">
+        <path d="M52 40 V 12 a 12 12 0 0 1 12 -12 h 52 a 12 12 0 0 1 12 12 V 40"
+              fill="none" stroke="#102a43" stroke-width="3"/>
+        <rect x="0" y="40" width="180" height="230" rx="24"
+              fill="currentColor" stroke="#102a43" stroke-width="3"/>
+        <path d="M0 150 h 180" stroke="#c99c54" stroke-width="10"/>
+        <circle cx="36" cy="288" r="16" fill="#fffdf8"
+                stroke="#102a43" stroke-width="3"/>
+        <circle cx="144" cy="288" r="16" fill="#fffdf8"
+                stroke="#102a43" stroke-width="3"/>
+      </g>
+      <g transform="translate(292 122) scale(.9)">
+        <path d="M24 12 C 4 -14, 22 -46, 54 -42 C 82 -38, 84 -12, 56 -6"
+              fill="none" stroke="#102a43" stroke-width="2.5"/>
+        <rect x="0" y="0" width="152" height="104" rx="16"
+              fill="#fffdf8" stroke="#102a43" stroke-width="2.5"/>
+        <circle cx="24" cy="24" r="8" fill="none"
+                stroke="#102a43" stroke-width="2.5"/>
+        <path d="M30 58 h 96" stroke="currentColor" stroke-width="8"/>
+        <path d="M30 80 h 62" stroke="currentColor" stroke-width="8"/>
+      </g>`
+  },
+
+  "flight-attendant-dog-gifts": {
+    accent: "#7b5ea7",
+    accentSoft: "#e8e2f1",
+    label: "A dog watching from a window, a pair of crew wings and a bone",
+    scene: `
+      ${FRAME}
+      <path d="M46 404 C 200 436, 330 302, 470 268 S 700 198, 758 136"
+            fill="none" stroke="#102a43" stroke-width="2"
+            stroke-dasharray="10 9" opacity=".45"/>
+      <g transform="translate(90 110)">
+        <rect x="0" y="0" width="264" height="244" rx="12"
+              fill="#fffdf8" stroke="#102a43" stroke-width="2"/>
+        <path d="M132 0 V 244 M0 122 H 264"
+              stroke="#102a43" stroke-width="2" opacity=".45"/>
+        <g transform="translate(132 96)">
+          <path d="M-58 148 v -34 a 58 42 0 0 1 116 0 v 34 Z"
+                fill="currentColor" stroke="#102a43" stroke-width="2"/>
+          <path d="M-38 6 C -72 12, -76 66, -52 88 C -36 100, -26 86, -30 66 Z"
+                fill="currentColor" stroke="#102a43" stroke-width="2"/>
+          <path d="M38 6 C 72 12, 76 66, 52 88 C 36 100, 26 86, 30 66 Z"
+                fill="currentColor" stroke="#102a43" stroke-width="2"/>
+          <ellipse cx="0" cy="30" rx="46" ry="42"
+                   fill="currentColor" stroke="#102a43" stroke-width="2"/>
+          <ellipse cx="0" cy="54" rx="19" ry="14"
+                   fill="#fffdf8" stroke="#102a43" stroke-width="2"/>
+          <circle cx="0" cy="44" r="6" fill="#102a43"/>
+          <circle cx="-17" cy="22" r="4.5" fill="#102a43"/>
+          <circle cx="17" cy="22" r="4.5" fill="#102a43"/>
+        </g>
+        <rect x="-16" y="244" width="296" height="18" rx="6"
+              fill="#c99c54" stroke="#102a43" stroke-width="2"/>
+      </g>
+      <g transform="translate(590 200) scale(.72)">
+        <path d="M-26 -14 C -70 -22, -128 -14, -152 4 C -126 16, -66 18, -26 6 Z"
+              fill="#c99c54" stroke="#102a43" stroke-width="2"/>
+        <path d="M26 -14 C 70 -22, 128 -14, 152 4 C 126 16, 66 18, 26 6 Z"
+              fill="#c99c54" stroke="#102a43" stroke-width="2"/>
+        <path d="M-46 -8 v 16 M-70 -8 v 18 M-94 -4 v 16
+                 M46 -8 v 16 M70 -8 v 18 M94 -4 v 16"
+              stroke="#102a43" stroke-width="2" opacity=".5"/>
+        <path d="M-26 -26 h 52 v 30 C 26 22, 6 32, 0 38 C -6 32, -26 22, -26 4 Z"
+              fill="currentColor" stroke="#102a43" stroke-width="2"/>
+      </g>
+      <g transform="translate(620 370) scale(.66)">
+        <path d="M-34 -12 C -34 -32, -66 -32, -66 -12 C -84 -12, -84 12, -66 12
+                 C -66 32, -34 32, -34 12 h 68 C 34 32, 66 32, 66 12
+                 C 84 12, 84 -12, 66 -12 C 66 -32, 34 -32, 34 -12 Z"
+              fill="#fffdf8" stroke="#102a43" stroke-width="2"/>
+      </g>`,
+    badge: `
+      <path d="M20 254 C 132 232, 212 160, 312 130 S 450 88, 468 66"
+            fill="none" stroke="#102a43" stroke-width="2"
+            stroke-dasharray="9 8" opacity=".45"/>
+      <g transform="translate(34 46) scale(.8)">
+        <rect x="0" y="0" width="264" height="244" rx="12"
+              fill="#fffdf8" stroke="#102a43" stroke-width="3"/>
+        <path d="M132 0 V 244 M0 122 H 264"
+              stroke="#102a43" stroke-width="3" opacity=".45"/>
+        <g transform="translate(132 96)">
+          <path d="M-58 148 v -34 a 58 42 0 0 1 116 0 v 34 Z"
+                fill="currentColor" stroke="#102a43" stroke-width="3"/>
+          <path d="M-38 6 C -72 12, -76 66, -52 88 C -36 100, -26 86, -30 66 Z"
+                fill="currentColor" stroke="#102a43" stroke-width="3"/>
+          <path d="M38 6 C 72 12, 76 66, 52 88 C 36 100, 26 86, 30 66 Z"
+                fill="currentColor" stroke="#102a43" stroke-width="3"/>
+          <ellipse cx="0" cy="30" rx="46" ry="42"
+                   fill="currentColor" stroke="#102a43" stroke-width="3"/>
+          <ellipse cx="0" cy="54" rx="19" ry="14"
+                   fill="#fffdf8" stroke="#102a43" stroke-width="3"/>
+          <circle cx="0" cy="44" r="7" fill="#102a43"/>
+          <circle cx="-17" cy="22" r="5" fill="#102a43"/>
+          <circle cx="17" cy="22" r="5" fill="#102a43"/>
+        </g>
+        <rect x="-16" y="244" width="296" height="18" rx="6"
+              fill="#c99c54" stroke="#102a43" stroke-width="3"/>
+      </g>
+      <g transform="translate(362 176) scale(.6)">
+        <path d="M-26 -14 C -70 -22, -128 -14, -152 4 C -126 16, -66 18, -26 6 Z"
+              fill="#c99c54" stroke="#102a43" stroke-width="3"/>
+        <path d="M26 -14 C 70 -22, 128 -14, 152 4 C 126 16, 66 18, 26 6 Z"
+              fill="#c99c54" stroke="#102a43" stroke-width="3"/>
+        <path d="M-26 -26 h 52 v 30 C 26 22, 6 32, 0 38 C -6 32, -26 22, -26 4 Z"
+              fill="currentColor" stroke="#102a43" stroke-width="3"/>
+      </g>`
+  },
+
+  "elementary-classroom-essentials": {
+    accent: "#2f6f73",
+    accentSoft: "#dde9ea",
+    label: "A rolling classroom cart, a cup of pencils and a name tag",
+    scene: `
+      ${FRAME}
+      <path d="M44 388 C 190 432, 300 322, 452 330 S 690 372, 762 296"
+            fill="none" stroke="#102a43" stroke-width="2"
+            stroke-dasharray="10 9" opacity=".45"/>
+      <g transform="translate(110 120)">
+        <path d="M14 8 a 14 14 0 0 1 14 -14 h 120 a 14 14 0 0 1 14 14"
+              fill="none" stroke="#102a43" stroke-width="2"/>
+        <path d="M14 8 V 312 M162 8 V 312"
+              stroke="#102a43" stroke-width="2"/>
+        <rect x="-8" y="70" width="192" height="46" rx="8"
+              fill="currentColor" stroke="#102a43" stroke-width="2"/>
+        <rect x="-8" y="162" width="192" height="46" rx="8"
+              fill="#fffdf8" stroke="#102a43" stroke-width="2"/>
+        <rect x="-8" y="254" width="192" height="46" rx="8"
+              fill="#c99c54" stroke="#102a43" stroke-width="2"/>
+        <path d="M64 92 h 48 M64 184 h 48 M64 276 h 48"
+              stroke="#102a43" stroke-width="2" opacity=".5"/>
+        <circle cx="16" cy="330" r="15" fill="#fffdf8"
+                stroke="#102a43" stroke-width="2"/>
+        <circle cx="160" cy="330" r="15" fill="#fffdf8"
+                stroke="#102a43" stroke-width="2"/>
+      </g>
+      <g transform="translate(430 258)">
+        <g transform="translate(16 -72) rotate(-8)">
+          <path d="M0 0 L 8.5 -20 L 17 0 Z"
+                fill="#fffdf8" stroke="#102a43" stroke-width="2"/>
+          <rect x="0" y="0" width="17" height="96"
+                fill="#c99c54" stroke="#102a43" stroke-width="2"/>
+        </g>
+        <g transform="translate(42 -84)">
+          <path d="M0 0 L 8.5 -20 L 17 0 Z"
+                fill="#fffdf8" stroke="#102a43" stroke-width="2"/>
+          <rect x="0" y="0" width="17" height="108"
+                fill="currentColor" stroke="#102a43" stroke-width="2"/>
+        </g>
+        <g transform="translate(68 -74) rotate(9)">
+          <path d="M0 0 L 8.5 -20 L 17 0 Z"
+                fill="#fffdf8" stroke="#102a43" stroke-width="2"/>
+          <rect x="0" y="0" width="17" height="96"
+                fill="#c99c54" stroke="#102a43" stroke-width="2"/>
+        </g>
+        <path d="M0 0 h 100 l -11 112 h -78 Z"
+              fill="#fffdf8" stroke="#102a43" stroke-width="2"/>
+        <path d="M4 34 h 92" stroke="currentColor" stroke-width="10"/>
+      </g>
+      <g transform="translate(590 150)">
+        <path d="M78 0 v -26" stroke="#102a43" stroke-width="2"/>
+        <circle cx="78" cy="-34" r="9" fill="none"
+                stroke="#c99c54" stroke-width="3"/>
+        <rect x="0" y="0" width="158" height="106" rx="14"
+              fill="#fffdf8" stroke="#102a43" stroke-width="2"/>
+        <path d="M2 32 h 154 v -18 a 12 12 0 0 0 -12 -12 h -130
+                 a 12 12 0 0 0 -12 12 Z" fill="currentColor"/>
+        <path d="M0 32 h 158" stroke="#102a43" stroke-width="2"/>
+        <path d="M24 58 h 110" stroke="#102a43" stroke-width="5" opacity=".6"/>
+        <path d="M24 80 h 72" stroke="#c99c54" stroke-width="5"/>
+      </g>`,
+    badge: `
+      <path d="M18 236 C 120 270, 210 190, 306 200 S 448 242, 468 206"
+            fill="none" stroke="#102a43" stroke-width="2"
+            stroke-dasharray="9 8" opacity=".45"/>
+      <g transform="translate(44 34) scale(.68)">
+        <path d="M14 8 a 14 14 0 0 1 14 -14 h 120 a 14 14 0 0 1 14 14"
+              fill="none" stroke="#102a43" stroke-width="3"/>
+        <path d="M14 8 V 312 M162 8 V 312"
+              stroke="#102a43" stroke-width="3"/>
+        <rect x="-8" y="70" width="192" height="46" rx="8"
+              fill="currentColor" stroke="#102a43" stroke-width="3"/>
+        <rect x="-8" y="162" width="192" height="46" rx="8"
+              fill="#fffdf8" stroke="#102a43" stroke-width="3"/>
+        <rect x="-8" y="254" width="192" height="46" rx="8"
+              fill="#c99c54" stroke="#102a43" stroke-width="3"/>
+        <circle cx="16" cy="330" r="15" fill="#fffdf8"
+                stroke="#102a43" stroke-width="3"/>
+        <circle cx="160" cy="330" r="15" fill="#fffdf8"
+                stroke="#102a43" stroke-width="3"/>
+      </g>
+      <g transform="translate(308 142) scale(.9)">
+        <g transform="translate(16 -72) rotate(-8)">
+          <path d="M0 0 L 8.5 -20 L 17 0 Z"
+                fill="#fffdf8" stroke="#102a43" stroke-width="3"/>
+          <rect x="0" y="0" width="17" height="96"
+                fill="#c99c54" stroke="#102a43" stroke-width="3"/>
+        </g>
+        <g transform="translate(42 -84)">
+          <path d="M0 0 L 8.5 -20 L 17 0 Z"
+                fill="#fffdf8" stroke="#102a43" stroke-width="3"/>
+          <rect x="0" y="0" width="17" height="108"
+                fill="currentColor" stroke="#102a43" stroke-width="3"/>
+        </g>
+        <g transform="translate(68 -74) rotate(9)">
+          <path d="M0 0 L 8.5 -20 L 17 0 Z"
+                fill="#fffdf8" stroke="#102a43" stroke-width="3"/>
+          <rect x="0" y="0" width="17" height="96"
+                fill="#c99c54" stroke="#102a43" stroke-width="3"/>
+        </g>
+        <path d="M0 0 h 100 l -11 112 h -78 Z"
+              fill="#fffdf8" stroke="#102a43" stroke-width="3"/>
+        <path d="M4 34 h 92" stroke="currentColor" stroke-width="10"/>
+      </g>`
+  },
+
+  "dog-lover-gifts": {
+    accent: "#c9752f",
+    accentSoft: "#f7e6d6",
+    label: "Three paw prints crossing to a food bowl, with a leash hanging above",
+    scene: `
+      ${FRAME}
+      <path d="M44 400 C 140 370, 220 326, 330 290 S 580 228, 762 200"
+            fill="none" stroke="#102a43" stroke-width="2"
+            stroke-dasharray="10 9" opacity=".45"/>
+      <g transform="translate(150 350) rotate(-14)"
+         fill="currentColor" stroke="#102a43" stroke-width="2">
+        <ellipse cx="0" cy="16" rx="27" ry="22"/>
+        <circle cx="-25" cy="-12" r="10"/>
+        <circle cx="-9" cy="-25" r="10"/>
+        <circle cx="10" cy="-25" r="10"/>
+        <circle cx="26" cy="-11" r="10"/>
+      </g>
+      <g transform="translate(258 306) rotate(-4)"
+         fill="#c99c54" stroke="#102a43" stroke-width="2">
+        <ellipse cx="0" cy="16" rx="27" ry="22"/>
+        <circle cx="-25" cy="-12" r="10"/>
+        <circle cx="-9" cy="-25" r="10"/>
+        <circle cx="10" cy="-25" r="10"/>
+        <circle cx="26" cy="-11" r="10"/>
+      </g>
+      <g transform="translate(366 262) rotate(6)"
+         fill="currentColor" stroke="#102a43" stroke-width="2">
+        <ellipse cx="0" cy="16" rx="27" ry="22"/>
+        <circle cx="-25" cy="-12" r="10"/>
+        <circle cx="-9" cy="-25" r="10"/>
+        <circle cx="10" cy="-25" r="10"/>
+        <circle cx="26" cy="-11" r="10"/>
+      </g>
+      <g transform="translate(600 96)" fill="none"
+         stroke-linecap="round" stroke-linejoin="round">
+        <path d="M0 -22 C -44 -22, -44 44, 0 44 C 44 44, 44 -22, 0 -22 Z"
+              stroke="#102a43" stroke-width="17"/>
+        <path d="M0 -22 C -44 -22, -44 44, 0 44 C 44 44, 44 -22, 0 -22 Z"
+              stroke="currentColor" stroke-width="13"/>
+        <path d="M0 44 C 6 92, 44 106, 38 146"
+              stroke="#102a43" stroke-width="17"/>
+        <path d="M0 44 C 6 92, 44 106, 38 146"
+              stroke="currentColor" stroke-width="13"/>
+      </g>
+      <g transform="translate(638 242)">
+        <rect x="-11" y="-4" width="22" height="26" rx="6"
+              fill="#c99c54" stroke="#102a43" stroke-width="2"/>
+        <path d="M0 22 v 10 a 12 12 0 1 0 12 8"
+              fill="none" stroke="#102a43" stroke-width="3"/>
+      </g>
+      <g transform="translate(470 336)">
+        <path d="M0 0 C 0 74, 176 74, 176 0 Z"
+              fill="currentColor" stroke="#102a43" stroke-width="2"/>
+        <path d="M10 26 C 46 50, 130 50, 166 26"
+              fill="none" stroke="#c99c54" stroke-width="9"/>
+        <ellipse cx="88" cy="0" rx="88" ry="19"
+                 fill="#fffdf8" stroke="#102a43" stroke-width="2"/>
+      </g>`,
+    badge: `
+      <path d="M18 252 C 100 226, 170 192, 250 162 S 420 120, 466 96"
+            fill="none" stroke="#102a43" stroke-width="2"
+            stroke-dasharray="9 8" opacity=".45"/>
+      <g transform="translate(66 214) rotate(-14)"
+         fill="currentColor" stroke="#102a43" stroke-width="3">
+        <ellipse cx="0" cy="16" rx="27" ry="22"/>
+        <circle cx="-25" cy="-12" r="10"/>
+        <circle cx="-9" cy="-25" r="10"/>
+        <circle cx="10" cy="-25" r="10"/>
+        <circle cx="26" cy="-11" r="10"/>
+      </g>
+      <g transform="translate(146 174) rotate(-4)"
+         fill="#c99c54" stroke="#102a43" stroke-width="3">
+        <ellipse cx="0" cy="16" rx="27" ry="22"/>
+        <circle cx="-25" cy="-12" r="10"/>
+        <circle cx="-9" cy="-25" r="10"/>
+        <circle cx="10" cy="-25" r="10"/>
+        <circle cx="26" cy="-11" r="10"/>
+      </g>
+      <g transform="translate(226 136) rotate(6)"
+         fill="currentColor" stroke="#102a43" stroke-width="3">
+        <ellipse cx="0" cy="16" rx="27" ry="22"/>
+        <circle cx="-25" cy="-12" r="10"/>
+        <circle cx="-9" cy="-25" r="10"/>
+        <circle cx="10" cy="-25" r="10"/>
+        <circle cx="26" cy="-11" r="10"/>
+      </g>
+      <g transform="translate(292 158) scale(.9)">
+        <path d="M0 0 C 0 74, 176 74, 176 0 Z"
+              fill="currentColor" stroke="#102a43" stroke-width="3"/>
+        <path d="M10 26 C 46 50, 130 50, 166 26"
+              fill="none" stroke="#c99c54" stroke-width="9"/>
+        <ellipse cx="88" cy="0" rx="88" ry="19"
+                 fill="#fffdf8" stroke="#102a43" stroke-width="3"/>
+      </g>`
+  },
+
+  "first-apartment-tools": {
+    accent: "#4a6572",
+    accentSoft: "#e2e8eb",
+    label: "A screwdriver, a spirit level with its bubble centered and two hex keys",
+    scene: `
+      ${FRAME}
+      <path d="M46 190 C 168 156, 246 372, 418 404 S 688 402, 760 316"
+            fill="none" stroke="#102a43" stroke-width="2"
+            stroke-dasharray="10 9" opacity=".45"/>
+      <g transform="translate(110 300) rotate(-24)">
+        <rect x="0" y="0" width="112" height="54" rx="20"
+              fill="currentColor" stroke="#102a43" stroke-width="2"/>
+        <path d="M36 8 v 38 M64 8 v 38"
+              stroke="#102a43" stroke-width="2" opacity=".45"/>
+        <rect x="112" y="16" width="24" height="22"
+              fill="#c99c54" stroke="#102a43" stroke-width="2"/>
+        <rect x="136" y="21" width="108" height="12"
+              fill="#fffdf8" stroke="#102a43" stroke-width="2"/>
+        <path d="M244 15 h 26 v 24 h -26 Z"
+              fill="#fffdf8" stroke="#102a43" stroke-width="2"/>
+      </g>
+      <g transform="translate(420 106)">
+        <rect x="0" y="0" width="300" height="64" rx="10"
+              fill="currentColor" stroke="#102a43" stroke-width="2"/>
+        <path d="M42 0 v 64 M258 0 v 64"
+              stroke="#102a43" stroke-width="2" opacity=".35"/>
+        <rect x="110" y="16" width="80" height="32" rx="16"
+              fill="#fffdf8" stroke="#102a43" stroke-width="2"/>
+        <path d="M134 18 v 28 M166 18 v 28"
+              stroke="#102a43" stroke-width="2" opacity=".45"/>
+        <circle cx="150" cy="32" r="11"
+                fill="#c99c54" stroke="#102a43" stroke-width="2"/>
+      </g>
+      <g fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <g transform="translate(548 292) rotate(-8)">
+          <path d="M0 0 h 112 v 54" stroke="#102a43" stroke-width="17"/>
+          <path d="M0 0 h 112 v 54" stroke="#c99c54" stroke-width="12"/>
+        </g>
+        <g transform="translate(586 386) rotate(7)">
+          <path d="M0 0 h 86 v 42" stroke="#102a43" stroke-width="15"/>
+          <path d="M0 0 h 86 v 42" stroke="#c99c54" stroke-width="10"/>
+        </g>
+      </g>`,
+    badge: `
+      <path d="M18 300 C 120 322, 210 240, 300 218 S 448 178, 468 142"
+            fill="none" stroke="#102a43" stroke-width="2"
+            stroke-dasharray="9 8" opacity=".45"/>
+      <g transform="translate(150 56) rotate(-6) scale(.86)">
+        <rect x="0" y="0" width="300" height="64" rx="10"
+              fill="currentColor" stroke="#102a43" stroke-width="3"/>
+        <path d="M42 0 v 64 M258 0 v 64"
+              stroke="#102a43" stroke-width="3" opacity=".35"/>
+        <rect x="110" y="16" width="80" height="32" rx="16"
+              fill="#fffdf8" stroke="#102a43" stroke-width="3"/>
+        <circle cx="150" cy="32" r="11"
+                fill="#c99c54" stroke="#102a43" stroke-width="3"/>
+      </g>
+      <g transform="translate(60 262) rotate(-24) scale(.86)">
+        <rect x="0" y="0" width="112" height="54" rx="20"
+              fill="currentColor" stroke="#102a43" stroke-width="3"/>
+        <path d="M36 8 v 38 M64 8 v 38"
+              stroke="#102a43" stroke-width="3" opacity=".45"/>
+        <rect x="112" y="16" width="24" height="22"
+              fill="#c99c54" stroke="#102a43" stroke-width="3"/>
+        <rect x="136" y="21" width="108" height="12"
+              fill="#fffdf8" stroke="#102a43" stroke-width="3"/>
+        <path d="M244 15 h 26 v 24 h -26 Z"
+              fill="#fffdf8" stroke="#102a43" stroke-width="3"/>
+      </g>`
+  },
+
+  "holiday-gifts": {
+    accent: "#a63d40",
+    accentSoft: "#f4dedf",
+    label: "Two stacked gift boxes tied with a ribbon bow, beside a gift tag",
+    scene: `
+      ${FRAME}
+      <path d="M46 400 C 200 444, 320 296, 464 268 S 700 200, 760 132"
+            fill="none" stroke="#102a43" stroke-width="2"
+            stroke-dasharray="10 9" opacity=".45"/>
+      <g transform="translate(120 190)">
+        <rect x="0" y="118" width="210" height="158" rx="10"
+              fill="currentColor" stroke="#102a43" stroke-width="2"/>
+        <path d="M105 118 v 158" stroke="#c99c54" stroke-width="16"/>
+        <path d="M0 190 h 210" stroke="#c99c54" stroke-width="16"/>
+        <rect x="44" y="0" width="138" height="118" rx="8"
+              fill="#fffdf8" stroke="#102a43" stroke-width="2"/>
+        <path d="M113 0 v 118" stroke="currentColor" stroke-width="14"/>
+        <path d="M113 0 C 88 -12, 70 -36, 92 -44 C 110 -50, 112 -16, 113 0 Z"
+              fill="currentColor" stroke="#102a43" stroke-width="2"/>
+        <path d="M113 0 C 138 -12, 156 -36, 134 -44 C 116 -50, 114 -16, 113 0 Z"
+              fill="currentColor" stroke="#102a43" stroke-width="2"/>
+        <circle cx="113" cy="-2" r="9"
+                fill="#c99c54" stroke="#102a43" stroke-width="2"/>
+      </g>
+      <g transform="translate(570 200)">
+        <path d="M20 40 C -12 18, -22 -30, 26 -54"
+              fill="none" stroke="#102a43" stroke-width="2"/>
+        <path d="M32 0 h 126 a 14 14 0 0 1 14 14 v 84 a 14 14 0 0 1 -14 14
+                 h -126 L 0 56 Z"
+              fill="#fffdf8" stroke="#102a43" stroke-width="2"/>
+        <circle cx="30" cy="56" r="8" fill="none"
+                stroke="#102a43" stroke-width="2"/>
+        <path d="M58 42 h 92" stroke="currentColor" stroke-width="8"/>
+        <path d="M58 70 h 60" stroke="currentColor" stroke-width="8"/>
+      </g>`,
+    badge: `
+      <path d="M18 258 C 130 294, 220 176, 320 158 S 448 110, 468 74"
+            fill="none" stroke="#102a43" stroke-width="2"
+            stroke-dasharray="9 8" opacity=".45"/>
+      <g transform="translate(40 62) scale(.66)">
+        <rect x="0" y="118" width="210" height="158" rx="10"
+              fill="currentColor" stroke="#102a43" stroke-width="3"/>
+        <path d="M105 118 v 158" stroke="#c99c54" stroke-width="16"/>
+        <path d="M0 190 h 210" stroke="#c99c54" stroke-width="16"/>
+        <rect x="44" y="0" width="138" height="118" rx="8"
+              fill="#fffdf8" stroke="#102a43" stroke-width="3"/>
+        <path d="M113 0 v 118" stroke="currentColor" stroke-width="14"/>
+        <path d="M113 0 C 88 -12, 70 -36, 92 -44 C 110 -50, 112 -16, 113 0 Z"
+              fill="currentColor" stroke="#102a43" stroke-width="3"/>
+        <path d="M113 0 C 138 -12, 156 -36, 134 -44 C 116 -50, 114 -16, 113 0 Z"
+              fill="currentColor" stroke="#102a43" stroke-width="3"/>
+        <circle cx="113" cy="-2" r="9"
+                fill="#c99c54" stroke="#102a43" stroke-width="3"/>
+      </g>
+      <g transform="translate(250 110) scale(.94)">
+        <path d="M20 40 C -12 18, -22 -30, 26 -54"
+              fill="none" stroke="#102a43" stroke-width="2.5"/>
+        <path d="M32 0 h 126 a 14 14 0 0 1 14 14 v 84 a 14 14 0 0 1 -14 14
+                 h -126 L 0 56 Z"
+              fill="#fffdf8" stroke="#102a43" stroke-width="2.5"/>
+        <circle cx="30" cy="56" r="8" fill="none"
+                stroke="#102a43" stroke-width="2.5"/>
+        <path d="M58 42 h 92" stroke="currentColor" stroke-width="8"/>
+        <path d="M58 70 h 60" stroke="currentColor" stroke-width="8"/>
+      </g>`
+  },
+
+  "retro-classroom-decor": {
+    accent: "#c99c54",
+    accentSoft: "#f6ecda",
+    label: "A chalkboard under a string of pennants, with an apple beside it",
+    scene: `
+      ${FRAME}
+      <path d="M44 424 C 190 464, 330 402, 470 400 S 700 356, 762 300"
+            fill="none" stroke="#102a43" stroke-width="2"
+            stroke-dasharray="10 9" opacity=".45"/>
+      <path d="M60 60 Q 320 154, 580 60"
+            fill="none" stroke="#102a43" stroke-width="2"/>
+      <g stroke="#102a43" stroke-width="2">
+        <path d="M89 77 h 46 L 112 131 Z" fill="currentColor"/>
+        <path d="M183 98 h 46 L 206 152 Z" fill="#fffdf8"/>
+        <path d="M276 107 h 46 L 299 161 Z" fill="#102a43"/>
+        <path d="M370 103 h 46 L 393 157 Z" fill="#fffdf8"/>
+        <path d="M463 88 h 46 L 486 142 Z" fill="currentColor"/>
+      </g>
+      <g transform="translate(110 178)">
+        <rect x="0" y="0" width="340" height="236" rx="10"
+              fill="currentColor" stroke="#102a43" stroke-width="2"/>
+        <rect x="18" y="18" width="304" height="182" rx="4" fill="#102a43"/>
+        <path d="M48 66 h 196 M48 102 h 148 M48 138 h 174"
+              stroke="#fbf6ed" stroke-width="4" opacity=".8"/>
+        <rect x="18" y="206" width="304" height="16" rx="6"
+              fill="#fffdf8" stroke="#102a43" stroke-width="2"/>
+        <rect x="236" y="204" width="48" height="12" rx="6"
+              fill="#fbf6ed" stroke="#102a43" stroke-width="2"/>
+      </g>
+      <g transform="translate(620 316)">
+        <path d="M22 -64 C 40 -80, 64 -72, 62 -52 C 44 -42, 26 -50, 22 -64 Z"
+              fill="#2f6f73" stroke="#102a43" stroke-width="2"/>
+        <path d="M0 -30 C 2 -48, 10 -60, 22 -64"
+              fill="none" stroke="#102a43" stroke-width="4"/>
+        <path d="M0 -30 C -34 -50, -70 -22, -62 20 C -56 56, -26 78, 0 60
+                 C 26 78, 56 56, 62 20 C 70 -22, 34 -50, 0 -30 Z"
+              fill="currentColor" stroke="#102a43" stroke-width="2"/>
+        <path d="M-34 -14 C -44 -2, -46 16, -40 30"
+              fill="none" stroke="#fbf6ed" stroke-width="4" opacity=".6"/>
+      </g>`,
+    badge: `
+      <path d="M18 268 C 120 294, 220 244, 310 250 S 448 228, 468 190"
+            fill="none" stroke="#102a43" stroke-width="2"
+            stroke-dasharray="9 8" opacity=".45"/>
+      <g transform="translate(28 68) scale(.66)">
+        <rect x="0" y="0" width="340" height="236" rx="10"
+              fill="currentColor" stroke="#102a43" stroke-width="3"/>
+        <rect x="18" y="18" width="304" height="182" rx="4" fill="#102a43"/>
+        <path d="M48 66 h 196 M48 102 h 148 M48 138 h 174"
+              stroke="#fbf6ed" stroke-width="6" opacity=".8"/>
+        <rect x="18" y="206" width="304" height="16" rx="6"
+              fill="#fffdf8" stroke="#102a43" stroke-width="3"/>
+        <rect x="236" y="204" width="48" height="12" rx="6"
+              fill="#fbf6ed" stroke="#102a43" stroke-width="3"/>
+      </g>
+      <g transform="translate(370 176)">
+        <path d="M22 -64 C 40 -80, 64 -72, 62 -52 C 44 -42, 26 -50, 22 -64 Z"
+              fill="#2f6f73" stroke="#102a43" stroke-width="3"/>
+        <path d="M0 -30 C 2 -48, 10 -60, 22 -64"
+              fill="none" stroke="#102a43" stroke-width="5"/>
+        <path d="M0 -30 C -34 -50, -70 -22, -62 20 C -56 56, -26 78, 0 60
+                 C 26 78, 56 56, 62 20 C 70 -22, 34 -50, 0 -30 Z"
+              fill="currentColor" stroke="#102a43" stroke-width="3"/>
+      </g>`
+  },
+
+  "pen-pal-starter-kit": {
+    accent: "#3f5f8f",
+    accentSoft: "#e0e6f0",
+    label: "An envelope, a fountain pen nib and a stamped wax seal",
+    scene: `
+      ${FRAME}
+      <path d="M40 108 C 180 62, 320 142, 468 116 S 690 214, 762 322"
+            fill="none" stroke="#102a43" stroke-width="2"
+            stroke-dasharray="10 9" opacity=".45"/>
+      <g transform="translate(96 202)">
+        <rect x="0" y="0" width="304" height="204" rx="12"
+              fill="#fffdf8" stroke="#102a43" stroke-width="2"/>
+        <path d="M0 194 L 122 106 M304 194 L 182 106"
+              stroke="#102a43" stroke-width="2" opacity=".4"/>
+        <path d="M6 3 L 152 120 L 298 3 Z"
+              fill="currentColor" stroke="#102a43" stroke-width="2"/>
+      </g>
+      <g transform="translate(470 122)">
+        <path d="M0 0 C -40 6, -56 60, -34 118 C -22 150, -8 168, 0 176
+                 C 8 168, 22 150, 34 118 C 56 60, 40 6, 0 0 Z"
+              fill="#c99c54" stroke="#102a43" stroke-width="2"/>
+        <path d="M-27 42 C -14 36, 14 36, 27 42"
+              fill="none" stroke="#102a43" stroke-width="2" opacity=".5"/>
+        <circle cx="0" cy="66" r="12"
+                fill="#fbf6ed" stroke="#102a43" stroke-width="2"/>
+        <path d="M0 78 V 176" stroke="#102a43" stroke-width="2"/>
+      </g>
+      <g transform="translate(628 344)">
+        <circle r="48" fill="currentColor" stroke="#102a43" stroke-width="2"/>
+        <circle r="35" fill="none" stroke="#102a43"
+                stroke-width="2" opacity=".45"/>
+        <path d="M-13 -15 v 30 M-13 -15 L 13 15 M13 -15 v 30"
+              fill="none" stroke="#fbf6ed" stroke-width="5"/>
+      </g>`,
+    badge: `
+      <path d="M18 250 C 110 212, 190 256, 292 224 S 448 152, 468 116"
+            fill="none" stroke="#102a43" stroke-width="2"
+            stroke-dasharray="9 8" opacity=".45"/>
+      <g transform="translate(34 92) scale(.64)">
+        <rect x="0" y="0" width="304" height="204" rx="12"
+              fill="#fffdf8" stroke="#102a43" stroke-width="3"/>
+        <path d="M0 194 L 122 106 M304 194 L 182 106"
+              stroke="#102a43" stroke-width="3" opacity=".4"/>
+        <path d="M6 3 L 152 120 L 298 3 Z"
+              fill="currentColor" stroke="#102a43" stroke-width="3"/>
+      </g>
+      <g transform="translate(356 60) scale(.95)">
+        <path d="M0 0 C -40 6, -56 60, -34 118 C -22 150, -8 168, 0 176
+                 C 8 168, 22 150, 34 118 C 56 60, 40 6, 0 0 Z"
+              fill="#c99c54" stroke="#102a43" stroke-width="3"/>
+        <circle cx="0" cy="66" r="12"
+                fill="#fbf6ed" stroke="#102a43" stroke-width="3"/>
+        <path d="M0 78 V 176" stroke="#102a43" stroke-width="3"/>
+      </g>`
+  },
+
+  "adventure-travel-essentials": {
+    accent: "#3d7a5c",
+    accentSoft: "#dcebe3",
+    label: "A roll-top dry bag and a filtered bottle against a mountain ridge",
+    scene: `
+      ${FRAME}
+      <path d="M30 402 L 168 232 L 268 322 L 392 190 L 512 320 L 618 258 L 770 402 Z"
+            fill="currentColor" opacity=".16"/>
+      <path d="M30 402 L 168 232 L 268 322 L 392 190 L 512 320 L 618 258 L 770 402"
+            fill="none" stroke="#102a43" stroke-width="2" opacity=".55"/>
+      <path d="M366 218 L 392 190 L 418 218 C 406 210, 378 226, 366 218 Z"
+            fill="#fffdf8" stroke="#102a43" stroke-width="2"/>
+      <path d="M46 434 C 190 400, 300 454, 430 424 S 690 398, 762 358"
+            fill="none" stroke="#102a43" stroke-width="2"
+            stroke-dasharray="10 9" opacity=".45"/>
+      <g transform="translate(110 208)">
+        <path d="M18 -2 C 18 -34, 152 -34, 152 -2"
+              fill="none" stroke="#102a43" stroke-width="2"/>
+        <rect x="72" y="-26" width="26" height="18" rx="4"
+              fill="#c99c54" stroke="#102a43" stroke-width="2"/>
+        <path d="M-6 0 h 182 v 40 h -182 Z"
+              fill="#fffdf8" stroke="#102a43" stroke-width="2"/>
+        <path d="M-6 14 h 182 M-6 28 h 182"
+              stroke="#102a43" stroke-width="2" opacity=".35"/>
+        <path d="M0 40 h 170 v 150 a 16 16 0 0 1 -16 16 h -138
+                 a 16 16 0 0 1 -16 -16 Z"
+              fill="currentColor" stroke="#102a43" stroke-width="2"/>
+        <path d="M0 110 h 170" stroke="#c99c54" stroke-width="10"/>
+      </g>
+      <g transform="translate(556 186)">
+        <rect x="26" y="0" width="44" height="40" rx="8"
+              fill="#c99c54" stroke="#102a43" stroke-width="2"/>
+        <path d="M0 40 h 96 v 190 a 18 18 0 0 1 -18 18 h -60
+                 a 18 18 0 0 1 -18 -18 Z"
+              fill="#fffdf8" stroke="#102a43" stroke-width="2"/>
+        <path d="M2 132 C 26 118, 70 146, 94 132 v 96 a 16 16 0 0 1 -16 16
+                 h -60 a 16 16 0 0 1 -16 -16 Z" fill="currentColor"/>
+        <rect x="34" y="86" width="28" height="44" rx="7"
+              fill="none" stroke="#102a43" stroke-width="2"/>
+        <path d="M48 40 v 46" stroke="#102a43" stroke-width="5" opacity=".5"/>
+        <path d="M76 158 h 12 M76 182 h 12 M76 206 h 12"
+              stroke="#102a43" stroke-width="2" opacity=".4"/>
+        <path d="M0 40 h 96 v 190 a 18 18 0 0 1 -18 18 h -60
+                 a 18 18 0 0 1 -18 -18 Z"
+              fill="none" stroke="#102a43" stroke-width="2"/>
+      </g>`,
+    badge: `
+      <path d="M10 264 L 92 150 L 154 208 L 228 124 L 300 204 L 364 166 L 470 264 Z"
+            fill="currentColor" opacity=".2"/>
+      <path d="M14 286 C 110 266, 200 298, 292 280 S 448 262, 470 232"
+            fill="none" stroke="#102a43" stroke-width="2"
+            stroke-dasharray="9 8" opacity=".45"/>
+      <g transform="translate(56 126) scale(.66)">
+        <path d="M18 -2 C 18 -34, 152 -34, 152 -2"
+              fill="none" stroke="#102a43" stroke-width="3"/>
+        <rect x="72" y="-26" width="26" height="18" rx="4"
+              fill="#c99c54" stroke="#102a43" stroke-width="3"/>
+        <path d="M-6 0 h 182 v 40 h -182 Z"
+              fill="#fffdf8" stroke="#102a43" stroke-width="3"/>
+        <path d="M-6 20 h 182" stroke="#102a43" stroke-width="3" opacity=".35"/>
+        <path d="M0 40 h 170 v 150 a 16 16 0 0 1 -16 16 h -138
+                 a 16 16 0 0 1 -16 -16 Z"
+              fill="currentColor" stroke="#102a43" stroke-width="3"/>
+        <path d="M0 110 h 170" stroke="#c99c54" stroke-width="10"/>
+      </g>
+      <g transform="translate(300 69) scale(.78)">
+        <rect x="26" y="0" width="44" height="40" rx="8"
+              fill="#c99c54" stroke="#102a43" stroke-width="3"/>
+        <path d="M0 40 h 96 v 190 a 18 18 0 0 1 -18 18 h -60
+                 a 18 18 0 0 1 -18 -18 Z"
+              fill="#fffdf8" stroke="#102a43" stroke-width="3"/>
+        <path d="M2 132 C 26 118, 70 146, 94 132 v 96 a 16 16 0 0 1 -16 16
+                 h -60 a 16 16 0 0 1 -16 -16 Z" fill="currentColor"/>
+        <rect x="34" y="86" width="28" height="44" rx="7"
+              fill="none" stroke="#102a43" stroke-width="3"/>
+        <path d="M0 40 h 96 v 190 a 18 18 0 0 1 -18 18 h -60
+                 a 18 18 0 0 1 -18 -18 Z"
+              fill="none" stroke="#102a43" stroke-width="3"/>
+      </g>`
+  },
+
+  "whimsical-kitchen-finds": {
+    accent: "#b8536b",
+    accentSoft: "#f6e0e6",
+    label: "A mushroom grinder, nesting doll measuring cups and a wind-up timer",
+    scene: `
+      ${FRAME}
+      <path d="M44 412 C 190 450, 320 392, 470 406 S 700 356, 762 286"
+            fill="none" stroke="#102a43" stroke-width="2"
+            stroke-dasharray="10 9" opacity=".45"/>
+      <g transform="translate(112 176)">
+        <path d="M88 -30 v -20" stroke="#102a43" stroke-width="2"/>
+        <circle cx="88" cy="-58" r="11"
+                fill="#c99c54" stroke="#102a43" stroke-width="2"/>
+        <path d="M52 60 h 72 v 118 a 14 14 0 0 1 -14 14 h -44
+                 a 14 14 0 0 1 -14 -14 Z"
+              fill="#fffdf8" stroke="#102a43" stroke-width="2"/>
+        <path d="M0 60 C 0 6, 40 -30, 88 -30 C 136 -30, 176 6, 176 60 Z"
+              fill="currentColor" stroke="#102a43" stroke-width="2"/>
+        <g fill="#fffdf8" stroke="#102a43" stroke-width="2">
+          <circle cx="52" cy="18" r="13"/>
+          <circle cx="106" cy="6" r="10"/>
+          <circle cx="138" cy="34" r="9"/>
+          <circle cx="26" cy="44" r="8"/>
+        </g>
+      </g>
+      <g transform="translate(524 330) scale(.62)">
+        <path d="M0 -60 C -34 -60, -46 -26, -40 4 C -50 40, -46 84, 0 84
+                 C 46 84, 50 40, 40 4 C 46 -26, 34 -60, 0 -60 Z"
+              fill="#c99c54" stroke="#102a43" stroke-width="2"/>
+        <path d="M0 -46 C -20 -46, -26 -20, -18 -8 C -10 0, 10 0, 18 -8
+                 C 26 -20, 20 -46, 0 -46 Z"
+              fill="#fffdf8" stroke="#102a43" stroke-width="2"/>
+        <circle cx="-7" cy="-28" r="3.5" fill="#102a43"/>
+        <circle cx="7" cy="-28" r="3.5" fill="#102a43"/>
+        <path d="M-34 26 C -20 12, 20 12, 34 26 C 36 58, 20 78, 0 78
+                 C -20 78, -36 58, -34 26 Z"
+              fill="#fffdf8" stroke="#102a43" stroke-width="2"/>
+      </g>
+      <g transform="translate(430 296)">
+        <path d="M0 -60 C -34 -60, -46 -26, -40 4 C -50 40, -46 84, 0 84
+                 C 46 84, 50 40, 40 4 C 46 -26, 34 -60, 0 -60 Z"
+              fill="currentColor" stroke="#102a43" stroke-width="2"/>
+        <path d="M0 -46 C -20 -46, -26 -20, -18 -8 C -10 0, 10 0, 18 -8
+                 C 26 -20, 20 -46, 0 -46 Z"
+              fill="#fffdf8" stroke="#102a43" stroke-width="2"/>
+        <circle cx="-7" cy="-28" r="3.5" fill="#102a43"/>
+        <circle cx="7" cy="-28" r="3.5" fill="#102a43"/>
+        <circle cx="-15" cy="-17" r="4" fill="#c99c54"/>
+        <circle cx="15" cy="-17" r="4" fill="#c99c54"/>
+        <path d="M-34 26 C -20 12, 20 12, 34 26 C 36 58, 20 78, 0 78
+                 C -20 78, -36 58, -34 26 Z"
+              fill="#fffdf8" stroke="#102a43" stroke-width="2"/>
+        <circle cx="0" cy="44" r="10"
+                fill="#c99c54" stroke="#102a43" stroke-width="2"/>
+      </g>
+      <g transform="translate(660 200)">
+        <path d="M0 -52 v -14" stroke="#102a43" stroke-width="2"/>
+        <rect x="-13" y="-82" width="26" height="18" rx="7"
+              fill="#c99c54" stroke="#102a43" stroke-width="2"/>
+        <path d="M-30 44 l -12 20 M30 44 l 12 20"
+              stroke="#102a43" stroke-width="3"/>
+        <circle r="54" fill="#fffdf8" stroke="#102a43" stroke-width="2"/>
+        <circle r="41" fill="none" stroke="currentColor" stroke-width="9"/>
+        <path d="M0 -54 v 12 M54 0 h -12 M0 54 v -12 M-54 0 h 12"
+              stroke="#102a43" stroke-width="2"/>
+        <path d="M0 0 L 27 -27" stroke="#102a43"
+              stroke-width="4" stroke-linecap="round"/>
+        <circle r="5" fill="#102a43"/>
+      </g>`,
+    badge: `
+      <path d="M18 262 C 120 290, 210 232, 300 240 S 448 212, 468 176"
+            fill="none" stroke="#102a43" stroke-width="2"
+            stroke-dasharray="9 8" opacity=".45"/>
+      <g transform="translate(52 96) scale(.66)">
+        <path d="M88 -30 v -20" stroke="#102a43" stroke-width="3"/>
+        <circle cx="88" cy="-58" r="11"
+                fill="#c99c54" stroke="#102a43" stroke-width="3"/>
+        <path d="M52 60 h 72 v 118 a 14 14 0 0 1 -14 14 h -44
+                 a 14 14 0 0 1 -14 -14 Z"
+              fill="#fffdf8" stroke="#102a43" stroke-width="3"/>
+        <path d="M0 60 C 0 6, 40 -30, 88 -30 C 136 -30, 176 6, 176 60 Z"
+              fill="currentColor" stroke="#102a43" stroke-width="3"/>
+        <g fill="#fffdf8" stroke="#102a43" stroke-width="3">
+          <circle cx="52" cy="18" r="13"/>
+          <circle cx="106" cy="6" r="10"/>
+          <circle cx="138" cy="34" r="9"/>
+          <circle cx="26" cy="44" r="8"/>
+        </g>
+      </g>
+      <g transform="translate(348 172) scale(1.1)">
+        <path d="M0 -60 C -34 -60, -46 -26, -40 4 C -50 40, -46 84, 0 84
+                 C 46 84, 50 40, 40 4 C 46 -26, 34 -60, 0 -60 Z"
+              fill="currentColor" stroke="#102a43" stroke-width="2.5"/>
+        <path d="M0 -46 C -20 -46, -26 -20, -18 -8 C -10 0, 10 0, 18 -8
+                 C 26 -20, 20 -46, 0 -46 Z"
+              fill="#fffdf8" stroke="#102a43" stroke-width="2.5"/>
+        <circle cx="-7" cy="-28" r="3.5" fill="#102a43"/>
+        <circle cx="7" cy="-28" r="3.5" fill="#102a43"/>
+        <circle cx="-15" cy="-17" r="4" fill="#c99c54"/>
+        <circle cx="15" cy="-17" r="4" fill="#c99c54"/>
+        <path d="M-34 26 C -20 12, 20 12, 34 26 C 36 58, 20 78, 0 78
+                 C -20 78, -36 58, -34 26 Z"
+              fill="#fffdf8" stroke="#102a43" stroke-width="2.5"/>
+        <circle cx="0" cy="44" r="10"
+                fill="#c99c54" stroke="#102a43" stroke-width="2.5"/>
+      </g>`
   }
 };
 

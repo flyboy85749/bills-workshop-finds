@@ -1,4 +1,4 @@
-import { guideArt, homeArt } from "./art.js";
+import { guideArt, homeArt, categoryArt } from "./art.js";
 
 function lookup(slug) {
   const art = guideArt[slug];
@@ -28,4 +28,15 @@ export function renderGuideBadge(slug) {
 // The home hero. Decorative: the <h1> beside it already carries the message.
 export function renderHomeArt() {
   return `<div class="home-art" aria-hidden="true"><svg viewBox="0 0 800 560" xmlns="http://www.w3.org/2000/svg" focusable="false" preserveAspectRatio="xMidYMid meet">${homeArt}</svg></div>`;
+}
+
+// Category icons. Decorative — each sits above an <h3> that names its category.
+export function renderCategoryIcon(name) {
+  const icon = categoryArt[name];
+  if (!icon) {
+    throw new Error(
+      `art-render: unknown category "${name}". Registered: ${Object.keys(categoryArt).join(", ")}.`
+    );
+  }
+  return `<svg class="category-icon" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">${icon}</svg>`;
 }

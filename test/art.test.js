@@ -1,7 +1,7 @@
 import { test } from "node:test";
 import assert from "node:assert/strict";
-import { guideArt } from "../guides/art.js";
-import { renderGuideScene, renderGuideBadge } from "../guides/art-render.js";
+import { guideArt, categoryArt } from "../guides/art.js";
+import { renderGuideScene, renderGuideBadge, renderCategoryIcon } from "../guides/art-render.js";
 import { collections } from "../products.js";
 
 const SLUG = "cozy-fall-finds";
@@ -52,4 +52,18 @@ test("labels are quote-safe, since they land in an HTML attribute", () => {
 test("an unknown slug throws rather than rendering nothing", () => {
   assert.throws(() => renderGuideScene("no-such-guide"), /no-such-guide/);
   assert.throws(() => renderGuideBadge("no-such-guide"), /no-such-guide/);
+});
+
+test("all six category icons render as hidden decorative SVG", () => {
+  const names = ["travel", "dogs", "gifts", "teachers", "seasonal", "workshop"];
+  assert.deepEqual(Object.keys(categoryArt).sort(), [...names].sort());
+  for (const name of names) {
+    const svg = renderCategoryIcon(name);
+    assert.match(svg, /aria-hidden="true"/, name);
+    assert.match(svg, /viewBox="0 0 64 64"/, name);
+  }
+});
+
+test("an unknown category throws", () => {
+  assert.throws(() => renderCategoryIcon("nope"), /nope/);
 });

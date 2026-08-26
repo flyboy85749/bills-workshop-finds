@@ -281,7 +281,31 @@ p { margin-top: 0; }
   background: rgba(255,255,255,.66);
 }
 
-.category-card .icon, .value-card .icon { font-size: 1.8rem; margin-bottom: 1rem; }
+.category-card .icon { margin-bottom: 1rem; line-height: 0; }
+.category-icon { width: 46px; height: 46px; display: block; }
+
+.category-card:nth-of-type(1) .icon { color: var(--navy); }
+.category-card:nth-of-type(2) .icon { color: var(--gold); }
+.category-card:nth-of-type(3) .icon { color: var(--coral); }
+.category-card:nth-of-type(4) .icon { color: var(--teal); }
+.category-card:nth-of-type(5) .icon { color: #7b5ea7; }
+.category-card:nth-of-type(6) .icon { color: #b4552f; }
+
+.value-number {
+  display: inline-grid;
+  place-items: center;
+  width: 46px;
+  height: 46px;
+  margin-bottom: 1rem;
+  border-radius: 50%;
+  color: var(--navy);
+  background: rgba(201, 156, 84, .28);
+  border: 2px solid var(--gold);
+  font-family: var(--font-display);
+  font-size: 1.35rem;
+  font-weight: 700;
+}
+
 .category-card p, .value-card p { color: var(--muted); margin-bottom: 0; }
 
 .newsletter {

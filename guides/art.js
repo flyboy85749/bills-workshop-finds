@@ -213,5 +213,13 @@ export const homeArt = `
   <text x="600" y="524" font-size="13" letter-spacing="3.4"
         fill="#dbeaf0" font-weight="700">CURATED BY BILL</text>`;
 
-// Filled in Task 6.
-export const categoryArt = {};
+// Category icons, replacing the six emoji on the home page. 64x64, drawn with
+// currentColor so each card supplies its own hue.
+export const categoryArt = {
+  travel: `<rect x="12" y="22" width="40" height="30" rx="6" fill="currentColor" opacity=".18"/><rect x="12" y="22" width="40" height="30" rx="6" fill="none" stroke="currentColor" stroke-width="3"/><path d="M24 22v-6a5 5 0 0 1 5-5h6a5 5 0 0 1 5 5v6" fill="none" stroke="currentColor" stroke-width="3"/><path d="M32 30v14" stroke="currentColor" stroke-width="3"/>`,
+  dogs: `<ellipse cx="32" cy="42" rx="12" ry="15" fill="currentColor" opacity=".22"/><ellipse cx="32" cy="42" rx="12" ry="15" fill="none" stroke="currentColor" stroke-width="3"/><circle cx="17" cy="21" r="6" fill="currentColor"/><circle cx="28" cy="14" r="6" fill="currentColor"/><circle cx="42" cy="17" r="6" fill="currentColor"/><circle cx="50" cy="29" r="6" fill="currentColor"/>`,
+  gifts: `<rect x="12" y="26" width="40" height="28" rx="5" fill="currentColor" opacity=".18"/><rect x="12" y="26" width="40" height="28" rx="5" fill="none" stroke="currentColor" stroke-width="3"/><path d="M12 36h40M32 26v28" stroke="currentColor" stroke-width="3"/><path d="M32 26c-8 0-12-4-12-8s8-4 12 8c4-12 12-12 12-8s-4 8-12 8z" fill="none" stroke="currentColor" stroke-width="3"/>`,
+  teachers: `<rect x="10" y="14" width="44" height="30" rx="4" fill="currentColor" opacity=".2"/><rect x="10" y="14" width="44" height="30" rx="4" fill="none" stroke="currentColor" stroke-width="3"/><path d="M19 26h20M19 34h13" stroke="currentColor" stroke-width="3"/><path d="M8 50h48" stroke="currentColor" stroke-width="4" stroke-linecap="round"/>`,
+  seasonal: `<path d="M32 10l6 15h16l-13 11 5 16-14-10-14 10 5-16-13-11h16z" fill="currentColor" opacity=".22"/><path d="M32 10l6 15h16l-13 11 5 16-14-10-14 10 5-16-13-11h16z" fill="none" stroke="currentColor" stroke-width="3" stroke-linejoin="round"/>`,
+  workshop: `<path d="M14 50l24-24" stroke="currentColor" stroke-width="7" stroke-linecap="round"/><path d="M36 20l10 10-6 6-10-10z" fill="currentColor" opacity=".25"/><path d="M36 20l10 10-6 6-10-10z" fill="none" stroke="currentColor" stroke-width="3"/><circle cx="48" cy="18" r="6" fill="none" stroke="currentColor" stroke-width="3"/>`
+};

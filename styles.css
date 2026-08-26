@@ -399,7 +399,17 @@ p { margin-top: 0; }
 
 .breadcrumb { display: flex; flex-wrap: wrap; gap: .45rem; color: var(--muted); font-size: .86rem; margin-bottom: 1.5rem; }
 .breadcrumb a { color: var(--teal); }
-.breadcrumb a { color: var(--accent); }
+.breadcrumb a { color: var(--accent-ink); }
+
+/* The accent doubles as link text in two places, and three of the twelve are
+   light enough to fail 4.5:1 against cream. Those three get a darkened
+   same-hue ink for text only -- their art, badges and grounds keep the accent
+   itself, where the text-contrast rule does not apply. Same-hue rather than a
+   flat navy so each page keeps its identity. */
+body { --accent-ink: var(--accent); }
+body[style*="#c99c54"] { --accent-ink: #7d5f28; }  /* retro classroom  5.51:1 */
+body[style*="#a8621c"] { --accent-ink: #8f5217; }  /* dog lover        5.76:1 */
+body[style*="#b8536b"] { --accent-ink: #943f54; }  /* whimsical kitchen 6.30:1 */
 
 .disclosure-note {
   max-width: 850px;
@@ -433,7 +443,7 @@ p { margin-top: 0; }
 .toc strong { display: block; margin-bottom: .7rem; color: var(--navy); }
 .toc strong { border-left: 3px solid var(--accent); padding-left: .55rem; }
 .toc a { display: block; padding: .25rem 0; color: var(--teal); text-decoration: none; font-size: .9rem; }
-.toc a:hover, .toc a:focus-visible { color: var(--accent); }
+.toc a:hover, .toc a:focus-visible { color: var(--accent-ink); }
 
 .product-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.1rem; margin-top: 2rem; }
 

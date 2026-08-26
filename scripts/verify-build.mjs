@@ -11,14 +11,15 @@ const GUIDES = [
     cards: 15,
     anchors: [1, 3, 4, 6, 8, 11],
     contains: "Compression packing cubes",
-    links: ["/adventure-travel-essentials", "/student-pilot-gifts"]
+    links: ["/flight-attendant-hotel-room-essentials", "/student-pilot-gifts"]
   },
   {
     file: "dist/flight-attendant-dog-gifts.html",
     slug: "flight-attendant-dog-gifts",
     cards: 15,
     anchors: [1, 4, 7, 10, 13],
-    contains: "Treat-tossing pet camera"
+    contains: "Treat-tossing pet camera",
+    links: ["/flight-attendant-hotel-room-essentials"]
   },
   {
     file: "dist/elementary-classroom-essentials.html",
@@ -107,6 +108,14 @@ const GUIDES = [
     anchors: [1, 4, 6],
     contains: "Nesting-doll measuring cups",
     links: ["/first-apartment-tools", "/cozy-fall-finds"]
+  },
+  {
+    file: "dist/flight-attendant-hotel-room-essentials.html",
+    slug: "hotel-room-essentials",
+    cards: 15,
+    anchors: [1, 4, 7, 10, 13],
+    contains: "Travel door lock and alarm",
+    links: ["/flight-attendant-travel-essentials", "/flight-attendant-dog-gifts"]
   }
 ];
 

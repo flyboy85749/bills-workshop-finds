@@ -42,7 +42,50 @@ const GUIDES = [
     cards: 15,
     anchors: [1, 4, 7, 10, 13],
     contains: "Non-polarized aviation sunglasses",
-    links: ["/flight-attendant-travel-essentials", "/adventure-travel-essentials"]
+    links: [
+      "/first-solo-flight-gifts",
+      "/checkride-prep-gifts",
+      "/new-private-pilot-gifts",
+      "/flight-attendant-travel-essentials",
+      "/adventure-travel-essentials"
+    ]
+  },
+  {
+    file: "dist/checkride-prep-gifts.html",
+    slug: "checkride-prep-gifts",
+    cards: 15,
+    anchors: [1, 4, 7, 10, 13],
+    contains: "Airman certification standards booklet",
+    links: [
+      "/student-pilot-gifts",
+      "/first-solo-flight-gifts",
+      "/new-private-pilot-gifts"
+    ]
+  },
+  {
+    file: "dist/new-private-pilot-gifts.html",
+    slug: "new-private-pilot-gifts",
+    cards: 15,
+    anchors: [1, 4, 7, 10, 13],
+    contains: "Aviation carbon monoxide detector",
+    links: [
+      "/checkride-prep-gifts",
+      "/student-pilot-gifts",
+      "/first-solo-flight-gifts"
+    ]
+  },
+  {
+    file: "dist/first-solo-flight-gifts.html",
+    slug: "first-solo-flight-gifts",
+    cards: 15,
+    anchors: [1, 4, 7, 10, 13],
+    contains: "Plain white shirt for the shirttail cut",
+    links: [
+      "/student-pilot-gifts",
+      "/checkride-prep-gifts",
+      "/new-private-pilot-gifts",
+      "/holiday-gifts"
+    ]
   },
   {
     file: "dist/first-apartment-tools.html",

@@ -12,6 +12,9 @@ import { adventureTravelEssentials } from "./guides/adventure-travel-essentials.
 import { cozyFallFinds } from "./guides/cozy-fall-finds.js";
 import { whimsicalKitchenFinds } from "./guides/whimsical-kitchen-finds.js";
 import { hotelRoomEssentials } from "./guides/hotel-room-essentials.js";
+import { firstSoloFlightGifts } from "./guides/first-solo-flight-gifts.js";
+import { checkridePrepGifts } from "./guides/checkride-prep-gifts.js";
+import { newPrivatePilotGifts } from "./guides/new-private-pilot-gifts.js";
 
 export const collections = {
   "travel-essentials": travelEssentials,
@@ -26,7 +29,10 @@ export const collections = {
   "adventure-travel-essentials": adventureTravelEssentials,
   "cozy-fall-finds": cozyFallFinds,
   "whimsical-kitchen-finds": whimsicalKitchenFinds,
-  "hotel-room-essentials": hotelRoomEssentials
+  "hotel-room-essentials": hotelRoomEssentials,
+  "first-solo-flight-gifts": firstSoloFlightGifts,
+  "checkride-prep-gifts": checkridePrepGifts,
+  "new-private-pilot-gifts": newPrivatePilotGifts
 };
 
 function escapeHtml(value) {

@@ -143,6 +143,9 @@ export default defineConfig({
         cozyFall: "cozy-fall-finds.html",
         whimsicalKitchen: "whimsical-kitchen-finds.html",
         hotelRoom: "flight-attendant-hotel-room-essentials.html",
+        firstSolo: "first-solo-flight-gifts.html",
+        checkride: "checkride-prep-gifts.html",
+        newPrivatePilot: "new-private-pilot-gifts.html",
         about: "about.html",
         disclosure: "affiliate-disclosure.html",
         privacy: "privacy.html"

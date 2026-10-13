@@ -26,7 +26,7 @@ export const SITE = {
   SITE.amazonTag. The amzn.to "Shop my list" links are not affected: a
   shortlink carries the tag it was created with.
 */
-export const PER_GUIDE_TRACKING = false;
+export const PER_GUIDE_TRACKING = true;
 
 export const TRACKING_IDS = {
   "travel-essentials": "bwffatravel-20",

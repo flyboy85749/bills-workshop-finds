@@ -1,8 +1,12 @@
-import { inject } from '@vercel/analytics';
+import { inject, track } from '@vercel/analytics';
 import { SITE } from "./site.js";
+import { trackAmazonClicks } from "./clicks.js";
 
-// Initialize Vercel Web Analytics
+// Vercel Web Analytics. This only reports anything once Web Analytics is
+// enabled on the bills-workshop-finds project in the Vercel dashboard;
+// until then the beacon script 404s and every pageview and event is lost.
 inject();
+trackAmazonClicks(document, track);
 
 function hydrateLinks() {
   document.querySelectorAll("[data-etsy-link]").forEach(link => link.href = SITE.etsyShop);

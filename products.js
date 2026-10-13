@@ -1,4 +1,4 @@
-import { SITE } from "./site.js";
+import { amazonTagFor } from "./site.js";
 import { travelEssentials } from "./guides/travel-essentials.js";
 import { dogGifts } from "./guides/flight-attendant-dog-gifts.js";
 import { classroomEssentials } from "./guides/elementary-classroom-essentials.js";
@@ -47,16 +47,17 @@ function escapeHtml(value) {
 // Amazon's price facet is expressed in cents on the rh (refinement) parameter:
 // p_36:-4000 means "no lower bound, at most $40.00". Guides that make a price
 // claim in their title set maxPrice per item so the link honors the claim.
-export function amazonUrl(query, maxPrice) {
+export function amazonUrl(query, maxPrice, tag) {
   const url = new URL("https://www.amazon.com/s");
   url.searchParams.set("k", query);
   if (maxPrice) url.searchParams.set("rh", `p_36:-${Math.round(maxPrice * 100)}`);
-  if (SITE.amazonTag) url.searchParams.set("tag", SITE.amazonTag);
+  if (tag) url.searchParams.set("tag", tag);
   return url.toString();
 }
 
 export function renderProductGrid(key) {
   const items = collections[key];
+  const tag = amazonTagFor(key);
   if (!Array.isArray(items) || items.length === 0) {
     throw new Error(
       `renderProductGrid: unknown collection "${key}". Registered keys: ${Object.keys(collections).join(", ")}.`
@@ -68,7 +69,7 @@ export function renderProductGrid(key) {
       <h3>${escapeHtml(item.name)}</h3>
       <p>${escapeHtml(item.reason)}</p>
       <p class="product-tip"><strong>What to look for:</strong> ${escapeHtml(item.tip)}</p>
-      <a class="button button-primary" href="${escapeHtml(amazonUrl(item.query, item.maxPrice))}" target="_blank" rel="sponsored nofollow noopener" aria-label="See ${escapeHtml(item.name)} options on Amazon">See options on Amazon <span aria-hidden="true">↗</span></a>
+      <a class="button button-primary" href="${escapeHtml(amazonUrl(item.query, item.maxPrice, tag))}" target="_blank" rel="sponsored nofollow noopener" data-amazon-item="${escapeHtml(item.name)}" data-amazon-position="${index + 1}" aria-label="See ${escapeHtml(item.name)} options on Amazon">See options on Amazon <span aria-hidden="true">↗</span></a>
     </article>
   `.trim()).join("");
 }

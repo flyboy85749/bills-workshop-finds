@@ -26,6 +26,24 @@ A lightweight multi-page affiliate guide site intended for `finds.billsworkshopc
 
 `SITE.amazonTag` in `site.js` is set to `billsworkshop-20`, and `finds.billsworkshopcompany.com` is registered as an approved website in Amazon Associates. Product buttons open tagged Amazon search results and carry `rel="sponsored nofollow noopener"`.
 
+### Per-guide tracking IDs
+
+`TRACKING_IDS` in `site.js` maps each guide to its own Amazon tracking ID, so the Associates
+Earnings and Ordered Items reports can say which guide earned a sale. It is **off**
+(`PER_GUIDE_TRACKING = false`) until every ID has been created in Associates Central → Account
+Settings → Manage Your Tracking IDs: Amazon does not credit a tag the account does not own. IDs are
+unique across all of Amazon, so change any that are taken, then flip the flag.
+
+A new guide needs a `TRACKING_IDS` entry; `test/attribution.test.js` fails without one. The
+`amzn.to` "Shop my list" links keep whatever tag they were created with.
+
+### Click analytics
+
+`main.js` sends a Vercel Web Analytics custom event, **Amazon click**, for every click or
+middle-click on an Amazon link, with `guide`, `kind` (`product` or `list`), `item` and `position`.
+The decision logic is in `clicks.js`. Nothing is recorded until Web Analytics is enabled on the
+`bills-workshop-finds` project in the Vercel dashboard (Analytics tab).
+
 Remaining optional improvement: replace the search-based recommendations with specific reviewed products.
 
 Add the Pinterest account to the Amazon Associates approved social profiles before promoting there.
@@ -65,7 +83,9 @@ Pushing to `main` deploys to production automatically; pull requests get preview
 
 `vercel.json` is the single source of truth for host config: clean (extensionless) URLs, four security headers, and a one-year immutable cache for Vite's content-hashed assets in `/assets/`. Build command and output directory come from Vercel's Vite framework preset.
 
-Because pages are served without the `.html` extension, internal links, canonical tags, and `public/sitemap.xml` must all use extensionless paths. The files in `dist/` keep their `.html` names — Vercel maps the clean path to them at request time.
+Because pages are served without the `.html` extension, internal links and canonical tags must use extensionless paths.
+
+`sitemap.xml` is generated at build time from `rollupOptions.input` in `vite.config.js` (see `sitemap.js`), so every built page is listed automatically. `verify-build.mjs` fails if the sitemap and the built pages disagree, or if any page's canonical differs from its sitemap URL. The files in `dist/` keep their `.html` names — Vercel maps the clean path to them at request time.
 
 Design and implementation notes for the deployment live in `docs/superpowers/`.
 
@@ -74,7 +94,7 @@ Design and implementation notes for the deployment live in `docs/superpowers/`.
 Guide content lives in `guides/<slug>.js` as an array of `{ category, name, query, reason, tip }`
 objects. Register the array in `collections` in `products.js`, mark the page's container with
 `data-product-grid="<slug>"`, add the page to `rollupOptions.input` in `vite.config.js`, and add
-an entry to `GUIDES` in `scripts/verify-build.mjs`. The build fails if a registered collection is
+an entry to `GUIDES` in `scripts/verify-build.mjs` and to `TRACKING_IDS` in `site.js`. The build fails if a registered collection is
 never injected, so a half-wired guide cannot ship. `verify-build.mjs` also fails the build if the
 same product name appears in two guides, so a new guide's items need names that don't collide with
 an existing guide's.

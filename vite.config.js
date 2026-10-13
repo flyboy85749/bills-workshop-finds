@@ -7,6 +7,8 @@ import {
   renderHomeArt,
   renderCategoryIcon
 } from "./guides/art-render.js";
+import { SITE } from "./site.js";
+import { buildSitemapXml } from "./sitemap.js";
 
 // The leading lookbehind guards against a prefixed attribute such as
 // data-x-data-product-grid="k" being mistaken for the real marker.
@@ -123,9 +125,29 @@ function prerenderProducts() {
   };
 }
 
+// Emits dist/sitemap.xml from the pages this build produces. See sitemap.js.
+function generateSitemap() {
+  let pages = [];
+  return {
+    name: "generate-sitemap",
+    apply: "build",
+    configResolved(config) {
+      const input = config.build.rollupOptions.input;
+      pages = typeof input === "string" ? [input] : Object.values(input ?? {});
+    },
+    generateBundle() {
+      this.emitFile({
+        type: "asset",
+        fileName: "sitemap.xml",
+        source: buildSitemapXml(SITE.url, pages)
+      });
+    }
+  };
+}
+
 export default defineConfig({
   appType: "mpa",
-  plugins: [prerenderProducts()],
+  plugins: [prerenderProducts(), generateSitemap()],
   build: {
     rollupOptions: {
       input: {

@@ -1,8 +1,8 @@
-import { readFileSync } from "node:fs";
+import { readFileSync, readdirSync } from "node:fs";
 import { collections } from "../products.js";
 import { guideArt } from "../guides/art.js";
-
-const AMAZON_TAG = "billsworkshop-20";
+import { SITE, amazonTagFor } from "../site.js";
+import { pageUrl } from "../sitemap.js";
 
 const GUIDES = [
   {
@@ -200,8 +200,21 @@ for (const guide of GUIDES) {
   if (cards !== guide.cards) fail(`expected ${guide.cards} product cards, found ${cards}`);
   totalCards += cards;
 
-  const tagged = count(`tag=${AMAZON_TAG}`);
-  if (tagged !== guide.cards) fail(`expected ${guide.cards} URLs tagged ${AMAZON_TAG}, found ${tagged}`);
+  // Each guide's expected tag follows PER_GUIDE_TRACKING in site.js, so this
+  // checks whichever setting is live. `tag=X&` and `tag=X"` both end a
+  // parameter, so a tag that is a prefix of another cannot count twice.
+  const expectedTag = amazonTagFor(guide.slug);
+  const tagged = count(`tag=${expectedTag}"`) + count(`tag=${expectedTag}&amp;`);
+  if (tagged !== guide.cards) fail(`expected ${guide.cards} URLs tagged ${expectedTag}, found ${tagged}`);
+  const anyTag = count("tag=");
+  if (anyTag !== tagged) fail(`found ${anyTag - tagged} Amazon link(s) with a tag other than ${expectedTag}`);
+
+  // Click events read these; without them a product click reports as a list click.
+  const itemAttrs = count("data-amazon-item=");
+  const positionAttrs = count("data-amazon-position=");
+  if (itemAttrs !== guide.cards || positionAttrs !== guide.cards) {
+    fail(`expected ${guide.cards} product links with click-tracking attributes, found ${itemAttrs} item / ${positionAttrs} position`);
+  }
 
   const sponsored = count('rel="sponsored nofollow noopener"');
   if (sponsored !== guide.cards) fail(`expected ${guide.cards} sponsored/nofollow links, found ${sponsored}`);
@@ -302,6 +315,44 @@ if (home) {
       failures.push(
         `dist/index.html: guide "${guide.slug}" is not represented on the home page — it needs either a card badge or the featured scene`
       );
+    }
+  }
+}
+
+// The sitemap is generated from rollupOptions.input; it must list exactly the
+// pages in dist/, each under the URL that page names as its canonical. A page
+// whose canonical disagrees with its sitemap entry asks a crawler to index two
+// URLs for one page.
+let sitemap = "";
+try {
+  sitemap = readFileSync("dist/sitemap.xml", "utf8");
+} catch {
+  failures.push('dist/sitemap.xml: cannot read. The generate-sitemap plugin did not run.');
+}
+if (sitemap) {
+  const listed = [...sitemap.matchAll(/<loc>([^<]+)<\/loc>/g)].map(m => m[1]);
+  if (/<lastmod>/.test(sitemap)) {
+    failures.push("dist/sitemap.xml: carries <lastmod>, but no page has a real modification date (see sitemap.js)");
+  }
+  const builtPages = readdirSync("dist").filter(file => file.endsWith(".html"));
+  const expected = new Set(builtPages.map(file => pageUrl(SITE.url, file)));
+  for (const url of expected) {
+    if (!listed.includes(url)) failures.push(`dist/sitemap.xml: missing ${url}`);
+  }
+  for (const url of listed) {
+    if (!expected.has(url)) failures.push(`dist/sitemap.xml: lists ${url}, which is not a built page`);
+  }
+  if (new Set(listed).size !== listed.length) failures.push("dist/sitemap.xml: lists a URL twice");
+
+  for (const file of builtPages) {
+    const page = readFileSync(`dist/${file}`, "utf8");
+    const canonical = page.match(/<link[^>]*rel="canonical"[^>]*href="([^"]+)"/s)?.[1]
+      ?? page.match(/<link[^>]*href="([^"]+)"[^>]*rel="canonical"/s)?.[1];
+    const url = pageUrl(SITE.url, file);
+    if (!canonical) {
+      failures.push(`dist/${file}: has no canonical link`);
+    } else if (canonical !== url) {
+      failures.push(`dist/${file}: canonical is ${canonical} but the sitemap lists ${url}`);
     }
   }
 }

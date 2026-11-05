@@ -12,8 +12,9 @@
 
 export const CLICK_EVENT = "Amazon click";
 
-const AMAZON_HOSTS = new Set(["amazon.com", "www.amazon.com", "amzn.to", "www.amzn.to"]);
-const SHORTLINK_HOSTS = new Set(["amzn.to", "www.amzn.to"]);
+// link.amazon is Amazon's newer shortlink domain, used alongside amzn.to.
+const SHORTLINK_HOSTS = new Set(["amzn.to", "www.amzn.to", "link.amazon"]);
+const AMAZON_HOSTS = new Set(["amazon.com", "www.amazon.com", ...SHORTLINK_HOSTS]);
 
 /**
  * The guide a page belongs to, from its clean URL path.

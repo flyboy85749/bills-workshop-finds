@@ -83,6 +83,15 @@ test("a Shop-my-list shortlink reports as a list click named by its code", () =>
   });
 });
 
+test("a link.amazon shortlink reports as a list click named by its code", () => {
+  assert.deepEqual(clickProperties("https://link.amazon/B0dgkUkdM", "/flight-attendant-travel-essentials"), {
+    guide: "flight-attendant-travel-essentials",
+    kind: "list",
+    item: "B0dgkUkdM",
+    position: null
+  });
+});
+
 test("non-Amazon links and junk hrefs send nothing", () => {
   assert.equal(clickProperties("https://www.etsy.com/shop/BillsWorkshopCompany", "/"), null);
   assert.equal(clickProperties("https://billsworkshopcompany.com", "/"), null);
